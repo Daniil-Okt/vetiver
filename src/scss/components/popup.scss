@@ -1,0 +1,319 @@
+.popup {
+  $white-100: #fff;
+
+  position: fixed;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  overflow-y: auto;
+  pointer-events: none;
+
+  /** Установить свои значения */
+  padding: rem(30) rem(10);
+  background-color: rgba(#000, 50%);
+  z-index: 2000;
+  transition: opacity 0.4s ease-in-out;
+
+  &.is-open {
+    opacity: 1;
+    pointer-events: auto;
+
+    .popup__content {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+
+  // .popup__wrapper
+  &__wrapper {
+    display: flex;
+    align-items: center;
+    min-height: 100%;
+  }
+
+  // .popup__content
+  &__content {
+    position: relative;
+    width: 100%;
+    margin: 0 auto;
+
+    /** Установить свои значения */
+    padding: rem(30) rem(50);
+    max-width: rem(690);
+    background-color: $white-100;
+    transform: translateY(rem(-200));
+    opacity: 0;
+    transition: transform 0.2s ease-in-out, opacity 0.2s ease-in-out;
+  }
+
+  // .popup__close
+  &__close {
+    position: absolute;
+
+    /** Установить свои значения */
+    top: rem(20);
+    right: rem(20);
+    width: rem(40);
+    height: rem(40);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: transparent;
+    color: #000;
+    border-radius: rem(8);
+  }
+}
+
+
+
+
+
+
+.popup-right {
+    background: rgba(0, 0, 0, 0.2);
+    display: flex;
+    padding: 0;
+		&__container {
+      display: flex;
+      width: 100%;
+      flex: auto;
+      padding: 0;
+      max-width: rem(1440);
+		}
+
+		&__content {
+      position: relative;
+      z-index: 1;
+      margin-left: auto;
+      height: auto;
+      background: #fff;
+      padding: rem(24) rem(40) rem(40);
+      max-width: rem(400);
+      width: 100%;
+      display: flex;
+      transform: translateX(100%);
+      transition: all 0.5s ease  0s;
+      &::before {
+          position: absolute;
+          content: '';
+          width: 100vw;
+          height: 100%;
+          background: #fff;
+          top:0;
+          left: 0;
+          z-index: -1;
+      }
+
+      @media(max-width:540px){
+        max-width: 100%;
+      }
+
+      .is-open & {
+        transform: translateX(0);
+      }
+		}
+
+    &__body {
+      flex: auto;
+      display: grid;
+      grid-template-rows: 1fr auto 1fr;
+    }
+
+		&__head {
+      display: flex;
+      justify-content: space-between;
+      gap: rem(20);
+		}
+
+		&__title {
+      font-family: var(--second-family);
+      font-weight: 500;
+      font-size: 24px;
+      line-height: 100%;
+      text-transform: lowercase;
+      max-width: rem(270);
+		}
+
+		&__button-close {
+      background: none;
+      width: rem(20);
+      height: rem(20);
+      cursor: pointer;
+      transition: all 0.3s ease  0s;
+      svg {
+        g {
+          path {
+            transition: all 0.3s ease  0s;
+          }
+        }
+      }
+      &:hover {
+        svg {
+          g {
+            path {
+              stroke: #000;
+            }
+          }
+        }
+      }
+		}
+
+		&__center {
+		}
+
+		&__form {
+		}
+
+		&__item-row {
+      display: flex;
+      flex-direction: column;
+      gap: rem(40);
+		}
+
+		&__item-input {
+		}
+
+		&__bottom {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: end;
+      gap: rem(24);
+      padding-bottom: rem(40);
+		}
+
+		&__social {
+      max-width: rem(180);
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      gap: rem(10);
+
+      p {
+        font-size: rem(16);
+        line-height: 100%;
+        text-align: center;
+        color: #000;
+      }
+		}
+
+		&__social-link {
+      width: rem(20);
+      height: rem(20);
+      svg {
+        display: block;
+        width: 100%;
+        height: auto;
+  
+        g {
+          path {
+            transition: all 0.3s ease  0s;
+          }
+        }
+        path {
+          transition: all 0.3s ease  0s;
+        }
+      }
+      &:hover {
+        svg {
+          g {
+            path {
+              fill: var(--pink);
+            }
+          }
+          path {
+            fill: var(--pink);
+          }
+        }
+      }
+		}
+
+  &__sub-block {
+    display: flex;
+    justify-content: space-between;
+    gap: rem(20);
+    margin-top: rem(20);
+  
+  }
+
+  &__item-checkbox {
+  }
+
+  &__button-password {
+    font-size: rem(12);
+    line-height: 100%;
+    color: #000;
+    transition: all 0.3s ease  0s;
+    cursor: pointer;
+    &:hover {
+      color: var(--pink);
+    }
+  }
+
+  &__button-row {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: rem(16);
+    margin-top: rem(60);
+  }
+
+  &__button {
+    font-size: rem(16);
+    width: 100%;
+    padding: rem(16);
+  }
+
+  &__button-change {
+    font-size: rem(16);
+    line-height: 100%;
+    color: #000;
+    transition: all 0.3s ease  0s;
+    cursor: pointer;
+    &:hover {
+      color: var(--pink);
+    }
+  }
+}
+.popup-item-checkbox {
+  display: flex;
+  gap: rem(12);
+  font-size: rem(12);
+  line-height: 100%;
+  color: #000;
+  cursor: pointer;
+
+  &:hover {
+    span {
+      border-color: #565656;
+    }
+  }
+  &__input {
+    display: none;
+
+    &:checked + .popup-item-checkbox__square {
+      border: rem(6) solid var(--pink);
+      transition: all 0s ease  0s;
+    }
+  }
+
+  &__square {
+    border: rem(1) solid #ccc;
+    width: rem(12);
+    height: rem(12);
+    transition: all 0.3s ease  0s;
+  }
+}
+.button {
+}
+
+
+
+
+.popup-ent-reg-body {
+  display: none;
+  &.active {
+    display: grid;
+  }
+}

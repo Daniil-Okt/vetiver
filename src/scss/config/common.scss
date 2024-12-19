@@ -1,0 +1,39 @@
+// Заголовки, общие БЄМ блоки и проче...
+
+.item-input-text {
+    border-bottom: 1px solid #ccc;
+}
+.input-text {
+    font-weight: 400;
+    font-size: rem(16);
+    line-height: 100%;
+    text-transform: lowercase;
+    color: #000;
+    background-color: #fff;
+    padding-bottom: rem(20);
+}
+
+input::placeholder, textarea::placeholder {
+    color: #999;
+    font-weight: 700;
+}
+
+
+.button {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 100%;
+    text-transform: lowercase;
+    color: #fff;
+    background-color: #000;
+    padding: rem(20) rem(24);
+    cursor: pointer;
+    transition: all 0.3s ease  0s;
+    &:hover {
+        background-color: var(--pink);
+    }
+}
+
