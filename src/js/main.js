@@ -8,7 +8,7 @@
  */
 // import MousePRLX from './libs/parallaxMouse'
 // import AOS from 'aos'
-// import Swiper, { Navigation, Pagination } from 'swiper';
+import Swiper, { Navigation, Pagination, Autoplay } from 'swiper';
 
 import BaseHelpers from './helpers/base-helpers';
 import PopupManager from './modules/popup-manager';
@@ -22,7 +22,7 @@ BaseHelpers.checkWebpSupport();
 /* Добавление loaded для HTML после полной загрузки страницы */
 BaseHelpers.addLoadedClass();
 /* Фиксированный header */
-BaseHelpers.headerFixed();
+BaseHelpers.headerFixed(10);
 
 
 /** ===================================================================================
@@ -111,6 +111,26 @@ new BurgerMenu().init();
 
 /* Инициализация  swiper =================================================================================
 */
+const aboutSlider = new Swiper('.about__slider', {
+  speed: 1400,
+  spaceBetween: 0,
+  slidesPerView: 1,
+  modules: [Autoplay, Pagination],
+  loop: true,
+  initialSlide: 0,
+  autoplay: {
+    delay: 4500,
+    stopOnLastSlide: false,
+    disableOnIteration: false,
+  },
+
+  pagination: {
+    el: ".about__pagination",
+    clickable: true,
+  },
+});
+
+
 // const swiper = new Swiper('.swiper', {
 //   speed: 800,
 //   spaceBetween: 16,

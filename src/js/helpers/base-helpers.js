@@ -60,12 +60,29 @@ class BaseHelpers {
   }
 
   /** Функция для фиксированной шапки при скролле */
-  static headerFixed() {
-    const headerStickyObserver = new IntersectionObserver(([entry]) => {
-	    BaseHelpers.html.classList.toggle('header-is-sticky', !entry.isIntersecting);
-    });
+  // static headerFixed() {
+  //   const headerStickyObserver = new IntersectionObserver(([entry]) => {
+	//     BaseHelpers.html.classList.toggle('header-is-sticky', !entry.isIntersecting);
+  //   });
 
-    if (BaseHelpers.firstScreen) {
+  //   if (BaseHelpers.firstScreen) {
+  //     headerStickyObserver.observe(BaseHelpers.firstScreen);
+  //   }
+  // }
+
+  static headerFixed(offsetInPx = 0) {
+    if (offsetInPx > 0) {
+      // Используем событие scroll для управления фиксацией при заданном отступе
+      window.addEventListener('scroll', () => {
+        const scrollTop = window.scrollY || document.documentElement.scrollTop;
+        BaseHelpers.html.classList.toggle('header-is-sticky', scrollTop > offsetInPx);
+      });
+    } else if (BaseHelpers.firstScreen) {
+      // Сохраняем поведение через IntersectionObserver, если offsetInPx не передано
+      const headerStickyObserver = new IntersectionObserver(([entry]) => {
+        BaseHelpers.html.classList.toggle('header-is-sticky', !entry.isIntersecting);
+      });
+
       headerStickyObserver.observe(BaseHelpers.firstScreen);
     }
   }
