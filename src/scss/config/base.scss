@@ -66,3 +66,12 @@
     padding-top: rem($headerHeight);
   }
 }
+
+
+input[type=password],
+input.password {
+    -webkit-text-security:square !important;
+    -moz-text-security:square !important;
+    -o-text-security: square !important;
+    text-security:square !important;
+}

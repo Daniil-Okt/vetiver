@@ -131,6 +131,46 @@ const aboutSlider = new Swiper('.about__slider', {
 });
 
 
+const categorySlider = new Swiper('.category__slider', {
+  speed: 1400,
+  spaceBetween: 40,
+  slidesPerView: 1.21,
+  modules: [Navigation, Pagination],
+  initialSlide: 0,
+
+  navigation: {
+    prevEl: ".category__button-prev",
+    nextEl: ".category__button-next"
+  },
+  pagination: {
+    el: ".category__pagination",
+    clickable: true,
+	type: "progressbar"
+  },
+  breakpoints: {
+	461: {
+		slidesPerView: 1.5,
+		spaceBetween: 40,
+		},
+	561: {
+		slidesPerView: 2,
+		spaceBetween: 40,
+		},
+	721: {
+		slidesPerView: 2.5,
+		spaceBetween: 40,
+		},
+    1001: {
+      slidesPerView: 3,
+      spaceBetween: 40,
+  	},
+    1291: {
+        slidesPerView: 3,
+        spaceBetween: 100,
+    }
+  },
+});
+
 // const swiper = new Swiper('.swiper', {
 //   speed: 800,
 //   spaceBetween: 16,
@@ -317,4 +357,82 @@ document.addEventListener('DOMContentLoaded', () => {
   
 	document.addEventListener('click', closeSearchOnClickOutside);
   });
+  
+
+
+
+
+  function toggle(input, button) {
+	console.log('click');
+	isVisible = !isVisible;
+  
+  
+	if (isVisible) {
+	  button.innerHTML = hideSvg;
+	  input.value = input.dataset.realValue || '';
+	} else {
+	  button.innerHTML = showSvg;
+	  input.dataset.realValue = input.value;
+	  input.value = 'X'.repeat(input.value.length);
+	}
+  }
+  
+  
+  function formatInput(input) {
+	if (!isVisible) {
+	  if (!input.dataset.realValue) {
+		input.dataset.realValue = input.value;
+	  } else {
+		const diff = input.value.length - 'X'.repeat(input.dataset.realValue.length).length;
+		if (diff > 0) {
+		  input.dataset.realValue += input.value.slice(-diff);
+		} else {
+		  input.dataset.realValue = input.dataset.realValue.slice(0, diff);
+		}
+	  }
+	  input.value = 'X'.repeat(input.dataset.realValue.length);
+	}
+  
+  
+  }
+  function switchWrapper(current, target) {
+	current.style.display = 'none';
+	target.style.display = 'block';
+  }
+  function setupPasswordToggle(wrapper) {
+	const button = wrapper.querySelector(".button__show-password");
+	const input = wrapper.querySelector(".input__password");
+	if (button) {
+	  button.addEventListener("click", () => toggle(input, button));
+	}
+	if (input) {
+	  input.addEventListener('input', () => formatInput(input));
+	}
+  
+  
+  }
+
+
+
+
+
+  window.onload = function() {
+	init();
+  }
+  
+  function init() {
+	// Выбираем все инпуты с type="text"
+	var elements = document.querySelectorAll('input[type="text"]');
+  
+	if (elements.length === 0) {
+	  return; // Завершаем выполнение функции, если таких элементов нет
+	}
+  
+	elements.forEach(function(element) {
+	  var style = window.getComputedStyle(element);
+	  if (!style.webkitTextSecurity && !style.textSecurity) {
+		element.setAttribute("type", "password");
+	  }
+	});
+  }
   

@@ -46,7 +46,7 @@
     .header__button-menu-web {
       svg rect {
         fill: #000;
-        transition: fill 0.3s;
+        transition: fill 0.5s;
       } 
       &:hover svg rect {
         fill: var(--pink); /* Замените на нужный вам цвет при наведении */
@@ -104,7 +104,7 @@
     svg {
       width: 100%;
       height: auto;
-      transition: all 0.3s ease  0s;
+      transition: all 0.5s ease  0s;
     }
     .close {
       display: block;
@@ -132,7 +132,7 @@
 
     & svg rect {
       fill: white;
-      transition: fill 0.3s;
+      transition: fill 0.5s;
     }
     &:hover svg rect {
       fill: var(--pink); /* Замените на нужный вам цвет при наведении */
@@ -189,7 +189,7 @@
     }
 
     span {
-      transition: all 0.3s ease  0s;
+      transition: all 0.5s ease  0s;
     }
     &:hover span {
       color: var(--pink);
@@ -204,7 +204,7 @@
       width: 100%;
       height: auto;
       * {
-        transition: all 0.3s ease  0s;
+        transition: all 0.5s ease  0s;
       }
     }
 
@@ -227,7 +227,7 @@
   display: flex;
   gap: rem(8);
   margin-top: rem(24);
-  transition: all 0.3s ease  0s;
+  transition: all 0.5s ease  0s;
 
   .menu-open & {
     opacity: 0;
@@ -242,7 +242,7 @@
   }
   &__link {
     font-size: rem(16);
-    transition: all 0.3s ease  0s;
+    transition: all 0.5s ease  0s;
     &:hover {
       color: var(--pink);
     }
@@ -342,7 +342,7 @@
   overflow-y: auto;
   z-index: 40;
   padding-top: rem(84);
-  transition: all 0.3s ease  0s;
+  transition: all 0.6s ease  0s;
   // visibility: hidden;
   .menu-open & {
     // visibility: visible;
@@ -419,7 +419,7 @@
   }
 
   &__item {
-    transition: all 0.3s ease  0s;
+    transition: all 0.5s ease  0s;
     
     
   }
@@ -439,14 +439,14 @@
 
     span {
       color: #999;
-      transition: all 0.3s ease  0s;
+      transition: all 0.5s ease  0s;
     }
     svg {
       display: block;
       margin-top: rem(3.5);
-      transition: all 0.3s ease  0s;
+      transition: all 0.5s ease  0s;
       path {
-        transition: all 0.3s ease  0s;
+        transition: all 0.5s ease  0s;
       }
     }
 
@@ -534,7 +534,7 @@
     min-width: 100%;
     opacity: 0;
     pointer-events: none;
-    transition: all 0.3s ease  0s;
+    transition: all 0.5s ease  0s;
     @media(min-width:721px){
       position: absolute;
       top: 0;
@@ -676,7 +676,7 @@
     }
     * {
       color: #999;
-      transition: color 0.3s ease  0s;
+      transition: color 0.5s ease  0s;
     }
 
     &:hover {

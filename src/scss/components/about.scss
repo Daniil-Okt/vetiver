@@ -3,15 +3,9 @@
     // height: 3000px;
     background: #1a1a1a;
     margin-top: rem(-68);
-    margin-bottom: rem(2000);
-    @media(max-width:1260px){
-        padding-top: rem(30);
-    }
-    @media(max-width:1024px){
-        padding-top: rem(184);
-    }
+    padding-top: 0;
+  
     @media(max-width:720px){
-        padding-top: rem(168);
         margin-top: rem(-100);
     }
 
@@ -21,8 +15,15 @@
     }
     &__slide {
         position: relative;
+
+        @media(max-width:1260px){
+            padding-top: rem(30);
+        }
+        @media(max-width:1024px){
+            padding-top: rem(184);
+        }
         @media(max-width:720px){
-         
+            padding-top: rem(168);
             padding-bottom: rem(40);
         }
     }
@@ -124,6 +125,14 @@
     }
 
     &__button {
+        @media(max-width:480px){
+            font-size: rem(16);
+            gap: rem(16);
+            svg {
+                width: rem(30);
+                height: auto;
+            }
+        }
     }
 
     &__pagination {
