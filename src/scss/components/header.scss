@@ -13,7 +13,7 @@
   }
 
 
-  .header-is-sticky &, .menu-open &, &.search-open {
+  .header-is-sticky &, .menu-open &, &.search-open, .header-white & {
     // ..стили для липкого хедера
     background: #fff;
    

@@ -24,6 +24,7 @@
 */
 // @import 'libs/aos';
 @import 'libs/swiper';
+@import 'libs/nouislider';
 
 /**
 * Подключение custom scrollbar для всего сайта
@@ -55,7 +56,15 @@
 @import 'components/category';
 @import 'components/stocks';
 @import 'components/novelty';
-
-
+@import 'components/promo';
+@import 'components/hits';
+@import 'components/blog-promo';
+@import 'components/quest';
 
 @import 'components/footer';
+
+
+//catalog
+@import 'components/catalog/catalog-top';
+@import 'components/catalog/catalog';
+@import 'components/catalog/looked';

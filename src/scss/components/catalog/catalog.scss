@@ -1,0 +1,164 @@
+.catalog {
+    padding-top: rem(56);
+    @media(max-width:720px){
+        padding-top: rem(36);
+    }
+    &__container {
+    }
+
+    &__top {
+    }
+    &__row {
+        margin-bottom: rem(120);
+        @media(max-width:1024px){
+            margin-bottom: rem(100);
+        }
+        @media(max-width:720px){
+            margin-bottom: rem(60);
+        }
+    }
+    &__button-row {
+        display: flex;
+        justify-content: center;
+        margin-bottom: rem(100);
+        @media(max-width:720px){
+            margin-bottom: rem(60);
+        }
+    }
+    &__pagin-row {
+        margin-top: 0;
+    }
+
+    &__pagin {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: rem(40);
+        @media(max-width:720px){
+            gap: rem(25.5);
+        }
+    }
+
+    &__pagin-item {
+        font-weight: 700;
+        font-size: rem(20);
+        text-transform: lowercase;
+        color: #ccc;
+        transition: all 0.3s ease  0s;
+        cursor: pointer;
+        &:hover {
+            color: #000;
+        }
+
+        &.active {
+            color: #ff008a;
+        }
+
+        @media(max-width:720px){
+            font-size: rem(16);
+        }
+    }
+
+}
+
+
+
+
+.catalog {
+
+    &__filter {
+    }
+}
+
+.filter {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: rem(20);
+    margin-bottom: rem(40);
+
+    &__btn-all, &__btn-sort, &__btn-view {
+        display: flex;
+        align-items: center;
+        gap: rem(20);
+        font-weight: 700;
+        text-transform: lowercase;
+        cursor: pointer;
+        span, p {
+            font-weight: 700;
+            transition: all 0.3s ease  0s;
+        }
+        svg {
+            width: rem(16);
+            path, g rect {
+                transition: all 0.3s ease  0s;
+            }
+        }
+        &:hover {
+            color: var(--pink);
+            svg {
+                path {
+                    fill: var(--pink);
+                    stroke: var(--pink);
+                }
+            }
+        }
+    }
+
+    &__btns-right {
+        display: flex;
+        align-items: center;
+        gap: rem(80);
+    }
+
+    &__btn-sort {
+        svg {
+            width: rem(8);
+        }
+    }
+
+    &__btn-view {
+  
+    }
+}
+.btn-view {
+    p {
+        color: #000;
+    }
+    svg {
+        width: rem(16);
+        path, g rect {
+            transition: all 0.3s ease  0s;
+        }
+    }
+    
+
+    &__icon {
+        svg {
+            width: rem(16);
+            transition: all 0.3s ease  0s;
+            color: #999;
+        }
+
+        &:hover {
+            svg {
+                color: var(--pink);
+            }
+        }
+
+        &.active {
+            pointer-events: none;
+            svg {
+                color: #000;
+            }
+        }
+    }
+}
+.one {
+}
+.two {
+}
+
+
+
+

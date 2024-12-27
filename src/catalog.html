@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="ru">
+  @@include('html/head.html', {
+    'title': 'Каталог'
+  })
+  <body class="header-white">
+    <div class="wrapper">
+      @@include('html/header.html')
+
+      <main class="page">
+        <div data-observ></div>
+        @@include('html/catalog/catalog-top.html')
+        @@include('html/catalog/catalog.html')
+        @@include('html/catalog/looked.html')
+        @@include('html/quest.html')
+      </main>
+
+      @@include('html/footer.html')
+    </div>
+
+    @@include('html/popup-example.html')
+  </body>
+</html>
+
+<!-- 
+<div class="card right">
+  <div class="card__body">
+      <div class="card__img">
+          <img src="@img/card-img1.png" alt="">
+              <div class="card__mark prc active">10%</div>
+              <div class="card__mark top">top</div>
+              <div class="card__mark new">new</div>
+          <div class="card__pay">
+              <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <g clip-path="url(#clip0_109_17919)">
+                      <rect x="4" width="8" height="1.33333" fill="white" />
+                      <rect x="0.666667" y="4.66667" width="14.6667" height="10.6667" stroke="white" stroke-width="1.33333" />
+                  </g>
+                  <defs>
+                      <clipPath id="clip0_109_17919">
+                      <rect width="16" height="16" fill="white" />
+                      </clipPath>
+                  </defs>
+              </svg>
+          </div>
+      </div>
+      <div class="card__volum volum-card">
+          <label class="volum-card__item">
+              <input type="radio" value="5 ml" name="volume-1" class="volum-card__input">
+              <span>5 ml</span>
+          </label>
+          <label class="volum-card__item">
+              <input type="radio" value="30 ml" name="volume-1" class="volum-card__input">
+              <span>30 ml</span>
+          </label>
+          <label class="volum-card__item">
+              <input type="radio" value="30 ml из EU" name="volume-1" class="volum-card__input">
+              <span>30 ml из EU</span>
+          </label>
+          <label class="volum-card__item">
+              <input type="radio" value="50 ml" name="volume-1" class="volum-card__input">
+              <span>50 ml</span>
+          </label>
+          <label class="volum-card__item">
+              <input type="radio" value="90 ml" name="volume-1" class="volum-card__input">
+              <span>90 ml</span>
+          </label>
+          <label class="volum-card__item">
+              <input type="radio" value="90 ml из EU" name="volume-1" class="volum-card__input">
+              <span>90 ml из EU</span>
+          </label>
+          <label class="volum-card__item">
+              <input type="radio" value="200 ml" name="volume-1" class="volum-card__input">
+              <span>200 ml</span>
+          </label>
+          <label class="volum-card__item">
+              <input type="radio" value="тестер 90 ml" name="volume-1" class="volum-card__input">
+              <span>тестер 90 ml</span>
+          </label>
+          <label class="volum-card__item">
+              <input type="radio" value="тестер 90 ml из EU" name="volume-1" class="volum-card__input">
+              <span>тестер 90 ml из EU</span>
+          </label>
+      </div>
+      <div class="card__head">
+          <div class="card__estim">
+              <p class="card__estim-number">
+                  4.2
+              </p>
+              <div class="card__estim-star">
+                  <svg class="marked" width="16" height="15" viewBox="0 0 16 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M8 1.52286L9.40863 5.57531L9.52287 5.90395L9.87073 5.91104L14.1601 5.99845L10.7413 8.59042L10.4641 8.80062L10.5648 9.13364L11.8072 13.2401L8.28559 10.7896L8 10.5909L7.71441 10.7896L4.19283 13.2401L5.4352 9.13364L5.53595 8.80062L5.25869 8.59042L1.83987 5.99845L6.12927 5.91104L6.47713 5.90395L6.59137 5.57531L8 1.52286Z" stroke="#999999" fill="#00000000" />
+                  </svg>
+                  <svg class="marked" width="16" height="15" viewBox="0 0 16 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M8 1.52286L9.40863 5.57531L9.52287 5.90395L9.87073 5.91104L14.1601 5.99845L10.7413 8.59042L10.4641 8.80062L10.5648 9.13364L11.8072 13.2401L8.28559 10.7896L8 10.5909L7.71441 10.7896L4.19283 13.2401L5.4352 9.13364L5.53595 8.80062L5.25869 8.59042L1.83987 5.99845L6.12927 5.91104L6.47713 5.90395L6.59137 5.57531L8 1.52286Z" stroke="#999999" fill="#00000000" />
+                  </svg>
+                  <svg class="marked" width="16" height="15" viewBox="0 0 16 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M8 1.52286L9.40863 5.57531L9.52287 5.90395L9.87073 5.91104L14.1601 5.99845L10.7413 8.59042L10.4641 8.80062L10.5648 9.13364L11.8072 13.2401L8.28559 10.7896L8 10.5909L7.71441 10.7896L4.19283 13.2401L5.4352 9.13364L5.53595 8.80062L5.25869 8.59042L1.83987 5.99845L6.12927 5.91104L6.47713 5.90395L6.59137 5.57531L8 1.52286Z" stroke="#999999" fill="#00000000" />
+                  </svg>
+                  <svg class="marked" width="16" height="15" viewBox="0 0 16 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M8 1.52286L9.40863 5.57531L9.52287 5.90395L9.87073 5.91104L14.1601 5.99845L10.7413 8.59042L10.4641 8.80062L10.5648 9.13364L11.8072 13.2401L8.28559 10.7896L8 10.5909L7.71441 10.7896L4.19283 13.2401L5.4352 9.13364L5.53595 8.80062L5.25869 8.59042L1.83987 5.99845L6.12927 5.91104L6.47713 5.90395L6.59137 5.57531L8 1.52286Z" stroke="#999999" fill="#00000000" />
+                  </svg>
+                  <svg class="" width="16" height="15" viewBox="0 0 16 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M8 1.52286L9.40863 5.57531L9.52287 5.90395L9.87073 5.91104L14.1601 5.99845L10.7413 8.59042L10.4641 8.80062L10.5648 9.13364L11.8072 13.2401L8.28559 10.7896L8 10.5909L7.71441 10.7896L4.19283 13.2401L5.4352 9.13364L5.53595 8.80062L5.25869 8.59042L1.83987 5.99845L6.12927 5.91104L6.47713 5.90395L6.59137 5.57531L8 1.52286Z" stroke="#999999" fill="#00000000" />
+                  </svg>
+              </div>
+          </div>
+          <div class="card__availab">
+              в наличии
+          </div>
+      </div>
+      <h3 class="card__title">
+          <a href="#">RABANNE million gold</a>
+      </h3>
+      <div class="card__price-row">
+          <p class="card__discount">
+              7 900 руб
+          </p>
+          <p class="card__price">
+              от 11 279 руб
+          </p>
+      </div>
+      <div class="card__volum volum-card">
+          <label class="volum-card__item">
+              <input type="radio" name="" class="form__input">
+          </label>
+      </div>
+  </div>
+</div> 
+-->

@@ -36,10 +36,10 @@
                     <form action="#" class="popup-right__form">
                         <div class="popup-right__item-row">
                             <div class="popup-right__item-input item-input-text">
-                                <input type="text" placeholder="e-mail или телефон" name="e-mail" class="input-text">
+                                <input type="text" placeholder="e-mail или телефон" name="e-mail" class="input-text _req">
                             </div>
                             <div class="popup-right__item-input item-input-text">
-                                <input type="text" placeholder="пароль" name="e-mail" class="input-text password">
+                                <input type="text" placeholder="пароль" name="e-mail" class="input-text password _req">
                             </div>
                         </div>
                         <div class="popup-right__sub-block">
@@ -116,16 +116,16 @@
                     <form action="#" class="popup-right__form">
                         <div class="popup-right__item-row">
                             <div class="popup-right__item-input item-input-text">
-                                <input type="text" placeholder="Ваше имя" name="name" class="input-text">
+                                <input type="text" placeholder="Ваше имя" name="name" class="input-text _req">
                             </div>
                             <div class="popup-right__item-input item-input-text">
-                                <input type="text" placeholder="Ваш телефон" name="phone" class="input-text">
+                                <input type="text" placeholder="Ваш e-mail" name="e-mail" class="input-text _req _email">
                             </div>
                             <div class="popup-right__item-input item-input-text">
-                                <input type="text" placeholder="пароль" name="password" class="input-text password">
+                                <input type="text" placeholder="пароль" name="password" class="input-text password _req input-match" data-match-group="2">
                             </div>
                             <div class="popup-right__item-input item-input-text">
-                                <input type="text" placeholder="повтор пароля" name="password-two" class="input-text password">
+                                <input type="text" placeholder="повтор пароля" name="password-two" class="input-text password _req input-match" data-match-group="2">
                             </div>
                         </div>
                         <div class="popup-right__button-row">
@@ -141,6 +141,139 @@
                 <div class="popup-right__bottom">
                 </div>
             </div>
+        </div>
+    </div>
+</div>
+
+
+<div class="popup-basket">
+        <div class="popup-basket__content">
+            <div class="popup-basket__img">
+                <img src="@img/catalog/cat-top1.png" alt="">
+            </div>
+            <div class="popup-basket__body">
+                <div class="popup-basket__top">
+                    <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <g clip-path="url(#clip0_24_892)">
+                          <rect x="3" width="6" height="1" fill="#999999" />
+                          <rect x="0.5" y="3.5" width="11" height="8" stroke="#999999" />
+                        </g>
+                        <defs>
+                          <clipPath id="clip0_24_892">
+                            <rect width="12" height="12" fill="white" />
+                          </clipPath>
+                        </defs>
+                    </svg>
+                    <p>
+                        добавлен в корзину
+                    </p>
+                </div>
+                <div class="popup-basket__title">
+                    TUMI atlas 00:00 gmt
+                </div>
+                <div class="popup-basket__mill">
+                    10 ml
+                </div>
+            </div>
+        </div>
+</div>
+
+
+
+
+<div class="popup popup-filter popup-right" data-popup="popup-ent-reg" data-close-overlay>
+    <div class="popup-right__container" data-close-overlay>
+        <div class="popup-right__content">
+            <div class="popup-right__body popup-ent-reg-body active">
+                <div class="popup-right__head">
+                    <div class="popup-filter__head-left">
+                        <div class="popup-right__title">
+                            фильтр
+                        </div>
+                        <button type="reset" class="popup-filter__clear">сбросить</button>
+                    </div>
+                    
+                    <button class="popup-right__button-close button-close">
+                        <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <g clip-path="url(#clip0_26_7847)">
+                              <path d="M19 19L10 10M1 1L10 10M10 10L19 1M10 10L1 19" stroke="#999999" />
+                            </g>
+                            <defs>
+                              <clipPath id="clip0_26_7847">
+                                <rect width="20" height="20" fill="white" />
+                              </clipPath>
+                            </defs>
+                        </svg>
+                    </button>
+                </div>
+                <div class="popup-right__center">
+                    <div class="popup-filter__avail avail-filter">
+                        <div class="popup-filter__title-item">в наличии</div>
+                        <label class="avail-filter__item-input">
+                            <input type="checkbox" name="avail-filter" class="avail-filter__input">
+                            <div class="avail-filter__icon">
+                                <span class="square"></span>
+                            </div>
+                        </label>
+                    </div>
+                    <div class="avail-filter__range">
+                        <div class="range">
+                            <div class="range__row-input">
+                                <p>от</p>
+                                <div class="range__item-input">
+                                    <input type="text" value="0" class="range__min-input">
+                                    <p class="range__currency">
+                                        RUB
+                                    </p>
+                                </div>
+                                <p>до</p>
+                                <div class="range__item-input">
+                                    <input type="text" value="99999" class="range__max-input">
+                                    <p class="range__currency">
+                                        RUB
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="range__slider">
+                                <div class="slider-range"></div>
+                            </div>
+                            
+                        </div>
+                    </div>
+                    <div  class="popup-right__form">
+                        <div class="popup-right__item-row">
+                            <div class="popup-right__item-input item-input-text">
+                                <input type="text" placeholder="e-mail или телефон" name="e-mail" class="input-text _req">
+                            </div>
+                            <div class="popup-right__item-input item-input-text">
+                                <input type="text" placeholder="пароль" name="e-mail" class="input-text password _req">
+                            </div>
+                        </div>
+                        <div class="popup-right__sub-block">
+                            <label class="popup-right__item-checkbox popup-item-checkbox">
+                                <input type="checkbox"name="remember" class="popup-item-checkbox__input">
+                                <span class="popup-item-checkbox__square"></span>
+                                <span>запомнить меня</span>
+                            </label>
+                            <a href="#" class="popup-right__button-password">
+                                забыл пароль?
+                            </a>
+                        </div>
+                        <div class="popup-right__button-row">
+                            <button type="submit" class="popup-right__button button">
+                                Войти
+                            </button>
+                            <div class="popup-right__button-change popup-ent-reg-change">
+                                зарегистрироваться
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="popup-right__bottom">
+                   <button class="popup-filter__button-bot button">показать все товары</button>
+                </div>
+            </div>
+
         </div>
     </div>
 </div>

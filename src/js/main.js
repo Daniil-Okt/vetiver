@@ -8,11 +8,12 @@
  */
 // import MousePRLX from './libs/parallaxMouse'
 // import AOS from 'aos'
-import Swiper, { Navigation, Pagination, Autoplay } from 'swiper';
 
 import BaseHelpers from './helpers/base-helpers';
 import PopupManager from './modules/popup-manager';
 import BurgerMenu from './modules/burger-menu';
+import { checkFormUnlock, focusInput, inputMatch, validForm } from './modules/validFrom';
+import noUiSliderInit from './modules/noUiSliderInit.js';
 // import Tabs from './modules/tabs';
 // import Accordion from './modules/accordion';
 
@@ -82,8 +83,8 @@ new BurgerMenu().init();
 * data-da="class блока куда нужно перебросить, брекпоинт(ширина экрана), позиция в блоке(цифра либо first,last)"
 */
 /*Расскоментировать для использования*/
-// import { useDynamicAdapt } from './modules/dynamicAdapt.js'
-// useDynamicAdapt()
+import { useDynamicAdapt } from './modules/dynamicAdapt.js'
+useDynamicAdapt()
 
 /* Маска для инпута tel =================================================================================
 	* Добавить класс tel к нужному инпуту 
@@ -111,99 +112,7 @@ new BurgerMenu().init();
 
 /* Инициализация  swiper =================================================================================
 */
-const aboutSlider = new Swiper('.about__slider', {
-  speed: 1400,
-  spaceBetween: 0,
-  slidesPerView: 1,
-  modules: [Autoplay, Pagination],
-  loop: true,
-  initialSlide: 0,
-  autoplay: {
-    delay: 4500,
-    stopOnLastSlide: false,
-    disableOnIteration: false,
-  },
-
-  pagination: {
-    el: ".about__pagination",
-    clickable: true,
-  },
-});
-
-
-const categorySlider = new Swiper('.category__slider', {
-  speed: 1400,
-  spaceBetween: 40,
-  slidesPerView: 1.21,
-  modules: [Navigation, Pagination],
-  initialSlide: 0,
-
-  navigation: {
-    prevEl: ".category__button-prev",
-    nextEl: ".category__button-next"
-  },
-  pagination: {
-    el: ".category__pagination",
-    clickable: true,
-	type: "progressbar"
-  },
-  breakpoints: {
-	461: {
-		slidesPerView: 1.5,
-		spaceBetween: 40,
-		},
-	561: {
-		slidesPerView: 2,
-		spaceBetween: 40,
-		},
-	721: {
-		slidesPerView: 2.5,
-		spaceBetween: 40,
-		},
-    1001: {
-      slidesPerView: 3,
-      spaceBetween: 40,
-  	},
-    1291: {
-        slidesPerView: 3,
-        spaceBetween: 100,
-    }
-  },
-});
-
-// const swiper = new Swiper('.swiper', {
-//   speed: 800,
-//   spaceBetween: 16,
-//   slidesPerView: 1.4,
-//   modules: [Autoplay, Navigation, Pagination],
-//   loop: true,
-//   initialSlide: 1,
-//   autoplay: {
-//     delay: 2500,
-//     stopOnLastSlide: false,
-//     disableOnIteration: false,
-//   },
-//   navigation: {
-//     prevEl: ".reviews__button-slider-prev",
-//     nextEl: ".reviews__button-slider-next"
-//   },
-//   pagination: {
-//     el: ".card-slider__pagination",
-//     dynamicBullets: true,
-//     clickable: true,
-//   },
-//   breakpoints: {
-//     1400: {
-//       slidesPerView: 4,
-//       spaceBetween: 24,
-//   	},
-//     1650: {
-//         slidesPerView: 4,
-//         spaceBetween: 48,
-//     }
-//   },
-// });
-
+swiperInit()
 
 /* Валидация формы ======================================================================================
 * В константу записывает нужную форму
@@ -219,23 +128,38 @@ const categorySlider = new Swiper('.category__slider', {
 // const popupTranks = document.querySelector('.popup-thanks')
 // const formNAME = document.getElementById('form-NAME')
 // validForm(fromName, popupTranks)
+
+const formAll = document.querySelectorAll('form')
+
+if (formAll.length > 0) {
+	formAll.forEach(form => {
+		validForm(form)
+		checkFormUnlock(form)
+	});
+}
+
+//проверка совпадения
+inputMatch()
+// focusInput()
 // =======================================================================================================
 
 /* Добавление класса _active родителю при клике ==========================================================
 	* Вызвать функцию и передать в нее массив нужных элементов
 	* При клике на элемент, у всех элементов класс удаляется
 */
-// import { toggleActiveClassParent } from './modules/index.js'
-// const elementAll = document.querySelectorAll('.class');
-// toggleActiveClassParent(elementAll)
+import { toggleActiveClassParent } from './modules/index.js'
+import swiperInit from './modules/swiperInit.js';
+const footerItemTitle = document.querySelectorAll('.footer__item-title');
+toggleActiveClassParent(footerItemTitle)
 
 /* Динамический класса _active элементу при клике ========================================================
 	* Вызвать функцию и передать в нее массив нужных элементов
 	* При клике на элемент, у всех элементов класс удаляется
 */
-// import { toggleActiveClass } from './modules/index.js'
-// const elementAll = document.querySelectorAll('.class');
-// toggleActiveClass(elementAll)
+import { toggleActiveClass } from './modules/index.js'
+
+const questItem = document.querySelectorAll('.quest-item');
+toggleActiveClass(questItem)
 
 
 
@@ -356,70 +280,14 @@ document.addEventListener('DOMContentLoaded', () => {
 	});
   
 	document.addEventListener('click', closeSearchOnClickOutside);
-  });
-  
+});
 
 
 
-
-  function toggle(input, button) {
-	console.log('click');
-	isVisible = !isVisible;
-  
-  
-	if (isVisible) {
-	  button.innerHTML = hideSvg;
-	  input.value = input.dataset.realValue || '';
-	} else {
-	  button.innerHTML = showSvg;
-	  input.dataset.realValue = input.value;
-	  input.value = 'X'.repeat(input.value.length);
-	}
-  }
-  
-  
-  function formatInput(input) {
-	if (!isVisible) {
-	  if (!input.dataset.realValue) {
-		input.dataset.realValue = input.value;
-	  } else {
-		const diff = input.value.length - 'X'.repeat(input.dataset.realValue.length).length;
-		if (diff > 0) {
-		  input.dataset.realValue += input.value.slice(-diff);
-		} else {
-		  input.dataset.realValue = input.dataset.realValue.slice(0, diff);
-		}
-	  }
-	  input.value = 'X'.repeat(input.dataset.realValue.length);
-	}
-  
-  
-  }
-  function switchWrapper(current, target) {
-	current.style.display = 'none';
-	target.style.display = 'block';
-  }
-  function setupPasswordToggle(wrapper) {
-	const button = wrapper.querySelector(".button__show-password");
-	const input = wrapper.querySelector(".input__password");
-	if (button) {
-	  button.addEventListener("click", () => toggle(input, button));
-	}
-	if (input) {
-	  input.addEventListener('input', () => formatInput(input));
-	}
-  
-  
-  }
-
-
-
-
-
+//квадраты инпута пароля
   window.onload = function() {
 	init();
   }
-  
   function init() {
 	// Выбираем все инпуты с type="text"
 	var elements = document.querySelectorAll('input[type="text"]');
@@ -436,3 +304,68 @@ document.addEventListener('DOMContentLoaded', () => {
 	});
   }
   
+
+//наведение на карточку товара
+const cardsHover = document.querySelectorAll('.card-hover')
+if (cardsHover.length > 0) {
+	cardsHover.forEach(card => {
+		card.addEventListener('mouseover', () => {
+			const volumCard = card.querySelector('.volum-card');
+			if (volumCard) {
+				const volumHeight = volumCard.offsetHeight;
+				card.style.marginBottom = `-${volumHeight + 20}px`;
+			}
+		})
+	
+		card.addEventListener('mouseout', () => {
+			card.style.marginBottom = '';
+		});
+	});
+}
+
+//таймер окна добавления корзины
+const cardsPay = document.querySelectorAll('.card__pay')
+if (cardsPay.length > 0) {
+	cardsPay.forEach(button => {
+		let timeoutId;
+		button.addEventListener('click', () => {
+			const popupBasket = document.querySelector('.popup-basket');
+			
+			popupBasket.classList.add('is-open');
+			
+			if (timeoutId) {
+				clearTimeout(timeoutId);
+			}
+	
+			timeoutId = setTimeout(() => {
+				popupBasket.classList.remove('is-open');
+			}, 2000);
+		});
+	});
+}
+
+
+
+//Изменение сетки каталога
+const buttonsView = document.querySelectorAll('.btn-view__icon');
+const catalogRow = document.querySelector('.catalog__row');
+
+buttonsView.forEach(button => {
+	button.addEventListener('click', () => {
+		buttonsView.forEach(btn => btn.classList.remove('active'));
+
+		button.classList.add('active');
+
+		if (button.classList.contains('two')) {
+			catalogRow.classList.add('row-two');
+		} else {
+			catalogRow.classList.remove('row-two'); 
+		}
+	});
+});
+
+
+
+
+//ползунок цены
+noUiSliderInit()
