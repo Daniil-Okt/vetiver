@@ -1,18 +1,25 @@
 <section class="catalog">
     <div class="catalog__container">
         <div class="catalog__filter filter">
-            <div class="filter__btn-all">
+            <div class="filter__btn-all" data-type="popup-filter">
                 <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path d="M6.17931 14.6207L9.71035 12.4138V8.88278L15.8897 1.37933H0L6.17931 8.88278V14.6207Z" fill="black" />
                 </svg>
                 <span>фильтр</span>
             </div>
             <div class="filter__btns-right">
-                <div class="filter__btn-sort">
-                    <span>по популярности</span>
-                    <svg width="8" height="6" viewBox="0 0 8 6" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M4 6L0.535898 -1.75695e-07L7.4641 4.29987e-07L4 6Z" fill="black" />
-                    </svg>
+                <div class="sort__body select">
+                    <input class="select__input" type="hidden" name="">
+                    <!-- <div class="select__head-mob">по популярности</div> -->
+                    <div class="select__head">по популярности</div>
+                    <ul class="select__list" data-da=".catalog__head, 650, last">
+                        <li class="select__item">по популярности</li>
+                        <li class="select__item">С лучшей оценкой</li>
+                        <li class="select__item">По отзывам</li>
+                        <li class="select__item">Сначала дорогие</li>
+                        <li class="select__item">Сначала дешевые</li>
+                        <li class="select__item">Новинки</li>
+                    </ul>
                 </div>
                 <div class="filter__btn-view btn-view">
                     <p>вид каталога</p>

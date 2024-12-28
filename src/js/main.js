@@ -151,12 +151,20 @@ import { toggleActiveClassParent } from './modules/index.js'
 import swiperInit from './modules/swiperInit.js';
 const footerItemTitle = document.querySelectorAll('.footer__item-title');
 toggleActiveClassParent(footerItemTitle)
+const itemFilterTitle = document.querySelectorAll('.item-filter__title');
+toggleActiveClassParent(itemFilterTitle)
+
 
 /* Динамический класса _active элементу при клике ========================================================
 	* Вызвать функцию и передать в нее массив нужных элементов
 	* При клике на элемент, у всех элементов класс удаляется
 */
 import { toggleActiveClass } from './modules/index.js'
+import setupAutoResize from './modules/inputAutoResize.js';
+import cardsPayOpenTimer from './modules/cardsPayOpenTimer.js';
+import cardsHover from './modules/cardsHover.js';
+import searchHeader from './modules/searchHeader.js';
+import syncCheckboxes from './modules/syncCheckboxes.js';
 
 const questItem = document.querySelectorAll('.quest-item');
 toggleActiveClass(questItem)
@@ -225,7 +233,6 @@ function initializeMenu(menuSelector) {
 	}
 }
 
-
   initializeMenu('.menu-list-one')
   initializeMenu('.menu-list-two')
 
@@ -255,95 +262,14 @@ if (popupEntRegChange.length > 0) {
 }
 
 //открытие-закрытие  поиска
-document.addEventListener('DOMContentLoaded', () => {
-	const header = document.querySelector('header');
-	const buttonSearch = document.querySelector('.button-search');
-	const headerSearch = header.querySelector('.header-search'); // Предполагается, что такой элемент существует
-  
-	function toggleSearch() {
-	  header.classList.toggle('search-open');
-	}
-  
-	function closeSearchOnClickOutside(event) {
-	  const isClickInsideButton = buttonSearch.contains(event.target);
-	  const isClickInsideHeaderSearch = headerSearch.contains(event.target);
-  
-	  // Если клик не по кнопке и не по элементу headerSearch, то убираем класс
-	  if (header.classList.contains('search-open') && !isClickInsideButton && !isClickInsideHeaderSearch) {
-		header.classList.remove('search-open');
-	  }
-	}
-  
-	buttonSearch.addEventListener('click', (event) => {
-	  event.stopPropagation();
-	  toggleSearch();
-	});
-  
-	document.addEventListener('click', closeSearchOnClickOutside);
-});
+searchHeader()
 
-
-
-//квадраты инпута пароля
-  window.onload = function() {
-	init();
-  }
-  function init() {
-	// Выбираем все инпуты с type="text"
-	var elements = document.querySelectorAll('input[type="text"]');
-  
-	if (elements.length === 0) {
-	  return; // Завершаем выполнение функции, если таких элементов нет
-	}
-  
-	elements.forEach(function(element) {
-	  var style = window.getComputedStyle(element);
-	  if (!style.webkitTextSecurity && !style.textSecurity) {
-		element.setAttribute("type", "password");
-	  }
-	});
-  }
-  
 
 //наведение на карточку товара
-const cardsHover = document.querySelectorAll('.card-hover')
-if (cardsHover.length > 0) {
-	cardsHover.forEach(card => {
-		card.addEventListener('mouseover', () => {
-			const volumCard = card.querySelector('.volum-card');
-			if (volumCard) {
-				const volumHeight = volumCard.offsetHeight;
-				card.style.marginBottom = `-${volumHeight + 20}px`;
-			}
-		})
-	
-		card.addEventListener('mouseout', () => {
-			card.style.marginBottom = '';
-		});
-	});
-}
+cardsHover()
 
 //таймер окна добавления корзины
-const cardsPay = document.querySelectorAll('.card__pay')
-if (cardsPay.length > 0) {
-	cardsPay.forEach(button => {
-		let timeoutId;
-		button.addEventListener('click', () => {
-			const popupBasket = document.querySelector('.popup-basket');
-			
-			popupBasket.classList.add('is-open');
-			
-			if (timeoutId) {
-				clearTimeout(timeoutId);
-			}
-	
-			timeoutId = setTimeout(() => {
-				popupBasket.classList.remove('is-open');
-			}, 2000);
-		});
-	});
-}
-
+cardsPayOpenTimer()
 
 
 //Изменение сетки каталога
@@ -366,6 +292,209 @@ buttonsView.forEach(button => {
 
 
 
-
 //ползунок цены
 noUiSliderInit()
+
+
+// Функция для автоматического изменения ширины инпутов
+const inputsAutoresize = document.querySelectorAll('input.autoresize');
+setupAutoResize(inputsAutoresize);
+
+
+// Функция для синхронизации состояния чекбоксов по name
+syncCheckboxes()
+
+
+// Ищем все элементы с классом .item-filter
+document.querySelectorAll('.item-filter').forEach((filterBody) => {
+	// Внутри каждого .item-filter ищем все кнопки
+	const btnAllList = filterBody.querySelectorAll('.btn-all');
+	const btnNoAllList = filterBody.querySelectorAll('.btn-no-all');
+	const title = filterBody.querySelector('.item-filter__title');
+  
+	// Перебираем кнопки с классом .btn-all
+	btnAllList.forEach((btnAll) => {
+		btnAll.addEventListener('click', () => {
+			// Перед добавлением класса сбрасываем его у всех .item-filter
+			document.querySelectorAll('.item-filter').forEach((item) => {
+				item.classList.remove('open-all');
+			});
+			
+			// Добавляем класс open-all к текущему .item-filter
+			filterBody.classList.add('open-all');
+		});
+	});
+
+	// Перебираем кнопки с классом .btn-no-all
+	btnNoAllList.forEach((btnNoAll) => {
+		btnNoAll.addEventListener('click', () => {
+			// Убираем класс open-all у текущего .item-filter
+			filterBody.classList.remove('open-all');
+		});
+	});
+
+	// Логика для клика на заголовок .item-filter__title
+	if (title) {
+		title.addEventListener('click', () => {
+			// Убираем класс open-all у всех элементов .item-filter
+			document.querySelectorAll('.item-filter').forEach((item) => {
+				item.classList.remove('open-all');
+			});
+		});
+	}
+});
+
+
+document.addEventListener('DOMContentLoaded', () => {
+	const buttonBot = document.querySelector('.popup-filter__button-bot'); // Находим кнопку
+  
+	// Функция для проверки, выбраны ли хоть какие-то чекбоксы на странице
+	function updatePinkClass() {
+	  const anyChecked = document.querySelectorAll('.item-filter input[type="checkbox"]:checked').length > 0;
+	  if (anyChecked) {
+		buttonBot.classList.add('pink'); // Добавляем класс pink, если есть выбранные чекбоксы
+	  } else {
+		buttonBot.classList.remove('pink'); // Убираем класс pink, если ничего не выбрано
+	  }
+	}
+  
+	// Перебираем все блоки item-filter
+	document.querySelectorAll('.item-filter').forEach(itemFilter => {
+	  const checkboxes = itemFilter.querySelectorAll('input[type="checkbox"]');
+	  const quantityElement = itemFilter.querySelector('.item-filter__quantity');
+	  const clearButton = itemFilter.querySelector('.item-filter__clear');
+  
+	  // Функция для обновления счетчика и класса option-selected
+	  function updateSelectedOptions() {
+		// Получить уникальные выбранные значения
+		const selectedValues = new Set(
+		  Array.from(checkboxes)
+			.filter(checkbox => checkbox.checked)
+			.map(checkbox => checkbox.value)
+		);
+  
+		// Обновляем количество выбранных
+		const selectedCount = selectedValues.size;
+  
+		// Добавляем или удаляем класс option-selected
+		if (selectedCount > 0) {
+		  itemFilter.classList.add('option-selected');
+		} else {
+		  itemFilter.classList.remove('option-selected');
+		}
+  
+		// Обновляем текст в счетчике item-filter__quantity (в формате 01, 02, и т.д.)
+		quantityElement.textContent = selectedCount > 0 ? selectedCount.toString().padStart(2, '0') : '00';
+  
+		// Проверяем, надо ли добавить или убрать класс pink у кнопки
+		updatePinkClass();
+	  }
+  
+	  // Добавляем обработчик на изменение состояния чекбокса
+	  checkboxes.forEach(checkbox => {
+		checkbox.addEventListener('change', updateSelectedOptions);
+	  });
+  
+	  // Кнопка "Очистить" в рамках текущего блока
+	  clearButton.addEventListener('click', () => {
+		checkboxes.forEach(checkbox => {
+		  checkbox.checked = false; // Сброс всех чекбоксов
+		});
+  
+		itemFilter.classList.remove('option-selected'); // Убираем класс
+		quantityElement.textContent = '00'; // Сбрасываем счетчик
+  
+		// Проверяем, надо ли удалить класс pink у кнопки
+		updatePinkClass();
+	  });
+	});
+  
+	// Обработчик для кнопки ".popup-filter__clear-all"
+	const clearAllButton = document.querySelector('.popup-filter__clear-all');
+  
+	if (clearAllButton) {
+	  clearAllButton.addEventListener('click', () => {
+		// Очищаем ВСЕ блоки item-filter
+		document.querySelectorAll('.item-filter').forEach(itemFilter => {
+		  const checkboxes = itemFilter.querySelectorAll('input[type="checkbox"]');
+		  const quantityElement = itemFilter.querySelector('.item-filter__quantity');
+  
+		  // Сбрасываем чекбоксы
+		  checkboxes.forEach(checkbox => {
+			checkbox.checked = false;
+		  });
+  
+		  // Убираем класс option-selected
+		  itemFilter.classList.remove('option-selected');
+  
+		  // Сбрасываем счетчик
+		  quantityElement.textContent = '00';
+		});
+  
+		// Убираем класс pink у кнопки после очистки всех данных
+		updatePinkClass();
+	  });
+	}
+});
+
+
+
+
+
+//select
+document.addEventListener('DOMContentLoaded', function() {
+	const selectHeads = document.querySelectorAll('.select__head');
+	const selectItems = document.querySelectorAll('.select__item');
+	selectHeads.forEach(function(selectHead) {
+	  selectHead.addEventListener('click', function() {
+		if (selectHead.classList.contains('open')) {
+		  selectHead.classList.remove('open');
+		  selectHead.nextElementSibling.classList.remove('open');
+		} else {
+		  selectHeads.forEach(function(head) {
+			head.classList.remove('open');
+			head.nextElementSibling.classList.remove('open');
+		  });
+		  selectHead.classList.add('open');
+		  selectHead.nextElementSibling.classList.add('open');
+		}
+	  });
+	});
+
+	selectItems.forEach(function(selectItem) {
+	  selectItem.addEventListener('click', function() {
+		selectHeads.forEach(function(head) {
+		  if (head.classList.contains('open')) {
+			selectItems.forEach(item  => {
+			  if (item.classList.contains('open')) {
+				item.classList.remove('open')
+			  }
+			})
+			head.classList.remove('open');
+			head.nextElementSibling.classList.remove('open');
+			selectItem.classList.add('open');
+			selectItem.parentElement.classList.remove('open');
+			selectItem.parentElement.previousElementSibling.textContent = selectItem.textContent;
+			selectItem.parentElement.previousElementSibling.previousElementSibling.value = selectItem.textContent;
+		  }
+		  
+		});
+		
+	  });
+	});
+  
+	document.addEventListener('click', function(e) {
+	  if (!e.target.closest('.select')) {
+		selectHeads.forEach(function(head) {
+		  if (head.classList.contains('open')) {
+			head.classList.remove('open');
+			head.nextElementSibling.classList.remove('open');
+		  } else {
+			// head.classList.remove('open');
+			// head.nextElementSibling.classList.remove('open');
+		}
+		  
+		});
+	  }
+	});
+});

@@ -1,0 +1,23 @@
+function cardsPayOpenTimer() {
+    const cardsPay = document.querySelectorAll('.card__pay')
+    if (cardsPay.length > 0) {
+        cardsPay.forEach(button => {
+            let timeoutId;
+            button.addEventListener('click', () => {
+                const popupBasket = document.querySelector('.popup-basket');
+                
+                popupBasket.classList.add('is-open');
+                
+                if (timeoutId) {
+                    clearTimeout(timeoutId);
+                }
+        
+                timeoutId = setTimeout(() => {
+                    popupBasket.classList.remove('is-open');
+                }, 2000);
+            });
+        });
+    }
+}
+
+export default cardsPayOpenTimer;

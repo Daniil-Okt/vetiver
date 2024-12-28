@@ -839,3 +839,113 @@ form {
         }
     }
 }
+
+
+//выбор
+.select {
+    position: relative;
+    display: block;
+
+    &__head {
+        display: flex;
+        align-items: center;
+        gap: rem(20);
+        position: relative;
+        width: auto;
+        // max-width: 100%;
+        font-size: rem(16);
+        color: #000;
+        font-weight: 700;
+        text-transform: lowercase;
+        cursor: pointer;
+        padding-bottom: rem(5);
+        padding-top: rem(5);
+    }
+    
+    &__head::after {
+        position: relative;
+        width: rem(8);
+        height: rem(8);
+        background: #FFF url("@img/select-str.svg") no-repeat center / cover;
+        margin-top: rem(1);
+        content: '';
+        display: block;
+        transition: .2s ease-in;
+    }
+    
+    &__head.open::after {
+        transform: rotate(180deg);
+    }
+    
+    &__list {
+        // display: none;
+        position: absolute;
+        min-width: max-content;
+        width: auto;
+        top: 130%;
+        left: rem(1);
+        right: 0;
+        background: #fff;
+        box-shadow: 0 0 4px rgba(0, 0, 0, 0.2);
+        margin-top: 5px;
+        overflow-x: hidden;
+        overflow-y: auto;
+        z-index: 15;
+        margin: 0;
+        padding: 0;
+        font-size: rem(14);
+        color: #000;
+        scrollbar-color: dark;
+        scrollbar-width: thin;
+        overscroll-behavior: contain;
+        max-height: 0;
+        opacity: 0;
+        pointer-events: none;
+        transition: all 0.3s ease  0s;
+
+        &.open  {
+            max-height: 1000px;
+            opacity: 1;
+            pointer-events: all;
+        }
+        @media(max-width:650px){
+            // position: relative;
+            // width: 100%;
+            // box-shadow: 0 0 0px rgba(0, 0, 0, 0.2);
+            // border-radius: 8px;
+            // border: 1px solid #D0D5DD;
+            // pointer-events: none;
+        }
+    }
+    
+    &__list::-webkit-scrollbar {
+        width: 7px;
+        background-color: #F8F9FA;
+        padding: 5px;
+    }
+    
+    &__list::-webkit-scrollbar-thumb {
+        border-radius: 10px;
+        background-color: #D9D9D9;
+    }
+    
+    &__list &__item {
+        position: relative;
+        // border-top: 1px solid rgba(224, 229, 231, 0.5);
+        padding: rem(10);
+        text-transform: lowercase;
+        cursor: pointer;
+        list-style-type: none;
+        transition: all 0.3s ease  0s;
+        @media(max-width:650px){
+            padding: rem(10) rem(14);
+        }
+    }
+    &__list &__item.open {
+        background: #F9FAFB;
+    }
+    
+    &__list &__item:hover {
+        background-color: rgba(224, 229, 231, 0.5);
+    }
+}
