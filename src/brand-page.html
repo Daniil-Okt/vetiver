@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="ru">
+  @@include('html/head.html', {
+    'title': 'Бренд - STATE OF MIND'
+  })
+  <body class="">
+    <div class="wrapper">
+      @@include('html/header.html')
+
+      <main class="page">
+        <div data-observ></div>
+        @@include('html/brand-about.html')
+        
+        @@include('html/catalog/catalog.html', {
+          'className':'catalog-brand'
+        })
+        @@include('html/catalog/looked.html')
+        @@include('html/quest.html')
+      </main>
+
+      @@include('html/footer.html')
+    </div>
+
+    @@include('html/popup-example.html')
+  </body>
+</html>

@@ -41,6 +41,13 @@ input::placeholder, textarea::placeholder {
     padding: rem(19) rem(24) rem(21);
     cursor: pointer;
     transition: all 0.3s ease  0s;
+    white-space: nowrap;
+    --font-family: "CaviarDreams", sans-serif;
+    span {
+        white-space: nowrap;
+        font-weight: 700;
+    }
+
     &:hover {
         background-color: var(--pink);
     }
@@ -87,8 +94,14 @@ input::placeholder, textarea::placeholder {
 section {
     padding-top: rem(180);
     
+    &:last-child {
+        padding-bottom: rem(180);
+    }
     @media(max-width:720px){
         padding-top: rem(160);
+        &:last-child {
+            padding-bottom: rem(160);
+        }
     }
 }
 
@@ -169,12 +182,14 @@ h2 {
         color: #ff008a;
         @media(max-width:480px){
             margin-right: auto;
+            
         }
 
         &.black {
             color: #000;
         }
     }
+
     &__link {
         display: flex;
         align-items: center;
@@ -270,6 +285,15 @@ h2 {
 
         @media(max-width:480px){
             .title-head__link {
+                margin-left: auto;
+            }
+        }
+    }
+
+    &.right-mob {
+        @media(max-width:480px){
+            h2 {
+                margin-right: 0;
                 margin-left: auto;
             }
         }

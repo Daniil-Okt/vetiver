@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="ru">
+  @@include('html/head.html', {
+    'title': 'О нас'
+  })
+  <body class="header-white">
+    <div class="wrapper">
+      @@include('html/header.html')
+
+      <main class="page">
+        <div data-observ></div>
+        @@include('html/about/about-contacts.html')
+        @@include('html/about/about-we.html')
+        @@include('html/about/job.html')
+        @@include('html/about/how-place.html')
+        @@include('html/about/delivery.html')
+        @@include('html/about/about-social.html')
+        @@include('html/about/about-payment.html')
+        @@include('html/about/refund.html')
+        <section class="how-place bonus">
+            <div class="how-place__container">
+                <h2 class="how-place__title">
+                    бонусная
+                    программа
+                </h2>
+                <ul class="how-place__body">
+                    <li class="how-place__item">
+                        При покупке Товара на сумму, превышающую 100 рублей, Клиенту начисляются бонусы в размере 1% от стоимости товара. Сумма начисленных бонусов может быть дробной
+                    </li>
+                    <li class="how-place__item">
+                        При покупке в день рождения, а также в период за 3 дня до и 3 дня после*, бонусы начисляются в размере 10% от стоимости товара. Увеличение бонусов не будет производиться, если при выдаче бонусной карты клиент неправильно указал в анкете свой день рождения или не подтвердил свой номер телефона. *При покупке в интернет-магазине: от даты оформления заказа. При покупке в офлайн-супермаркетах: со дня покупки
+                    </li>
+                    <li class="how-place__item">
+                        Бонусы начисляются только на ту часть стоимости товара, которая оплачена денежными средствами (наличный и безналичный расчет) или подарочной картой
+                    </li>
+                </ul>
+            </div>
+        </section>
+        @@include('html/about/about-reviews.html')
+        @@include('html/about/requisites.html')
+        @@include('html/blog-promo.html')
+      </main>
+
+      @@include('html/footer.html')
+    </div>
+
+    @@include('html/popup-example.html')
+  </body>
+</html>

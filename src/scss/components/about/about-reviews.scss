@@ -1,0 +1,117 @@
+.about-reviews {
+
+    &__container {
+        display: flex;
+        flex-direction: row-reverse;
+        gap: rem(60);
+        justify-content: space-between;
+
+        h2 {
+            font-size: rem(80);
+           
+        }
+
+        @media(max-width:1240px){
+            flex-direction: column;
+            h2 {
+                margin-left: auto;
+            }
+        }
+        @media(max-width:720px){
+            h2 {
+                font-size: rem(40);
+                margin-left: 0;
+                margin-right: auto;
+            }
+        }
+    }
+
+    .reviews {
+        max-width: rem(820);
+        @media(max-width:1240px){
+            max-width: 100%;
+        }
+        
+    }
+}
+.prod-prm {
+
+    &__reviews {
+    }
+}
+.reviews {
+
+    &__top {
+    }
+
+    &__left {
+    }
+
+    &__left-item {
+    }
+
+    &__right {
+    }
+
+    &__row {
+    }
+
+    &__item {
+    }
+
+    &__button-row {
+    }
+
+    &__button {
+    }
+}
+.item-lf-rev {
+
+    &__number {
+    }
+
+    &__line {
+    }
+
+    &__prc {
+    }
+}
+.r-reviews {
+
+    &__top {
+    }
+
+    &__item {
+    }
+
+    &__number {
+    }
+
+    &__button {
+    }
+}
+.card {
+
+    &__estim-star {
+    }
+}
+.marked {
+}
+.button {
+}
+.item-reviews {
+
+    &__head {
+    }
+
+    &__left-head {
+    }
+
+    &__data {
+    }
+
+    &__body {
+    }
+}
+.pink {
+}

@@ -1,0 +1,105 @@
+.about-social {
+
+    &__container {
+    }
+
+	&__head {
+        display: flex;
+        justify-content: space-between;
+        gap: rem(16);
+        align-items: end;
+        margin-bottom: rem(40);
+        @media(max-width:480px){
+            flex-direction: column;
+            align-items: start;
+        }
+        h2 {
+            font-size: rem(80);
+            max-width: rem(540);
+            color: #000;
+            @media(max-width:920px){
+                font-size: rem(60);
+            }
+            @media(max-width:720px){
+                font-size: rem(40);
+            }
+        }
+	}
+    &__head-btn {
+        font-weight: 700;
+        font-size: rem(16);
+        line-height: 100%;
+        color: #ff008a;
+        transition: all 0.3s ease  0s;
+        padding-bottom: rem(4);
+        border-bottom: 1px solid #ff008a;
+        cursor: pointer;
+        margin-left: auto;
+        &:hover {
+            color: #000;
+            border-color: #000;
+        }
+    }
+
+    &__body {
+        position: relative;
+        z-index: 1;
+        padding: rem(62);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: rem(40);
+        background: var(--pink);
+        overflow: hidden;
+        &::before {
+            position: absolute;
+            content: '';
+            width: rem(630);
+            height: 100%;
+            background: url(@img/about-social/about-social-bg.png) no-repeat center center / cover;
+            top:0;
+            right: 0;
+            z-index: -1;
+            @media(max-width:1150px){
+                right: rem(-205);
+            }
+            @media(max-width:540px){
+                right: rem(-330);
+            }
+        }
+        @media(max-width:720px){
+            padding: rem(42) rem(38);
+        }
+    }
+
+    &__title {
+        font-weight: 700;
+        font-size: rem(16);
+        line-height: 100%;
+        text-transform: lowercase;
+        color: #fff;
+    }
+
+    &__row {
+        display: flex;
+        justify-content: center;
+        gap: rem(60);
+        @media(max-width:720px){
+            gap: rem(40);
+        }
+    }
+
+    &__item {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: rem(60);
+        height: rem(60);
+        background: #fff;
+        cursor: pointer;
+        transition: all 0.3s ease  0s;
+        &:hover {
+            background: #000;
+        }
+    }
+}

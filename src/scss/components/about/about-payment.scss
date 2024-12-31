@@ -1,0 +1,40 @@
+.about-payment {
+
+    &__container {
+        display: flex;
+        align-items: center;
+        gap: rem(60);
+        justify-content: space-between;
+        flex-wrap: wrap;
+        h2 {
+            font-size: rem(80);
+            @media(max-width:720px){
+                font-size: rem(40);
+                margin-left: auto;
+            }
+        }
+    }
+
+    &__row {
+        max-width: rem(819);
+        display: flex;
+        align-items: center;
+        gap: rem(100);
+        @media(max-width:960px){
+            gap: rem(60);
+            flex-wrap: wrap;
+        }
+        @media(max-width:450px){
+            align-items: start;
+            flex-direction: column;
+        }
+    }
+
+
+    .refund {
+
+        &__item-top {
+        }
+    }
+}
+

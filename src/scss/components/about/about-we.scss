@@ -1,0 +1,27 @@
+.about-we {
+
+    &__container {
+        display: flex;
+        gap: rem(40);
+        @media(max-width:860px){
+            flex-direction: column;
+        }
+        h2 {
+            font-size: rem(100);
+            white-space: nowrap;
+            @media(max-width:860px){
+                font-size: rem(70);
+            }
+            @media(max-width:680px){
+                font-size: rem(40);
+            }
+        }
+        p {
+            padding-top: rem(100);
+            line-height: 140%;
+            @media(max-width:860px){
+                padding-top: 0;
+            }
+        }
+    }
+}

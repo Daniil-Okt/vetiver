@@ -7,7 +7,9 @@
   // background: #1a1a1a;
   padding-top: rem(24);
   padding-bottom: rem(24);
-  
+
+ 
+
   * {
     color: #fff;
   }
@@ -58,6 +60,14 @@
       &::before,
       &::after {
         background-color: #000;
+      }
+    }
+    .chrumbs {
+      * {
+        color: #000;
+      }
+      .chrumbs__link:hover {
+        color: var(--pink);
       }
     }
   }
@@ -236,6 +246,12 @@
   @media(max-width:720px){
       margin-top: rem(16);
       gap: rem(4);
+  }
+  @media(max-width:480px){
+    span {
+      position: relative;
+      top: rem(-3);
+    }
   }
   a, span {
     line-height: 100%;
@@ -646,9 +662,12 @@
   
     @media(max-width:720px){
       bottom: rem(-70);
-      padding-top: rem(16);
+      padding-top: rem(24);
       padding-bottom: rem(24);
-  }
+    }
+    @media(max-width:480px){
+        padding-top: rem(16);
+    }
   }
  
   &__item-input {

@@ -1,7 +1,18 @@
 .catalog {
+    
     padding-top: rem(56);
     @media(max-width:720px){
         padding-top: rem(36);
+    }
+    
+    &.catalog-brand {
+        padding-top: rem(130);
+        @media(max-width:1160px){
+            padding-top: rem(80);
+        }
+        @media(max-width:720px){
+            padding-top: rem(60);
+        }
     }
     &__container {
     }

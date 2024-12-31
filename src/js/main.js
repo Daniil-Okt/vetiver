@@ -154,6 +154,11 @@ toggleActiveClassParent(footerItemTitle)
 const itemFilterTitle = document.querySelectorAll('.item-filter__title');
 toggleActiveClassParent(itemFilterTitle)
 
+//окно способов оплаты
+const productBtnMethods = document.querySelectorAll('.product__btn-methods');
+toggleActiveClassParent(productBtnMethods)
+
+
 
 /* Динамический класса _active элементу при клике ========================================================
 	* Вызвать функцию и передать в нее массив нужных элементов
@@ -165,10 +170,21 @@ import cardsPayOpenTimer from './modules/cardsPayOpenTimer.js';
 import cardsHover from './modules/cardsHover.js';
 import searchHeader from './modules/searchHeader.js';
 import syncCheckboxes from './modules/syncCheckboxes.js';
+import headerMarginBottom from './modules/headerMarginBottom.js';
+import dataLinkAuto from './modules/dataLinkAuto.js';
+import initToggleActive from './modules/initToggleClass.js';
+import setupAutoResizeTextareas from './modules/setupAutoResizeTextareas.js';
 
 const questItem = document.querySelectorAll('.quest-item');
 toggleActiveClass(questItem)
 
+
+
+//header bottom
+const about = document.querySelector('.about');
+headerMarginBottom(about)
+const brandAbout = document.querySelector('.brand-about');
+headerMarginBottom(brandAbout)
 
 
 
@@ -301,10 +317,11 @@ const inputsAutoresize = document.querySelectorAll('input.autoresize');
 setupAutoResize(inputsAutoresize);
 
 
-// Функция для синхронизации состояния чекбоксов по name
+// Функция для синхронизации состояния чекбоксов по value
 syncCheckboxes()
 
 
+//фильтр
 // Ищем все элементы с классом .item-filter
 document.querySelectorAll('.item-filter').forEach((filterBody) => {
 	// Внутри каждого .item-filter ищем все кнопки
@@ -343,7 +360,6 @@ document.querySelectorAll('.item-filter').forEach((filterBody) => {
 		});
 	}
 });
-
 
 document.addEventListener('DOMContentLoaded', () => {
 	const buttonBot = document.querySelector('.popup-filter__button-bot'); // Находим кнопку
@@ -439,8 +455,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
 
-
-
 //select
 document.addEventListener('DOMContentLoaded', function() {
 	const selectHeads = document.querySelectorAll('.select__head');
@@ -497,4 +511,118 @@ document.addEventListener('DOMContentLoaded', function() {
 		});
 	  }
 	});
+});
+
+
+
+// Навешиваем обработчик событий на все ссылки-якоря
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+	anchor.addEventListener('click', function (e) {
+	  e.preventDefault();
+  
+	  // Определяем ID элемента, к которому должен произойти скролл
+	  const targetId = this.getAttribute('href').substring(1);
+	  const targetElement = document.getElementById(targetId);
+  
+	  if (targetElement) {
+		// Получаем высоту шапки (меню)
+		const headerHeight = document.querySelector('header').offsetHeight; // Замените 'header' на реальный ID вашей шапки
+  
+		// Вычисляем положение верхней границы элемента
+		const elementPosition = targetElement.getBoundingClientRect().top + window.pageYOffset;
+		
+		// Вычитаем высоту шапки из позиции элемента
+		const offsetPosition = elementPosition - headerHeight - 30;
+  
+		// Исполняем плавный скролл
+		window.scrollTo({
+		  top: offsetPosition,
+		  behavior: 'smooth'
+		});
+	  }
+	});
+});
+
+
+
+
+//автоматизация ссылок товара
+dataLinkAuto()
+
+
+//окно наличия продукта
+initToggleActive('.avail-prod__button', '.avail-prod', '_active');
+
+
+
+
+
+//добавить класс оформить продукту
+const productButtonAdd = document.querySelectorAll('.product-button-add')
+if (productButtonAdd.length > 0) {
+	productButtonAdd.forEach(button => {
+		button.addEventListener('click', () => {
+			const product = document.querySelector('.product')
+			if (product) {
+				product.classList.add('_arrange')
+			}
+		})
+
+	});
+}
+//добавить класс купить в клик
+const productBuyClick = document.querySelector('.product__buy-click')
+if (productBuyClick) {
+	productBuyClick.addEventListener('click', () => {
+			const product = document.querySelector('.product')
+			if (product) {
+				product.classList.add('_buy-click-active')
+			}
+		})
+}
+
+
+
+//автовысота textarea
+document.addEventListener('DOMContentLoaded', () => {
+	const textareas = document.querySelectorAll('textarea.textarea-auto-height');
+	setupAutoResizeTextareas(textareas);
+});
+
+
+//выбор оценки отзыва
+document.addEventListener('DOMContentLoaded', function() {
+	const stars = document.querySelectorAll('.estim-feedback__star');
+	const input = document.querySelector('.estim-feedback__input');
+	const feedbackNumber = document.querySelector('.estim-feedback__number');
+
+	if (stars.length > 0 && input && feedbackNumber) {
+		stars.forEach((star, index) => {
+			star.addEventListener('click', () => {
+				const rating = index + 1;
+				feedbackNumber.textContent = rating;
+				input.value = rating;
+
+				stars.forEach((s, i) => {
+					if (i < rating) {
+						s.classList.add('marked');
+					} else {
+						s.classList.remove('marked');
+					}
+				});
+			});
+		});
+
+		const existingRating = parseInt(input.value, 10) || 0;
+		if (existingRating > 0) {
+			stars.forEach((s, i) => {
+				if (i < existingRating) {
+					s.classList.add('marked');
+				} else {
+					s.classList.remove('marked');
+				}
+			});
+			feedbackNumber.textContent = existingRating;
+		}
+	}
 });

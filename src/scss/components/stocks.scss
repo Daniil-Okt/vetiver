@@ -25,10 +25,13 @@
     }
 
     &__button {
+        position: relative;
+        z-index: 2;
         grid-column: 3;
         display: inline-flex;
         max-width: rem(189);
         min-width: rem(189);
+        
         @media(max-width:1150px){
             grid-column: 2;
         }

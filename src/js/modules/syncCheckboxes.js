@@ -1,6 +1,6 @@
 function syncCheckboxes() {
 	// Собираем все чекбоксы
-	const checkboxes = document.querySelectorAll('.item-filter__item-input input');
+	const checkboxes = document.querySelectorAll('.item-input-sync input');
 	
 	checkboxes.forEach((checkbox) => {
 	  // Добавляем обработчик события `change`
@@ -9,7 +9,7 @@ function syncCheckboxes() {
 		const checkboxName = checkbox.value;
 
 		// Находим все чекбоксы с тем же `value` и синхронизируем их состояние
-		document.querySelectorAll(`.item-filter__item-input input[value="${checkboxName}"]`).forEach((syncCheckbox) => {
+		document.querySelectorAll(`.item-input-sync input[value="${checkboxName}"]`).forEach((syncCheckbox) => {
 		  syncCheckbox.checked = checkbox.checked;
 		});
 	  });

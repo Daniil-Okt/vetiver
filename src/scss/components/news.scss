@@ -1,0 +1,134 @@
+.news-cat {
+    padding-top: rem(56);
+    @media(max-width:720px){
+        padding-top: rem(36);
+    }
+    &__container {
+    }
+
+    &__row-links {
+        display: flex;
+        align-items: center;
+        flex-wrap: wrap;
+        gap: rem(80);
+        margin-bottom: rem(40);
+        @media(max-width:720px){
+            justify-content: space-between;
+            gap: rem(20);
+        }
+        a {
+            font-weight: 700;
+            text-transform: lowercase;
+            cursor: pointer;
+            transition: all 0.3s ease  0s;
+            color: #000;
+            &:hover {
+                opacity: 0.8;
+            }
+
+            &.active {
+                color: #ff008a;
+            }
+        }
+    }
+
+    &__row {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        gap: rem(100);
+        margin-bottom: rem(100);
+
+        @media(max-width:1320px){
+            gap: rem(60);
+        }
+        @media(max-width:1120px){
+            grid-template-columns: 1fr 1fr;
+        }
+        @media(max-width:720px){
+            gap: rem(60) rem(20);
+            margin-bottom: rem(60);
+        }
+        @media(max-width:625px){
+            grid-template-columns: 1fr;
+        }
+    }
+
+    .crad-blog__title {
+        margin-top: rem(20);
+        margin-bottom: rem(20);
+        font-family: var(--font-family);
+        font-weight: 700;
+        font-size: rem(20);
+        line-height: 100%;
+        text-transform: uppercase;
+        color: #000;
+        // margin-bottom: rem();
+    }
+    .crad-blog__text {
+        font-size: rem(16);
+    }
+}
+
+
+.news-about {
+    padding-top: 0;
+    &__img {
+        margin-bottom: rem(60);
+        img {
+            width: 100%;
+        }
+    }
+
+    &__container {
+    }
+
+    &__head {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: rem(60);
+        gap: rem(20);
+        @media(max-width:680px){
+            flex-direction: column;
+        }
+    }
+
+    &__title {
+        font-weight: 500;
+        font-size: rem(60);
+        color: #000;
+        @media(max-width:1250px){
+            font-size: rem(48);
+        }
+        @media(max-width:890px){
+            font-size: rem(32);
+        }
+    }
+
+    &__text {
+        display: flex;
+        flex-direction: column;
+        gap: rem(32);
+        p {
+            font-size: rem(20);
+            line-height: 140%;
+        }
+
+        @media(max-width:720px){
+            gap: rem(20);
+            p {
+                font-size: rem(16);
+            }
+        }
+    }
+}
+.crad-blog {
+
+    &__bottom {
+    }
+
+    &__data {
+    }
+
+    &__mark {
+    }
+}

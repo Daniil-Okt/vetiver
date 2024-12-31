@@ -1,5 +1,5 @@
 function cardsPayOpenTimer() {
-    const cardsPay = document.querySelectorAll('.card__pay')
+    const cardsPay = document.querySelectorAll('.popup-basket-open')
     if (cardsPay.length > 0) {
         cardsPay.forEach(button => {
             let timeoutId;

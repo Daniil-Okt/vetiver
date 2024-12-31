@@ -1,0 +1,69 @@
+.brand-about {
+    background: #1f1f1f;
+    overflow: hidden;
+
+    margin-top: rem(-108);
+    @media(max-width:720px){
+        margin-top: rem(-132);
+    }
+    @media(max-width:480px){
+        margin-top: rem(-128);
+    }
+
+    &__container {
+        position: relative;
+        padding-top: rem(164);
+        padding-bottom: rem(24);
+        display: flex;
+        align-items: end;
+        justify-content: space-between;
+        gap: rem(40);
+        @media(max-width:520px){
+            padding-top: rem(176);
+        }
+    }
+
+    &__bg {
+        position: absolute;
+        left: 0;
+        width: auto;
+        height: 100%;
+        @media(max-width:720px){
+            left: rem(-360);
+        }
+    }
+
+    &__title {
+        position: relative;
+        z-index: 1;
+        font-weight: 500;
+        font-size: rem(40);
+        margin-left: rem(340);
+        margin-left: 26%;
+        @media(max-width:1120px){
+            margin-left: rem(20);
+        }
+        @media(max-width:720px){
+            margin-left: 0;
+            font-size: rem(32);
+        }
+        @media(max-width:520px){
+            font-size: rem(24);
+        }
+    }
+
+    &__img {
+        position: relative;
+        z-index: 1;
+        width: rem(100);
+        img {
+            width: 100%;
+        }
+        @media(max-width:720px){
+            width: rem(80);
+        }
+        @media(max-width:520px){
+            width: rem(60);
+        }
+    }
+}

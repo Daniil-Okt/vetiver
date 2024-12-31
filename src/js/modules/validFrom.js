@@ -174,15 +174,11 @@ function validForm(form) {
   syncInput()
 }
 
-
 function checkInputsMatch() {
-  // Получаем все инпуты, которые нужно проверять
   const inputs = document.querySelectorAll('.input-match');
-  
-  // Создаем объект для хранения групп инпутов
+
   const matchGroups = {};
-  
-  // Группируем инпуты по атрибуту data-match-group
+
   inputs.forEach(input => {
       const groupId = input.getAttribute('data-match-group');
       if (!matchGroups[groupId]) {
@@ -191,13 +187,11 @@ function checkInputsMatch() {
       matchGroups[groupId].push(input);
   });
   
-  // Перебираем группы и проверяем совпадение значений внутри каждой группы
   Object.keys(matchGroups).forEach(groupId => {
     const groupInputs = matchGroups[groupId];
     const firstValue = groupInputs[0].value;
     const allMatch = groupInputs.every(input => input.value === firstValue);
     
-    // Если значения не совпадают, добавляем класс _error к инпуту с классом confirm
     groupInputs.forEach(input => {
       if (input.classList.contains('confirm')) {
         // Проверяем, был ли фокус и не пустой ли инпут
@@ -236,31 +230,21 @@ function inputMatch(){
 
 
 function focusInput() {
-  // Находим все поля ввода текста и пароля на странице
   var textInputs = document.querySelectorAll('input[type="text"], input[type="password"]');
 
-  // Для каждого найденного поля
   textInputs.forEach(function(input) {
-      // Проверяем изначальное состояние каждого поля ввода
-      // и добавляем класс 'focus', если в поле есть текст
       if (input.value.trim() !== '') {
           input.parentNode.classList.add('focus');
       }
 
-      // Добавляем обработчик события фокусировки
       input.addEventListener('focus', function() {
-          // Добавляем класс 'focus' родителю поля ввода
           this.parentNode.classList.add('focus');
       });
 
-      // Добавляем обработчик события потери фокуса
       input.addEventListener('blur', function() {
-          // Проверяем, пустое ли поле ввода
           if (this.value.trim() === '') {
-              // Удаляем класс 'focus' у родителя поля ввода, если поле пустое
               this.parentNode.classList.remove('focus');
           }
-          // Если в поле есть символы, класс 'focus' остается
       });
   });
 }

@@ -1,0 +1,31 @@
+.search-result {
+    padding-top: rem(56);
+    @media(max-width:720px){
+        padding-top: rem(36);
+    }
+    &__container {
+        margin-bottom: rem(24);
+        h1 {
+            font-family: var(--font-family);
+            font-weight: 700;
+            font-size: 40px;
+            line-height: 100%;
+            color: #999;
+            
+            text-transform: none;
+            b {
+                font-weight: 900;
+                text-transform: uppercase;
+            }
+            span.pink {
+                color: #ff008a;
+            }
+
+            @media(max-width:920px){
+                font-size: rem(20);
+            }
+        }
+    }
+}
+.pink {
+}

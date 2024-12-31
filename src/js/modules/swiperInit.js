@@ -1,4 +1,4 @@
-import Swiper, { Navigation, Pagination, Autoplay } from 'swiper';
+import Swiper, { Navigation, Pagination, Autoplay, Thumbs } from 'swiper';
 
 
 function swiperInit() {
@@ -126,6 +126,42 @@ function swiperInit() {
         },
     });
     
+    // Инициализация второго слайдера - Thumbs
+    const productSliderThumbs = new Swiper('.product__slider-thumbs', {
+        speed: 1200,
+        spaceBetween: 16,
+        slidesPerView: 4,
+        initialSlide: 0,
+        direction: 'vertical',
+    });
+    
+    // Инициализация основного слайдера - Product Slider
+    const productSlider = new Swiper('.product__slider', {
+        speed: 1200,
+        spaceBetween: 0,
+        modules: [Thumbs, Navigation],
+        slidesPerView: 1,
+        initialSlide: 0,
+        // loop: true,
+        thumbs: {
+        swiper: productSliderThumbs // Связываем thumbs со вторым слайдером
+        },
+        navigation: {
+            prevEl: ".product__button-thumbs-prev",
+            nextEl: ".product__button-thumbs-next"
+        },
+        breakpoints: {
+            721: {
+                speed: 0,
+                slidesPerView: 1,
+                spaceBetween: 0,
+            },
+        }
+    });
+    
+
+
+
     // const swiper = new Swiper('.swiper', {
       //   speed: 800,
       //   spaceBetween: 16,
@@ -158,6 +194,7 @@ function swiperInit() {
       //     }
       //   },
       // });
+    
     
 }
 

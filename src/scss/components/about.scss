@@ -2,13 +2,13 @@
     position: relative;
     // height: 3000px;
     background: #1a1a1a;
-    margin-top: rem(-68);
     padding-top: 0;
-  
+    
+    margin-top: rem(-68);
     @media(max-width:720px){
         margin-top: rem(-100);
     }
-
+    
     &__slider {
         max-width: 100%;
 
@@ -165,11 +165,14 @@
             bottom: rem(800) !important;
         }
         @media(max-width:920px){
-            left: rem(20) !important;
+            left: rem(16) !important;
         }
         @media(max-width:720px){
             bottom: auto !important;
-            top: rem(120);
+            top: rem(140);
+        }
+        @media(max-width:480px){
+            top: rem(130);
         }
     }
 }
