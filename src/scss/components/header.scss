@@ -476,6 +476,12 @@
         }
       }
     }
+    &:hover {
+
+      span {
+        color: #000;
+      }
+    }
 
     &.active + .menu__sub-menu {
       opacity: 1;
