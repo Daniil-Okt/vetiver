@@ -1,0 +1,198 @@
+.thanks {
+    padding-top: rem(56);
+    @media(max-width:720px){
+        padding-top: rem(36);
+    }
+
+    &__container {
+    }
+
+    &__content {
+        display: flex;
+        align-items: center;
+        @media(max-width:1240px){
+            flex-direction: column-reverse;
+        }
+    }
+
+    &__row {
+        display: flex;
+        flex-direction: column;
+        gap: rem(60);
+        margin-right: auto;
+        max-width: rem(450);
+        @media(max-width:1240px){
+            margin-left: auto;
+            margin-top: rem(100);
+        }
+    }
+    &__right {
+        display: flex;
+        align-items: center;
+        @media(max-width:1240px){
+            width: 100%;
+        }
+        @media(max-width:850px){
+            max-width: rem(600);
+        }
+    }
+    &__item {
+    }
+
+    &__img {
+        position: relative;
+        pointer-events: none;
+        width: rem(320);
+        margin-left: rem(20);
+        pointer-events: none;
+
+        img {
+            position: relative;
+            z-index: 1;
+            width: rem(520);
+            margin-left: rem(-100);
+            margin-right: rem(-100);
+            margin-top: rem(-100);
+            margin-bottom: rem(-100);
+        }
+
+        &::before {
+            position: absolute;
+            content: '';
+            width: rem(140);
+            height: rem(340);
+            background: var(--pink);
+            top:50%;
+            transform: translateY(-50%);
+            right: rem(-20);
+            @media(max-width:850px){
+                width: rem(112);
+                height: rem(260);
+                right: rem(-2);
+            }
+        }
+
+        @media(max-width:1240px){
+            margin-left: 0;
+        }
+        @media(max-width:850px){
+            width: rem(200);
+
+            img {
+                width: rem(326);
+                margin-left: rem(-63);
+                margin-right: rem(-63);
+                margin-top: rem(-61.5);
+                margin-bottom: rem(-61.5);
+            }
+            margin-left: rem(-60);
+        }
+
+    }
+
+    &__body {
+        position: relative;
+        z-index: 2;
+        display: flex;
+        flex-direction: column;
+        gap: rem(50);
+        align-items: end;
+        margin-left: rem(-12);
+        @media(max-width:1240px){
+            width: 100%;
+        }
+        @media(max-width:850px){
+            margin-left: rem(-10);
+            gap: rem(112);
+            // margin-right: rem(-25);
+            .footer__social {
+                gap: rem(40);
+            }
+        }
+    }
+
+    &__btn-link {
+        display: flex;
+        font-weight: 700;
+        font-size: rem(20);
+        line-height: 100%;
+        text-transform: lowercase;
+        color: #999;
+        gap: rem(20);
+        white-space: nowrap;
+        span {
+            padding-bottom: rem(2);
+            transition: all 0.3s ease  0s;
+        }
+        svg {
+            width: rem(41);
+            height: auto;
+            path {
+                transition: all 0.3s ease  0s;
+            }
+        }
+        &:hover {
+            color: var(--pink);
+            svg {
+                path {
+                    fill: var(--pink);
+                }
+            }
+        }
+        @media(max-width:850px){
+            font-size: rem(16);
+            svg {
+                width: rem(36);
+            }
+        }
+    }
+
+    &__title {
+        font-family: var(--second-family);
+        font-weight: 500;
+        font-size: rem(100);
+        text-transform: lowercase;
+        color: #1f1f1f;
+        margin-right: auto;
+        @media(max-width:850px){
+            font-size: rem(40);
+        }
+      
+    }
+}
+.item-thanks {
+    display: flex;
+    align-items: start;
+    justify-content: end;
+    gap: rem(60);
+    &__title {
+        font-family: var(--second-family);
+        font-weight: 500;
+        font-size: rem(20);
+        text-transform: lowercase;
+        color: #000;
+        min-width: rem(120);
+        @media(max-width:600px){
+            min-width: rem(110);
+        }
+    }
+    p {
+        text-align: right;
+        color: #000;
+        &.big {
+            font-weight: 700;
+            font-size: rem(20);
+        }
+        &.pink {
+            font-weight: 700;
+            color: #ff008a;
+            text-transform: lowercase;
+        }
+    }
+}
+
+.footer {
+
+    &__social {
+    }
+}

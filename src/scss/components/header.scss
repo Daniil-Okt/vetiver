@@ -599,6 +599,7 @@
     }
   }
   &__img {
+    pointer-events: none;
     max-width: rem(260);
     height: rem(260);
     overflow: hidden;

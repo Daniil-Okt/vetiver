@@ -1,15 +1,6 @@
-/**
- * @class Tabs
- * @description Represents a tabs component.
- * @param {string} selector - The CSS selector for the tab's container.
- * @param {object} options - The options for configuring the tabs.
- */
 class Tabs {
-  /**
-   * Direction of the tabs.
-   * @type {number | string | null}
-   */
   direction = null;
+
   errors = {
     selectorNotExist: 'Селектор data-tabs не существует',
     duplicateTabs: 'Количество элементов с одинаковым data-tabs больше одного',
@@ -45,10 +36,6 @@ class Tabs {
     this.#events();
   }
 
-  /**
-   * Perform any necessary checks or validations.
-   * @private
-   */
   #check() {
     if (this.isTabsUnique()) {
       console.error(this.errors.duplicateTabs);
@@ -64,40 +51,43 @@ class Tabs {
     return tabs.length > 1;
   }
 
-  /**
-   * Initialize the tabs.
-   * @private
-   */
   #init() {
     const { tabsName, defaultTab } = this.options;
 
     this.tabsNav.setAttribute('role', 'tablist');
 
     this.triggers.forEach((trigger, i) => {
+      const isActive = trigger.classList.contains('active');
       trigger.setAttribute('role', 'tab');
       trigger.setAttribute('aria-controls', `${tabsName}_${i + 1}`);
       trigger.setAttribute('tabindex', '-1');
       trigger.setAttribute('id', `${tabsName}_${i + 1}`);
-      trigger.classList.remove('active');
+      if (!isActive) {
+        trigger.classList.remove('active');
+      }
     });
 
     this.panels.forEach((panel, i) => {
+      const isActive = panel.classList.contains('active');
       panel.setAttribute('role', 'tabpanel');
       panel.setAttribute('tabindex', '-1');
       panel.setAttribute('aria-labelledby', this.triggers[i].id);
-      panel.classList.remove('active');
+      if (!isActive) {
+        panel.classList.remove('active');
+      }
     });
 
-    this.triggers[defaultTab].classList.add('active');
-    this.triggers[defaultTab].removeAttribute('tabindex');
-    this.triggers[defaultTab].setAttribute('aria-selected', 'true');
-    this.panels[defaultTab].classList.add('active');
+    // Если активный элемент уже задан, приоритет у него
+    const initialActiveTab = [...this.triggers].findIndex((trigger) => trigger.classList.contains('active'));
+    const activeTabIndex = initialActiveTab !== -1 ? initialActiveTab : defaultTab;
+
+    // Устанавливаем активное состояние на основе `activeTabIndex`
+    this.triggers[activeTabIndex]?.classList.add('active');
+    this.triggers[activeTabIndex]?.removeAttribute('tabindex');
+    this.triggers[activeTabIndex]?.setAttribute('aria-selected', 'true');
+    this.panels[activeTabIndex]?.classList.add('active');
   }
 
-  /**
-   * Bind event listeners to the tab triggers.
-   * @private
-   */
   #events() {
     this.options.onLoaded(this);
 
@@ -148,11 +138,6 @@ class Tabs {
     });
   }
 
-  /**
-   * Switch tabs to the specified next tab.
-   * @param {HTMLElement} nextTab - The next tab element.
-   * @param {HTMLElement} currentTab - The current tab element.
-   */
   switchTabs(nextTab, currentTab) {
     const nextIndex = this.getIndex(this.triggers, nextTab);
     const currentIndex = this.getIndex(this.triggers, currentTab);
@@ -161,8 +146,8 @@ class Tabs {
     nextTab?.removeAttribute('tabindex');
     nextTab?.setAttribute('aria-selected', 'true');
 
-    currentTab.removeAttribute('aria-selected');
-    currentTab.setAttribute('tabindex', '-1');
+    currentTab?.removeAttribute('aria-selected');
+    currentTab?.setAttribute('tabindex', '-1');
 
     this.removeClass(this.panels[currentIndex]);
     this.addClass(this.panels[nextIndex]);
@@ -181,28 +166,14 @@ class Tabs {
     });
   }
 
-  /**
-   * Get the index of an element within an array-like object.
-   * @param {NodeListOf<Element>} array - The array-like object to search.
-   * @param {HTMLElement} element - The element to find the index of.
-   * @returns {number} The index of the element.
-   */
   getIndex(array, element) {
     return Array.prototype.indexOf.call(array, element);
   }
 
-  /**
-   * Add a CSS class to an element.
-   * @param {HTMLElement} element - The element to add the class to.
-   */
   addClass(element) {
     element?.classList.add('active');
   }
 
-  /**
-   * Remove a CSS class from an element.
-   * @param {HTMLElement} element - The element to remove the class from.
-   */
   removeClass(element) {
     element?.classList.remove('active');
   }

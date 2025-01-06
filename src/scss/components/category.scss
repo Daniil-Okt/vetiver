@@ -19,6 +19,7 @@
     }
 
     &__img {
+        pointer-events: none;
         max-height: rem(460);
         @include adaptiveClamp(height, 460, 80);
         overflow: hidden;

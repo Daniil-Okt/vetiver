@@ -14,16 +14,18 @@ import PopupManager from './modules/popup-manager';
 import BurgerMenu from './modules/burger-menu';
 import { checkFormUnlock, focusInput, inputMatch, validForm } from './modules/validFrom';
 import noUiSliderInit from './modules/noUiSliderInit.js';
-// import Tabs from './modules/tabs';
+import Tabs from './modules/tabs';
 // import Accordion from './modules/accordion';
 
 BaseHelpers.checkWebpSupport();
 /* Добавление класса touch для HTML если браузер мобильный */
 // BaseHelpers.addTouchClass();
 /* Добавление loaded для HTML после полной загрузки страницы */
-BaseHelpers.addLoadedClass();
+// BaseHelpers.addLoadedClass();
 /* Фиксированный header */
 BaseHelpers.headerFixed(10);
+
+
 
 
 /** ===================================================================================
@@ -41,6 +43,10 @@ new PopupManager();
  *  Модуль для работы с меню (Бургер)
  * */
 new BurgerMenu().init();
+
+
+//кнопка вверх 
+buttonUp()
 
 /** ===================================================================================
  *  Библиотека для анимаций
@@ -61,11 +67,12 @@ new BurgerMenu().init();
 	* Для обертки body табов добавить класс "tabs__content"
 	* Для body таба добавить класс "tabs__panel"
 */
-// new Tabs('название', {
-// 	onChange: (data) => {
-// 		console.log(data);
-// 	},
-// });
+new Tabs('tabs-office', {
+	onChange: (data) => {
+		console.log(data);
+	},
+});
+
 /* АККАРДЕОН ===========================================================================================
  	* Класс wrapper блока аккардеона добавить в инициализацию аккардиона
 	* Каждый элемент аккардеона обернуть в блок с классом "accordion__item"
@@ -140,7 +147,7 @@ if (formAll.length > 0) {
 
 //проверка совпадения
 inputMatch()
-// focusInput()
+focusInput()
 // =======================================================================================================
 
 /* Добавление класса _active родителю при клике ==========================================================
@@ -160,6 +167,7 @@ toggleActiveClassParent(productBtnMethods)
 
 
 
+
 /* Динамический класса _active элементу при клике ========================================================
 	* Вызвать функцию и передать в нее массив нужных элементов
 	* При клике на элемент, у всех элементов класс удаляется
@@ -174,6 +182,12 @@ import headerMarginBottom from './modules/headerMarginBottom.js';
 import dataLinkAuto from './modules/dataLinkAuto.js';
 import initToggleActive from './modules/initToggleClass.js';
 import setupAutoResizeTextareas from './modules/setupAutoResizeTextareas.js';
+import cardBasketBtnActive from './modules/cardBasketBtnActive.js';
+import quantityNumber from './modules/quantityNumber.js';
+import estimFeedback from './modules/estimFeedback.js';
+import buyClick from './modules/buyClick.js';
+import buttonUp from './modules/buttonUp.js';
+import deliveryAddressChange from './modules/deliveryAddressChange.js';
 
 const questItem = document.querySelectorAll('.quest-item');
 toggleActiveClass(questItem)
@@ -570,16 +584,10 @@ if (productButtonAdd.length > 0) {
 
 	});
 }
+
 //добавить класс купить в клик
-const productBuyClick = document.querySelector('.product__buy-click')
-if (productBuyClick) {
-	productBuyClick.addEventListener('click', () => {
-			const product = document.querySelector('.product')
-			if (product) {
-				product.classList.add('_buy-click-active')
-			}
-		})
-}
+buyClick('.product')
+buyClick('.basket')
 
 
 
@@ -591,38 +599,76 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
 //выбор оценки отзыва
-document.addEventListener('DOMContentLoaded', function() {
-	const stars = document.querySelectorAll('.estim-feedback__star');
-	const input = document.querySelector('.estim-feedback__input');
-	const feedbackNumber = document.querySelector('.estim-feedback__number');
+estimFeedback()
 
-	if (stars.length > 0 && input && feedbackNumber) {
-		stars.forEach((star, index) => {
-			star.addEventListener('click', () => {
-				const rating = index + 1;
-				feedbackNumber.textContent = rating;
-				input.value = rating;
 
-				stars.forEach((s, i) => {
-					if (i < rating) {
-						s.classList.add('marked');
-					} else {
-						s.classList.remove('marked');
-					}
-				});
+//добавление в number
+quantityNumber()
+
+
+//актиность кнопок карточки в корзине в моб версии
+cardBasketBtnActive()
+
+
+//показать/скрыть адрес доставки
+deliveryAddressChange()
+
+
+
+//item мои заказы
+function toggleOrderItemActive() {
+	const buttons = document.querySelectorAll('.head-orders__btn-detailed');
+	if (!buttons.length) return;
+
+	buttons.forEach(button => {
+		button.addEventListener('click', function () {
+			const parentItem = this.closest('.office-orders__item');
+			if (parentItem) {
+				parentItem.classList.toggle('_active');
+			}
+		});
+	});
+}
+
+toggleOrderItemActive();
+
+//промотка страницы кабинета вверх
+const officeRightMenuButton = document.querySelectorAll('.office-right__menu-button');
+const makingLeft = document.querySelector('.making__left'); 
+
+if (officeRightMenuButton.length > 0 && makingLeft) {
+	officeRightMenuButton.forEach(button => {
+		button.addEventListener('click', () => {
+			const elementPosition = makingLeft.getBoundingClientRect().top + window.pageYOffset;
+
+			window.scrollTo({
+				top: elementPosition - 160, 
+				behavior: 'smooth' 
 			});
 		});
+	});
+}
 
-		const existingRating = parseInt(input.value, 10) || 0;
-		if (existingRating > 0) {
-			stars.forEach((s, i) => {
-				if (i < existingRating) {
-					s.classList.add('marked');
-				} else {
-					s.classList.remove('marked');
-				}
-			});
-			feedbackNumber.textContent = existingRating;
-		}
-	}
-});
+//при клик на ссылку истории заказов
+const linkOrder = document.querySelector('.office-right__link-order');
+const menuButtonOrders = document.querySelector('.office-right__menu-button-orders');
+
+if (linkOrder && menuButtonOrders) {
+    linkOrder.addEventListener('click', (event) => {
+        event.preventDefault();
+        menuButtonOrders.click();
+    });
+}
+
+
+
+//сохранить в избранное
+const cardBtnLike = document.querySelectorAll('.card__btn-like')
+if (cardBtnLike.length > 0) {
+	cardBtnLike.forEach(button => {
+		button.addEventListener('click', () => {
+			button.classList.toggle('active')
+		})
+	});
+}
+

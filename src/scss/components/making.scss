@@ -1,0 +1,394 @@
+.making {
+    padding-top: rem(56);
+    @media(max-width:720px){
+        padding-top: rem(36);
+    }
+    &__container {
+    }
+
+    &__row {
+        overflow: clip;
+        display: flex;
+        justify-content: space-between;
+        align-items: start;
+        gap: rem(60);
+        @media(max-width:1220px){
+            gap: rem(100);
+            flex-direction: column;
+        }
+    }
+
+    &__left {
+        max-width: rem(750);
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        gap: rem(100);
+    }
+
+    &__head {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: rem(20);
+        h1 {
+            max-width: rem(420);
+            font-size: rem(60);
+            @media(max-width:730px){
+                font-size: rem(40);
+            }
+        }
+
+        @media(max-width:730px){
+            flex-direction: column;
+            align-items: start;
+        }
+    }
+
+    &__button-basket {
+        display: flex;
+        align-items: center;
+        gap: rem(20);
+        font-weight: 700;
+        font-size: rem(20);
+        text-transform: lowercase;
+        color: #999;
+        transition: all 0.3s ease  0s;
+        cursor: pointer;
+        margin-left: auto;
+        span {
+            padding-bottom: rem(2);
+        }
+        svg {
+            path {
+               transition: all 0.3s ease  0s;
+            }
+        }
+          &:hover {
+            color: #000;
+            svg {
+              path {
+                fill: #000;
+              }
+            }
+          }
+          @media(max-width:730px){
+              font-size: rem(16);
+              svg {
+                width: rem(38);
+                height: auto;
+              }
+          }
+
+    }
+
+    &__item {
+        display: flex;
+        justify-content: space-between;
+        gap: rem(40);
+        @media(max-width:730px){
+            flex-direction: column-reverse;
+            gap: rem(60);
+        }
+    }
+
+    &__item-body {
+        max-width: rem(520);
+        width: 100%;
+    }
+
+    &__item-title {
+        max-width: rem(130);
+        font-size: rem(20);
+        text-transform: lowercase;
+        font-family: var(--second-family);
+        width: 100%;
+    }
+
+    &__right {
+        
+    }
+
+    .basket__row-card {
+        margin-top: 0;
+    }
+    
+    .card__btn-delete {
+        width: rem(16) !important;
+        height: rem(16);
+        background: none;
+        margin-left: auto;
+        padding: 0;
+        svg {
+            display: block;
+            width: rem(16) !important;
+            height: auto;
+            path {
+                transition: all 0.3s ease  0s;
+            }
+        }
+        &:hover {
+            background: none;
+            svg {
+                path {
+                    stroke: #000;
+                }
+            }
+        }
+    }
+
+    &__row-radio {
+        display: grid;
+        gap: rem(20);
+        &.four {
+            // display: flex;
+            gap: rem(16);
+            grid-template-columns: 1fr 1fr 1fr 1fr;
+            @media(max-width:560px){
+                grid-template-columns: 1fr 1fr;
+            }
+        }
+        &.three {
+            grid-template-columns: 1fr 1fr 1fr;
+            @media(max-width:520px){
+                grid-template-columns: 1fr;
+                .making__big-radio-body {
+                    height: rem(80);
+                    span {
+                        margin-right: rem(126);
+                    }
+                }
+            }
+        }
+    }
+
+    &__big-radio {
+        input {
+            display: none;
+            &:checked + .making__big-radio-body {
+                background: #000;
+                span {
+                    color: #fff;
+                }
+                .making__big-radio-button {
+                    color: #ff008a;
+                }
+            }
+        }
+    }
+
+    &__big-radio-body {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        gap: rem(8);
+        aspect-ratio: 1 / 1;
+        padding: rem(10);
+        border: 1px solid #ccc;
+        cursor: pointer;
+        transition: all 0.15s ease  0s;
+        span {
+            transition: all 0.15s ease  0s;
+            &.bold {
+                font-weight: 700;
+            }
+            &.gray {
+                color: #ccc;
+            }
+        }
+        span.m-t {
+            margin-top: auto;
+        }
+
+        @media(max-width:560px){
+            height: rem(120);
+            aspect-ratio: auto;
+        }
+    }
+    &__big-radio-button {
+        width: max-content;
+        margin-top: auto;
+        color: #ff008a;
+        font-weight: 700;
+        border-bottom: 1px solid #ff008a;
+        padding-bottom: rem(8);
+        transition: all 0.3s ease  0s;
+        &:hover {
+            opacity: 0.7;
+        }
+        @media(max-width:520px){
+            position: absolute;
+            bottom: rem(12);
+            right: rem(12);
+            margin-right: 0 !important;
+        }
+    }   
+
+
+    &__row-radio-time {
+        display: flex;
+        flex-direction: column;
+        gap: rem(40);
+
+        .making__row-radio {
+            gap: rem(20);
+        }
+    }
+
+
+    &__radio {
+    }
+
+    &__radio-body {
+        display: block;
+        padding: rem(7) rem(9);
+        border: 1px solid #ccc;
+        font-weight: 700;
+        font-size: rem(11);
+        color: #999;
+        text-align: center;
+        transition: all 0.15s ease  0s;
+        cursor: pointer;
+    }
+
+    &__item-time {
+        display: flex;
+        justify-content: space-between;
+        align-items: end;
+        gap: rem(20);
+        input {
+            display: none;
+            &:checked + .making__radio-body {
+                background: #000;
+                border-color: #000;
+                color: #fff;
+            }
+        }
+        .making__row-radio {
+            grid-template-columns: 1fr 1fr 1fr;
+            max-width: rem(335);
+            width: 100%;
+        }
+        @media(max-width:520px){
+            flex-direction: column;
+            align-items: start;
+        }
+    }
+
+    &__item-time-title {
+
+    }
+
+    &__item-body {
+        display: flex;
+        flex-direction: column;
+        gap: rem(40);
+    }
+
+    &__item-input-row {
+        display: flex;
+        gap: rem(40);
+
+        .item-input-text {
+            width: 100%;
+            input {
+                text-transform: none;
+                &::placeholder {
+                    text-transform: lowercase;
+                }
+            }
+        }
+        @media(max-width:480px){
+
+            &.two {
+                flex-direction: column;
+            }
+        }
+    }
+
+    input {
+        text-transform: none;
+        &::placeholder {
+            text-transform: lowercase;
+        }
+    }
+
+    .delivery-address-item,.item-input-city {
+        display: none;
+        &.active {
+            display: flex;
+        }
+    }
+    .basket__button-arrange.two {
+        @media(max-width:1220px){
+            display: none;
+        }
+    }
+}
+
+
+
+
+
+
+.making-right {
+    position: sticky;
+    top: rem(140);
+    max-width: rem(320);
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: rem(20);
+    @media(max-width:1220px){
+        max-width: rem(750);
+    }
+    &__title {
+        font-family: var(--second-family);
+        font-weight: 400;
+        font-size: rem(24);
+        line-height: 100%;
+        text-transform: lowercase;
+        text-align: right;
+        color: #000;
+        @media(max-width:1220px){
+            margin-bottom: rem(20);
+        }
+    }
+
+    .basket {
+
+        &__promocode {
+            margin-top: 0;
+        }
+    
+        &__result {
+            &.text-min {
+                p {
+                    font-size: rem(12);
+                    display: flex;
+                    gap: rem(4);
+                    .black {
+                        color: #000;
+                    }
+                }
+                p.basket__price-result {
+                    font-size: rem(16);
+                    color: #999;
+                }
+            }
+        }
+    
+        &__price-result {
+            color: #000;
+            font-size: rem(20);
+        }
+    }
+    .item-input-text {
+    
+        input {
+            text-transform: uppercase;
+        }
+    }
+}
+
+

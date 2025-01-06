@@ -53,7 +53,7 @@
     }
 
     &__img {
-        
+        pointer-events: none;
         max-width: rem(800);
         margin-left: rem(-80);
         margin-right: rem(-80);

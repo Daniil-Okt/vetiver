@@ -37,6 +37,7 @@
         margin-right: -100%;
 
         &::before {
+            pointer-events: none;
             position: absolute;
             content: '';
             width: 100vw;
@@ -46,6 +47,7 @@
             right: 0;
         }
         &::after {
+            pointer-events: none;
             position: absolute;
             content: '';
             width: rem(1362);
@@ -104,6 +106,7 @@
         margin-left: rem(-175);
         margin-top: rem(-190);
         margin-right: rem(-35);
+        pointer-events: none;
         img {
             width: 100%;
         }
@@ -161,37 +164,4 @@
         }
     }
 }
-.stocks {
 
-    &__head {
-    }
-}
-.title-head {
-
-    &__link {
-    }
-}
-
-.card {
-
-    &__body {
-    }
-
-    &__img {
-    }
-
-    &__mark {
-    }
-
-    &__info {
-    }
-
-    &__title {
-    }
-
-    &__price-row {
-    }
-
-    &__price {
-    }
-}

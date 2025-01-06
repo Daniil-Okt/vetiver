@@ -1,0 +1,108 @@
+.bottom-menu {
+    width: 100%;
+    padding-top: rem(20);
+    padding-bottom: rem(20);
+    background: #fff;
+    position: sticky;
+    bottom: -100%;
+    z-index: 10;
+
+    pointer-events: none;
+    box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.05);
+    transition: all 0.8s ease-in-out  0s;
+    @media(max-width:720px){
+        padding-top: rem(12);
+        padding-bottom: rem(12);
+    }
+    .header-is-sticky & {
+        pointer-events: all;
+        bottom: 0;
+    }
+    &__container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: rem(20);
+    }
+
+    &__row-item {
+        display: flex;
+        align-items: center;
+        gap: rem(40);
+    }
+
+    &__item {
+        display: flex;
+        align-items: center;
+        font-weight: 700;
+        font-size: rem(16);
+        line-height: 100%;
+        color: #999;
+        gap: rem(16);
+        cursor: pointer;
+        span {
+            transition: all 0.3s ease  0s;
+            // padding-bottom: rem(2);
+            &.p-b {
+                padding-bottom: rem(2);
+            }
+        }
+        svg {
+            path {
+                transition: all 0.3s ease  0s;
+            }
+            width: rem(16);
+            height: auto;
+        }
+
+        &:hover {
+            color: #000;
+            svg.fill {
+                path {
+                    fill: #000;
+                }
+            }
+            svg.stroke {
+                path {
+                    stroke: #000;
+                }
+            }
+        }
+        @media(max-width:720px){
+            span {
+                display: none;
+            }
+        }
+    }
+
+    &__button-up {
+        display: flex;
+        align-items: center;
+        font-weight: 700;
+        font-size: rem(16);
+        line-height: 100%;
+        color: #000;
+        gap: rem(20);
+    
+        cursor: pointer;
+        span {
+            transition: all 0.3s ease  0s;
+        }
+        svg {
+            path {
+               transition: all 0.3s ease  0s;
+            }
+            width: rem(8);
+            height: auto;
+        }
+
+        &:hover {
+            color: var(--pink);
+            svg {
+              path {
+                fill: var(--pink);
+              }
+            }
+          }
+    }
+}

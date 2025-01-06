@@ -73,6 +73,7 @@
 .news-about {
     padding-top: 0;
     &__img {
+        pointer-events: none;
         margin-bottom: rem(60);
         img {
             width: 100%;

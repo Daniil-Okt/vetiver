@@ -20,20 +20,6 @@
 	font-style: normal;
 }
 @font-face {
-	font-family: CaviarDreams;
-	font-display: swap;
-	src: url("../fonts/CaviarDreams.woff2") format("woff2");
-	font-weight: 400;
-	font-style: normal;
-}
-@font-face {
-	font-family: Caviar_Dreams_Bold;
-	font-display: swap;
-	src: url("../fonts/Caviar_Dreams_Bold.woff2") format("woff2");
-	font-weight: 400;
-	font-style: normal;
-}
-@font-face {
 	font-family: Inter;
 	font-display: swap;
 	src: url("../fonts/Inter-Bold.woff2") format("woff2");
@@ -59,5 +45,12 @@
 	font-display: swap;
 	src: url("../fonts/SFProText-Regular.woff2") format("woff2");
 	font-weight: 400;
+	font-style: normal;
+}
+@font-face {
+	font-family: caviar;
+	font-display: swap;
+	src: url("../fonts/caviar-dreams.woff2") format("woff2");
+	font-weight: undefined;
 	font-style: normal;
 }

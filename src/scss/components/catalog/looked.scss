@@ -110,7 +110,7 @@
         // margin-right: rem(-220);
         margin-left: rem(-70);
         margin-right: rem(-90);
-        
+        pointer-events: none;
         max-width: rem(420);
         img {
             max-width: rem(951);
@@ -162,61 +162,5 @@
             margin-top: rem(-16);
             max-width: rem(355);
         }
-    }
-}
-.card {
-
-    &__body {
-    }
-
-    &__img {
-    }
-
-    &__mark {
-    }
-
-    &__pay {
-    }
-
-    &__btns-img {
-    }
-
-    &__btn-img {
-    }
-
-    &__btn-like {
-    }
-
-    &__btn-compare {
-    }
-
-    &__info {
-    }
-
-    &__head {
-    }
-
-    &__estim {
-    }
-
-    &__estim-number {
-    }
-
-    &__estim-star {
-    }
-
-    &__availab {
-    }
-
-    &__title {
-    }
-
-    &__price-row {
-    }
-
-    &__discount {
-    }
-
-    &__price {
     }
 }

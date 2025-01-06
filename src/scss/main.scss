@@ -46,7 +46,7 @@
 */
 @import 'components/popup';
 // @import 'components/checkbox';
-// @import 'components/tabs';
+@import 'components/tabs';
 // @import 'components/accordion';
 /**
 * Подключение стилей отдельных блоков и секций
@@ -61,6 +61,7 @@
 @import 'components/blog-promo';
 @import 'components/quest';
 
+@import 'components/bottom-menu';
 @import 'components/footer';
 
 
@@ -89,6 +90,15 @@
 @import 'components/about/about-payment';
 @import 'components/about/about-social';
 @import 'components/about/delivery';
+
+
+@import 'components/making';
+
+@import 'components/thanks';
+
+@import 'components/office';
+
+
 
 
 

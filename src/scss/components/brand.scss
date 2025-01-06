@@ -11,12 +11,19 @@
         padding-top: rem(16);
         // position: sticky;
         // top: rem(108);
+        
         background: #fff;
+
+
     }
     &__fiter {
         overflow-x: auto;
         overflow-y: hidden;
         
+        
+    }
+
+    &__fiter-body {
         & {
             overflow: auto; 
             scrollbar-width: none; 
@@ -27,14 +34,13 @@
         }
     }
 
-    &__fiter-body {
+    &__fiter-body-row {
         display: flex;
         justify-content: space-between;
         gap: rem(40);
         padding-bottom: rem(20);
         min-width: max-content;
     }
-
     &__fiter-left {
     }
 
