@@ -15,7 +15,7 @@
     }
     &__slide {
         position: relative;
-
+        height: auto;
         @media(max-width:1260px){
             padding-top: rem(30);
         }
@@ -42,10 +42,12 @@
         }
     }
     &__container {
+        
         position: relative;
         z-index: 1;
         display: flex;
         gap: rem(32);
+        height: 100%;
         @media(max-width:1024px){
             flex-direction: column-reverse;
             gap: 0;
@@ -55,10 +57,12 @@
     &__img {
         pointer-events: none;
         max-width: rem(800);
-        margin-left: rem(-80);
-        margin-right: rem(-80);
+        width: 100%;
+        margin-left: rem(-60);
+        margin-right: rem(-70);
         img {
             width: 100%;
+            
         }
 
         @media(max-width:1260px){

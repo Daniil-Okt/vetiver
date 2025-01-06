@@ -1,7 +1,9 @@
 .thanks {
     padding-top: rem(56);
+    padding-bottom: rem(180);
     @media(max-width:720px){
         padding-top: rem(36);
+        padding-bottom: rem(160);
     }
 
     &__container {

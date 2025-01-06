@@ -1,0 +1,10 @@
+@use 'sass:math';
+/**
+* Подключение sass function и mixins и extends стилей
+*/
+@import 'config/functions';
+@import 'config/mixins';
+
+@import 'components/catalog/catalog-top';
+@import 'components/catalog/catalog';
+@import 'components/catalog/looked';

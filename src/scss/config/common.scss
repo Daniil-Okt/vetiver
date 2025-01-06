@@ -95,13 +95,13 @@ input::placeholder, textarea::placeholder {
 section {
     padding-top: rem(180);
     
-    &:last-child {
-        padding-bottom: rem(180);
+    &:last-of-type {
+        padding-bottom: rem(180) !important;
     }
     @media(max-width:720px){
         padding-top: rem(160);
-        &:last-child {
-            padding-bottom: rem(160);
+        &:last-of-type {
+            padding-bottom: rem(160) !important;
         }
     }
 }

@@ -1,6 +1,9 @@
 .brand {
     padding-top: 0;
-
+    padding-bottom: rem(180);
+    @media(max-width:720px){
+        padding-bottom: rem(160);
+    }
     &__container {
       
     }

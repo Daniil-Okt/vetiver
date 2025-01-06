@@ -924,6 +924,11 @@
     background: #fff;
     z-index: 2;
   }
+  .popup-right__container {
+    @media(max-width:650px){
+        padding: 0;
+    }
+  }
   &__row-card {
   }
 

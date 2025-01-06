@@ -1,0 +1,22 @@
+@use 'sass:math';
+/**
+* Подключение sass function и mixins и extends стилей
+*/
+@import 'config/functions';
+@import 'config/mixins';
+
+
+//стили блоков других страниц
+@import 'components/product/prod-prm';
+
+//
+@import 'components/about/about-contacts';
+@import 'components/about/about-we';
+@import 'components/about/job';
+@import 'components/about/how-place';
+@import 'components/about/about-reviews';
+@import 'components/about/requisites';
+@import 'components/about/refund';
+@import 'components/about/about-payment';
+@import 'components/about/about-social';
+@import 'components/about/delivery';

@@ -1,4 +1,11 @@
 @use 'sass:math';
+/**
+* Подключение sass function и mixins и extends стилей
+*/
+@import 'config/functions';
+@import 'config/mixins';
+// @import 'config/placeholders';
+
 
 /**
 * Подключение шрифтов локально из папки "./src/fonts"
@@ -8,12 +15,7 @@
 /** Подключение переменных */
 @import 'config/vars';
 
-/**
-* Подключение sass function и mixins и extends стилей
-*/
-@import 'config/functions';
-@import 'config/mixins';
-@import 'config/placeholders';
+
 
 /** Обнуление */
 @import 'config/reset';
@@ -22,7 +24,6 @@
 * Библиотеки
 * раскомментировать для использования
 */
-// @import 'libs/aos';
 @import 'libs/swiper';
 @import 'libs/nouislider';
 
@@ -45,13 +46,14 @@
 * Функциональные блоки используемые во всё проекте
 */
 @import 'components/popup';
-// @import 'components/checkbox';
 @import 'components/tabs';
-// @import 'components/accordion';
+
+
 /**
 * Подключение стилей отдельных блоков и секций
 */
 @import 'components/header';
+
 @import 'components/about';
 @import 'components/category';
 @import 'components/stocks';
@@ -60,43 +62,17 @@
 @import 'components/hits';
 @import 'components/blog-promo';
 @import 'components/quest';
-
 @import 'components/bottom-menu';
+
 @import 'components/footer';
 
 
-//catalog
-@import 'components/catalog/catalog-top';
-@import 'components/catalog/catalog';
-@import 'components/catalog/looked';
-
-@import 'components/product/product';
-@import 'components/product/prod-prm';
-
-@import 'components/brand';
-@import 'components/brand-about';
-
-@import 'components/news';
-
-@import 'components/search-result';
-
-@import 'components/about/about-contacts';
-@import 'components/about/about-we';
-@import 'components/about/job';
-@import 'components/about/how-place';
-@import 'components/about/about-reviews';
-@import 'components/about/requisites';
-@import 'components/about/refund';
-@import 'components/about/about-payment';
-@import 'components/about/about-social';
-@import 'components/about/delivery';
 
 
-@import 'components/making';
 
-@import 'components/thanks';
 
-@import 'components/office';
+
+
 
 
 
