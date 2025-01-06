@@ -1,16 +1,15 @@
 <!doctype html>
 <html lang="ru">
   <head>
-  <style>html { opacity: 0; }</style>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <title>Новости</title>
 
   <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
-  <link rel="stylesheet" href="css/main.min.css?_v=20241231125403">
+  <link rel="stylesheet" href="css/main.min.css?_v=20250106231917">
 
-  <script defer="defer" src="js/main.min.js?_v=20241231125403"></script>
+  <script defer="defer" src="js/main.min.js?_v=20250106231917"></script>
 </head>
 
   <body class="header-white">
@@ -81,7 +80,7 @@
             <path d="M10.0006 20C9.77292 19.9997 9.55448 19.8976 9.39354 19.7159L1.63868 10.9491C0.589265 9.74222 0.00146484 8.11976 0.00146484 6.42998C0.00146484 4.74018 0.589265 3.11772 1.63868 1.91096C2.70201 0.712519 4.14413 0.0392633 5.64785 0.0392633C7.15155 0.0392633 8.59365 0.712519 9.657 1.91096L10.0006 2.24666L10.3214 1.88514C10.8471 1.28605 11.4734 0.810841 12.1636 0.487214C12.8539 0.163575 13.5945 -0.00201503 14.342 6.37221e-05C15.0888 -0.00370643 15.8288 0.159856 16.5191 0.481249C17.2092 0.802655 17.8359 1.27546 18.3626 1.87223C19.412 3.07899 19.9998 4.70144 19.9998 6.39125C19.9998 8.08103 19.412 9.70348 18.3626 10.9103L10.6077 19.6772C10.531 19.7742 10.4376 19.8527 10.3333 19.9082C10.229 19.9636 10.1159 19.9948 10.0006 20ZM5.6593 1.92387C5.13906 1.9196 4.62322 2.03151 4.14153 2.2531C3.65986 2.47472 3.22189 2.80164 2.85289 3.21502C2.10932 4.05705 1.69189 5.19674 1.69189 6.38479C1.69189 7.57283 2.10932 8.71253 2.85289 9.55461L10.0006 17.663L17.137 9.58044C17.5065 9.1643 17.7997 8.67018 17.9997 8.12621C18.1997 7.58238 18.3027 6.99939 18.3027 6.41062C18.3027 5.82184 18.1997 5.23885 17.9997 4.69495C17.7997 4.15107 17.5065 3.65694 17.137 3.24085C16.7709 2.82668 16.335 2.49913 15.8551 2.2774C15.3751 2.05569 14.8607 1.94427 14.342 1.9497C13.8217 1.94542 13.3059 2.05733 12.8242 2.27893C12.3426 2.50054 11.9045 2.82746 11.5356 3.24085L10.6077 4.28668C10.4438 4.46195 10.2265 4.55966 10.0006 4.55966C9.77475 4.55966 9.55746 4.46195 9.39354 4.28668L8.4657 3.24085C8.09858 2.8228 7.66148 2.49111 7.17971 2.26503C6.69795 2.03895 6.18114 1.92298 5.6593 1.92387Z" fill="currentColor"/>
           </svg>
         </a>
-        <a href="#" class="header__button-icon">
+        <div class="header__button-icon" data-type="basket">
           <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg" class="icon">
             <g clip-path="url(#clip0_1_75)">
               <rect x="4.99976" width="10" height="1.66667" fill="currentColor"/>
@@ -93,7 +92,7 @@
               </clipPath>
             </defs>
           </svg>
-        </a>
+        </div>
       </div>
     </div>
 
@@ -608,12 +607,403 @@
               <span>все категории</span>
             </a>
           </li>
+          <li class="menu__item menu-item-brand">
+            <div class="menu__link menu__sub-link menu-list-one__link">
+              <span>по алфавиту</span>
+            </div>
+            <div class="menu__sub-menu menu-list-two menu-brand">
+              <div class="menu-brand__row-item">
+                <div class="menu__item menu-brand__item">
+                  <div class="menu__link menu-list-two__link menu__sub-link">
+                    0...9
+                  </div>
+                  <ul class="menu__sub-menu menu-list-three">
+                    <li class="menu__item menu-list-three__item">
+                      <a href="#" class="menu__link menu-list-three__link">
+                        <span>A few moments</span>
+                      </a>
+                    </li>
+                    <li class="menu__item menu-list-three__item">
+                      <a href="#" class="menu__link menu-list-three__link">
+                        <span>A SECRET KNOWLEDGE</span>
+                      </a>
+                    </li>
+                    <li class="menu__item menu-list-three__item">
+                      <a href="#" class="menu__link menu-list-three__link">
+                        <span>A_more</span>
+                      </a>
+                    </li>
+                    <li class="menu__item menu-list-three__item">
+                      <a href="#" class="menu__link menu-list-three__link">
+                        <span>A-dam</span>
+                      </a>
+                    </li>
+                    <li class="menu__item menu-list-three__item">
+                      <a href="#" class="menu__link menu-list-three__link">
+                        <span>A-derma</span>
+                      </a>
+                    </li>
+                    <li class="menu__item menu-list-three__item">
+                      <a href="#" class="menu__link menu-list-three__link">
+                        <span>A.Bono</span>
+                      </a>
+                    </li>
+                    <li class="menu__item menu-list-three__item">
+                      <a href="#" class="menu__link menu-list-three__link">
+                        <span>Aasha Herbals</span>
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <div class="menu-brand__row-item">
+                <div class="menu__item menu-brand__item">
+                  <div class="menu__link menu-list-two__link menu__sub-link">
+                    A
+                  </div>
+                  <ul class="menu__sub-menu menu-list-three">
+                    <li class="menu__item menu-list-three__item">
+                      <a href="#" class="menu__link menu-list-three__link">
+                        <span>A few moments</span>
+                      </a>
+                    </li>
+                    <li class="menu__item menu-list-three__item">
+                      <a href="#" class="menu__link menu-list-three__link">
+                        <span>A SECRET KNOWLEDGE</span>
+                      </a>
+                    </li>
+                    <li class="menu__item menu-list-three__item">
+                      <a href="#" class="menu__link menu-list-three__link">
+                        <span>A_more</span>
+                      </a>
+                    </li>
+                    <li class="menu__item menu-list-three__item">
+                      <a href="#" class="menu__link menu-list-three__link">
+                        <span>A-dam</span>
+                      </a>
+                    </li>
+                    <li class="menu__item menu-list-three__item">
+                      <a href="#" class="menu__link menu-list-three__link">
+                        <span>A-derma</span>
+                      </a>
+                    </li>
+                    <li class="menu__item menu-list-three__item">
+                      <a href="#" class="menu__link menu-list-three__link">
+                        <span>A.Bono</span>
+                      </a>
+                    </li>
+                    <li class="menu__item menu-list-three__item">
+                      <a href="#" class="menu__link menu-list-three__link">
+                        <span>Aasha Herbals</span>
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+                <div class="menu__item menu-brand__item">
+                  <div class="menu__link menu-list-two__link menu__sub-link">
+                    B
+                  </div>
+                  <ul class="menu__sub-menu menu-list-three">
+                    <li class="menu__item menu-list-three__item">
+                      <a href="#" class="menu__link menu-list-three__link">
+                        <span>A few moments</span>
+                      </a>
+                    </li>
+                    <li class="menu__item menu-list-three__item">
+                      <a href="#" class="menu__link menu-list-three__link">
+                        <span>A SECRET KNOWLEDGE</span>
+                      </a>
+                    </li>
+                    <li class="menu__item menu-list-three__item">
+                      <a href="#" class="menu__link menu-list-three__link">
+                        <span>A_more</span>
+                      </a>
+                    </li>
+                    <li class="menu__item menu-list-three__item">
+                      <a href="#" class="menu__link menu-list-three__link">
+                        <span>A-dam</span>
+                      </a>
+                    </li>
+                    <li class="menu__item menu-list-three__item">
+                      <a href="#" class="menu__link menu-list-three__link">
+                        <span>A-derma</span>
+                      </a>
+                    </li>
+                    <li class="menu__item menu-list-three__item">
+                      <a href="#" class="menu__link menu-list-three__link">
+                        <span>A.Bono</span>
+                      </a>
+                    </li>
+                    <li class="menu__item menu-list-three__item">
+                      <a href="#" class="menu__link menu-list-three__link">
+                        <span>Aasha Herbals</span>
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+                <div class="menu__item menu-brand__item">
+                  <div class="menu__link menu-list-two__link menu__sub-link">
+                    C
+                  </div>
+                  <ul class="menu__sub-menu menu-list-three">
+                    <li class="menu__item menu-list-three__item">
+                      <a href="#" class="menu__link menu-list-three__link">
+                        <span>A few moments</span>
+                      </a>
+                    </li>
+                    <li class="menu__item menu-list-three__item">
+                      <a href="#" class="menu__link menu-list-three__link">
+                        <span>A SECRET KNOWLEDGE</span>
+                      </a>
+                    </li>
+                    <li class="menu__item menu-list-three__item">
+                      <a href="#" class="menu__link menu-list-three__link">
+                        <span>A_more</span>
+                      </a>
+                    </li>
+                    <li class="menu__item menu-list-three__item">
+                      <a href="#" class="menu__link menu-list-three__link">
+                        <span>A-dam</span>
+                      </a>
+                    </li>
+                    <li class="menu__item menu-list-three__item">
+                      <a href="#" class="menu__link menu-list-three__link">
+                        <span>A-derma</span>
+                      </a>
+                    </li>
+                    <li class="menu__item menu-list-three__item">
+                      <a href="#" class="menu__link menu-list-three__link">
+                        <span>A.Bono</span>
+                      </a>
+                    </li>
+                    <li class="menu__item menu-list-three__item">
+                      <a href="#" class="menu__link menu-list-three__link">
+                        <span>Aasha Herbals</span>
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+                <div class="menu__item menu-brand__item">
+                  <div class="menu__link menu-list-two__link menu__sub-link">
+                    D
+                  </div>
+                  <ul class="menu__sub-menu menu-list-three">
+                    <li class="menu__item menu-list-three__item">
+                      <a href="#" class="menu__link menu-list-three__link">
+                        <span>A few moments</span>
+                      </a>
+                    </li>
+                    <li class="menu__item menu-list-three__item">
+                      <a href="#" class="menu__link menu-list-three__link">
+                        <span>A SECRET KNOWLEDGE</span>
+                      </a>
+                    </li>
+                    <li class="menu__item menu-list-three__item">
+                      <a href="#" class="menu__link menu-list-three__link">
+                        <span>A_more</span>
+                      </a>
+                    </li>
+                    <li class="menu__item menu-list-three__item">
+                      <a href="#" class="menu__link menu-list-three__link">
+                        <span>A-dam</span>
+                      </a>
+                    </li>
+                    <li class="menu__item menu-list-three__item">
+                      <a href="#" class="menu__link menu-list-three__link">
+                        <span>A-derma</span>
+                      </a>
+                    </li>
+                    <li class="menu__item menu-list-three__item">
+                      <a href="#" class="menu__link menu-list-three__link">
+                        <span>A.Bono</span>
+                      </a>
+                    </li>
+                    <li class="menu__item menu-list-three__item">
+                      <a href="#" class="menu__link menu-list-three__link">
+                        <span>Aasha Herbals</span>
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+                <div class="menu__item menu-brand__item">
+                  <div class="menu__link menu-list-two__link menu__sub-link">
+                    E
+                  </div>
+                  <ul class="menu__sub-menu menu-list-three">
+                    <li class="menu__item menu-list-three__item">
+                      <a href="#" class="menu__link menu-list-three__link">
+                        <span>A few moments</span>
+                      </a>
+                    </li>
+                    <li class="menu__item menu-list-three__item">
+                      <a href="#" class="menu__link menu-list-three__link">
+                        <span>A SECRET KNOWLEDGE</span>
+                      </a>
+                    </li>
+                    <li class="menu__item menu-list-three__item">
+                      <a href="#" class="menu__link menu-list-three__link">
+                        <span>A_more</span>
+                      </a>
+                    </li>
+                    <li class="menu__item menu-list-three__item">
+                      <a href="#" class="menu__link menu-list-three__link">
+                        <span>A-dam</span>
+                      </a>
+                    </li>
+                    <li class="menu__item menu-list-three__item">
+                      <a href="#" class="menu__link menu-list-three__link">
+                        <span>A-derma</span>
+                      </a>
+                    </li>
+                    <li class="menu__item menu-list-three__item">
+                      <a href="#" class="menu__link menu-list-three__link">
+                        <span>A.Bono</span>
+                      </a>
+                    </li>
+                    <li class="menu__item menu-list-three__item">
+                      <a href="#" class="menu__link menu-list-three__link">
+                        <span>Aasha Herbals</span>
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+                <div class="menu__item menu-brand__item">
+                  <div class="menu__link menu-list-two__link menu__sub-link">
+                    F
+                  </div>
+                  <ul class="menu__sub-menu menu-list-three">
+                    <li class="menu__item menu-list-three__item">
+                      <a href="#" class="menu__link menu-list-three__link">
+                        <span>A few moments</span>
+                      </a>
+                    </li>
+                    <li class="menu__item menu-list-three__item">
+                      <a href="#" class="menu__link menu-list-three__link">
+                        <span>A SECRET KNOWLEDGE</span>
+                      </a>
+                    </li>
+                    <li class="menu__item menu-list-three__item">
+                      <a href="#" class="menu__link menu-list-three__link">
+                        <span>A_more</span>
+                      </a>
+                    </li>
+                    <li class="menu__item menu-list-three__item">
+                      <a href="#" class="menu__link menu-list-three__link">
+                        <span>A-dam</span>
+                      </a>
+                    </li>
+                    <li class="menu__item menu-list-three__item">
+                      <a href="#" class="menu__link menu-list-three__link">
+                        <span>A-derma</span>
+                      </a>
+                    </li>
+                    <li class="menu__item menu-list-three__item">
+                      <a href="#" class="menu__link menu-list-three__link">
+                        <span>A.Bono</span>
+                      </a>
+                    </li>
+                    <li class="menu__item menu-list-three__item">
+                      <a href="#" class="menu__link menu-list-three__link">
+                        <span>Aasha Herbals</span>
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+                <div class="menu__item menu-brand__item">
+                  <div class="menu__link menu-list-two__link menu__sub-link">
+                    C
+                  </div>
+                  <ul class="menu__sub-menu menu-list-three">
+                    <li class="menu__item menu-list-three__item">
+                      <a href="#" class="menu__link menu-list-three__link">
+                        <span>A few moments</span>
+                      </a>
+                    </li>
+                    <li class="menu__item menu-list-three__item">
+                      <a href="#" class="menu__link menu-list-three__link">
+                        <span>A SECRET KNOWLEDGE</span>
+                      </a>
+                    </li>
+                    <li class="menu__item menu-list-three__item">
+                      <a href="#" class="menu__link menu-list-three__link">
+                        <span>A_more</span>
+                      </a>
+                    </li>
+                    <li class="menu__item menu-list-three__item">
+                      <a href="#" class="menu__link menu-list-three__link">
+                        <span>A-dam</span>
+                      </a>
+                    </li>
+                    <li class="menu__item menu-list-three__item">
+                      <a href="#" class="menu__link menu-list-three__link">
+                        <span>A-derma</span>
+                      </a>
+                    </li>
+                    <li class="menu__item menu-list-three__item">
+                      <a href="#" class="menu__link menu-list-three__link">
+                        <span>A.Bono</span>
+                      </a>
+                    </li>
+                    <li class="menu__item menu-list-three__item">
+                      <a href="#" class="menu__link menu-list-three__link">
+                        <span>Aasha Herbals</span>
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <div class="menu-brand__row-item">
+                <div class="menu__item menu-brand__item">
+                  <div class="menu__link menu-list-two__link menu__sub-link">
+                    А...Я
+                  </div>
+                  <ul class="menu__sub-menu menu-list-three">
+                    <li class="menu__item menu-list-three__item">
+                      <a href="#" class="menu__link menu-list-three__link">
+                        <span>A few moments</span>
+                      </a>
+                    </li>
+                    <li class="menu__item menu-list-three__item">
+                      <a href="#" class="menu__link menu-list-three__link">
+                        <span>A SECRET KNOWLEDGE</span>
+                      </a>
+                    </li>
+                    <li class="menu__item menu-list-three__item">
+                      <a href="#" class="menu__link menu-list-three__link">
+                        <span>A_more</span>
+                      </a>
+                    </li>
+                    <li class="menu__item menu-list-three__item">
+                      <a href="#" class="menu__link menu-list-three__link">
+                        <span>A-dam</span>
+                      </a>
+                    </li>
+                    <li class="menu__item menu-list-three__item">
+                      <a href="#" class="menu__link menu-list-three__link">
+                        <span>A-derma</span>
+                      </a>
+                    </li>
+                    <li class="menu__item menu-list-three__item">
+                      <a href="#" class="menu__link menu-list-three__link">
+                        <span>A.Bono</span>
+                      </a>
+                    </li>
+                    <li class="menu__item menu-list-three__item">
+                      <a href="#" class="menu__link menu-list-three__link">
+                        <span>Aasha Herbals</span>
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </li>
         </ul>
       </div>
       <div class="menu__card-row">
         <a href="#" class="card-menu menu__card-menu active">
           <div class="card-menu__img">
-            <picture><source srcset="images/header/card-menu-img.webp" type="image/webp"><img src="images/header/card-menu-img.png" alt=""></picture>
+            <img src="images/header/card-menu-img.png" alt="">
           </div>
           <h3 class="card-menu__title">
             TOM FORD
@@ -626,7 +1016,7 @@
         </a>
         <a href="#" class="card-menu menu__card-menu">
           <div class="card-menu__img">
-            <picture><source srcset="images/header/card-menu-img2.webp" type="image/webp"><img src="images/header/card-menu-img2.png" alt=""></picture>
+            <img src="images/header/card-menu-img2.png" alt="">
           </div>
           <h3 class="card-menu__title">
             TOM FORD 2
@@ -639,7 +1029,7 @@
         </a>
         <a href="#" class="card-menu menu__card-menu">
           <div class="card-menu__img">
-            <picture><source srcset="images/header/card-menu-img.webp" type="image/webp"><img src="images/header/card-menu-img.png" alt=""></picture>
+            <img src="images/header/card-menu-img.png" alt="">
           </div>
           <h3 class="card-menu__title">
             TOM FORD 3
@@ -652,7 +1042,7 @@
         </a>
         <a href="#" class="card-menu menu__card-menu">
           <div class="card-menu__img">
-            <picture><source srcset="images/header/card-menu-img2.webp" type="image/webp"><img src="images/header/card-menu-img2.png" alt=""></picture>
+            <img src="images/header/card-menu-img2.png" alt="">
           </div>
           <h3 class="card-menu__title">
             TOM FORD 4
@@ -665,7 +1055,7 @@
         </a>
         <a href="#" class="card-menu menu__card-menu">
           <div class="card-menu__img">
-            <picture><source srcset="images/header/card-menu-img.webp" type="image/webp"><img src="images/header/card-menu-img.png" alt=""></picture>
+            <img src="images/header/card-menu-img.png" alt="">
           </div>
           <h3 class="card-menu__title">
             TOM FORD 5
@@ -678,7 +1068,7 @@
         </a>
         <a href="#" class="card-menu menu__card-menu">
           <div class="card-menu__img">
-            <picture><source srcset="images/header/card-menu-img2.webp" type="image/webp"><img src="images/header/card-menu-img2.png" alt=""></picture>
+            <img src="images/header/card-menu-img2.png" alt="">
           </div>
           <h3 class="card-menu__title">
             TOM FORD 6
@@ -691,7 +1081,7 @@
         </a>
         <a href="#" class="card-menu menu__card-menu">
           <div class="card-menu__img">
-            <picture><source srcset="images/header/card-menu-img.webp" type="image/webp"><img src="images/header/card-menu-img.png" alt=""></picture>
+            <img src="images/header/card-menu-img.png" alt="">
           </div>
           <h3 class="card-menu__title">
             TOM FORD 7
@@ -704,7 +1094,7 @@
         </a>
         <a href="#" class="card-menu menu__card-menu">
           <div class="card-menu__img">
-            <picture><source srcset="images/header/card-menu-img2.webp" type="image/webp"><img src="images/header/card-menu-img2.png" alt=""></picture>
+            <img src="images/header/card-menu-img2.png" alt="">
           </div>
           <h3 class="card-menu__title">
             TOM FORD 6
@@ -717,7 +1107,20 @@
         </a>
         <a href="#" class="card-menu menu__card-menu">
           <div class="card-menu__img">
-            <picture><source srcset="images/header/card-menu-img.webp" type="image/webp"><img src="images/header/card-menu-img.png" alt=""></picture>
+            <img src="images/header/card-menu-img.png" alt="">
+          </div>
+          <h3 class="card-menu__title">
+            TOM FORD 7
+            lost cherry
+          </h3>
+          <p class="card-menu__text">
+            нежный аромат
+            <br>с вишневыми акцентами
+          </p>
+        </a>
+        <a href="#" class="card-menu menu__card-menu">
+          <div class="card-menu__img">
+            <img src="images/header/card-menu-img.png" alt="">
           </div>
           <h3 class="card-menu__title">
             TOM FORD 7
@@ -774,7 +1177,7 @@
         <div class="news-cat__row">
             <a href="product-page.html" class="blog__card crad-blog">
                 <div class="crad-blog__img">
-                    <picture><source srcset="images/blog/blog-img1.webp" type="image/webp"><img src="images/blog/blog-img1.png" alt=""></picture>
+                    <img src="images/blog/blog-img1.png" alt="">
                 </div>
                 <h3 class="crad-blog__title">
                     Популярная актриса раскритиковала подборку
@@ -793,7 +1196,7 @@
             </a>
             <a href="product-page.html" class="blog__card crad-blog">
                 <div class="crad-blog__img">
-                    <picture><source srcset="images/blog/blog-img2.webp" type="image/webp"><img src="images/blog/blog-img2.png" alt=""></picture>
+                    <img src="images/blog/blog-img2.png" alt="">
                 </div>
                 <h3 class="crad-blog__title">
                     Что носят мужчины?
@@ -812,7 +1215,7 @@
             </a>
             <a href="product-page.html" class="blog__card crad-blog">
                 <div class="crad-blog__img">
-                    <picture><source srcset="images/blog/blog-img3.webp" type="image/webp"><img src="images/blog/blog-img3.png" alt=""></picture>
+                    <img src="images/blog/blog-img3.png" alt="">
                 </div>
                 <h3 class="crad-blog__title">
                     Что носят мужчины?
@@ -831,7 +1234,7 @@
             </a>
             <a href="product-page.html" class="blog__card crad-blog">
                 <div class="crad-blog__img">
-                    <picture><source srcset="images/blog/blog-img1.webp" type="image/webp"><img src="images/blog/blog-img1.png" alt=""></picture>
+                    <img src="images/blog/blog-img1.png" alt="">
                 </div>
                 <h3 class="crad-blog__title">
                     Популярная актриса раскритиковала подборку
@@ -850,7 +1253,7 @@
             </a>
             <a href="product-page.html" class="blog__card crad-blog">
                 <div class="crad-blog__img">
-                    <picture><source srcset="images/blog/blog-img2.webp" type="image/webp"><img src="images/blog/blog-img2.png" alt=""></picture>
+                    <img src="images/blog/blog-img2.png" alt="">
                 </div>
                 <h3 class="crad-blog__title">
                     Что носят мужчины?
@@ -869,7 +1272,7 @@
             </a>
             <a href="product-page.html" class="blog__card crad-blog">
                 <div class="crad-blog__img">
-                    <picture><source srcset="images/blog/blog-img3.webp" type="image/webp"><img src="images/blog/blog-img3.png" alt=""></picture>
+                    <img src="images/blog/blog-img3.png" alt="">
                 </div>
                 <h3 class="crad-blog__title">
                     Что носят мужчины?
@@ -1056,7 +1459,7 @@
 <div class="popup popup-right" data-popup="popup-ent-reg" data-close-overlay>
     <div class="popup-right__container" data-close-overlay>
         <div class="popup-right__content">
-            <div class="active popup-ent-reg-body popup-right__body">
+            <div class="popup-right__body popup-ent-reg-body active">
                 <div class="popup-right__head">
                     <div class="popup-right__title">
                         Вход
@@ -1165,10 +1568,10 @@
                                 <input type="text" placeholder="Ваш e-mail" name="e-mail" class="input-text _req _email">
                             </div>
                             <div class="item-input-text popup-right__item-input">
-                                <input type="text" placeholder="пароль" name="password" class="input-text _req password input-match" data-match-group="2">
+                                <input type="text" placeholder="пароль" name="password" class="input-text _req password input-match" data-match-group="1">
                             </div>
                             <div class="item-input-text popup-right__item-input">
-                                <input type="text" placeholder="повтор пароля" name="password-two" class="input-text _req password input-match" data-match-group="2">
+                                <input type="text" placeholder="повтор пароля" name="password-two" class="input-text _req password input-match confirm" data-match-group="1">
                             </div>
                         </div>
                         <div class="popup-right__button-row">
@@ -1192,7 +1595,7 @@
 <div class="popup-basket">
         <div class="popup-basket__content">
             <div class="popup-basket__img">
-                <picture><source srcset="images/catalog/cat-top1.webp" type="image/webp"><img src="images/catalog/cat-top1.png" alt=""></picture>
+                <img src="images/catalog/cat-top1.png" alt="">
             </div>
             <div class="popup-basket__body">
                 <div class="popup-basket__top">
@@ -1227,7 +1630,7 @@
 <div class="popup popup-right popup-filter" data-popup="popup-filter" data-close-overlay>
     <div class="popup-right__container" data-close-overlay>
         <div class="popup-right__content">
-            <form action="#" class="active popup-ent-reg-body popup-right__body">
+            <form action="#" class="popup-right__body popup-ent-reg-body active">
                 <div class="popup-right__head">
                     <div class="popup-filter__head-left">
                         <div class="popup-right__title">
@@ -1735,6 +2138,361 @@
                             </button>
                         </div>
                     </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="popup popup-right basket" data-popup="basket" data-close-overlay>
+    <div class="popup-right__container" data-close-overlay>
+        <div class="popup-right__content">
+            <div class="popup-right__body">
+                <div class="popup-right__head">
+                    <div class="popup-filter__head-left">
+                        <div class="popup-right__title">
+                            корзина
+                        </div>
+                        <div class="popup-filter__clear">Очистить</div>
+                    </div>
+                    
+                    <button class="button-close popup-right__button-close">
+                        <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <g clip-path="url(#clip0_26_7847)">
+                              <path d="M19 19L10 10M1 1L10 10M10 10L19 1M10 10L1 19" stroke="#999999"/>
+                            </g>
+                            <defs>
+                              <clipPath id="clip0_26_7847">
+                                <rect width="20" height="20" fill="white"/>
+                              </clipPath>
+                            </defs>
+                        </svg>
+                    </button>
+                </div>
+                <div class="basket__row-card">
+                    <div class="card">
+                        <div class="card__body">
+                            <div class="card__img">
+                                <img src="images/card-img1.png" alt="">
+                            </div>
+                            <div class="card__info">
+                                <h3 class="card__title">
+                                    RABANNE million gold
+                                </h3>
+                                <div class="card__selected-volume">10 ml</div>
+                                <div class="card__price-row">
+                                    <div class="card__price-calc">
+                                        <span class="pink"><span class="quantity-number-text">2</span>x</span>
+                                        <span>5 530 руб</span>
+                                    </div>
+                                    <p class="card__result-price">
+                                        от 11 279 руб
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="card__btn-content">
+                                <div class="card__basket-btn-row">
+                                    <div class="card__btn-row">
+                                        <div class="card__btn-plus quantity__number-minus">
+                                            -
+                                        </div>
+                                        <input type="number" min="1" value="2" readonly="readonly" class="quantity__input">
+                                        <div class="card__btn-minus quantity__number-plus">
+                                            +
+                                        </div>
+                                    </div>
+                                    <div class="card__btn-delete">
+                                        <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M19 19L10 10M1 1L10 10M10 10L19 1M10 10L1 19" stroke="white"/>
+                                        </svg>
+                                        <span>удалить товар</span>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="card__body">
+                            <div class="card__img">
+                                <img src="images/card-img1.png" alt="">
+                            </div>
+                            <div class="card__info">
+                                <h3 class="card__title">
+                                    RABANNE million gold
+                                </h3>
+                                <div class="card__selected-volume">10 ml</div>
+                                <div class="card__price-row">
+                                    <div class="card__price-calc">
+                                        <span class="pink"><span class="quantity-number-text">2</span>x</span>
+                                        <span>5 530 руб</span>
+                                    </div>
+                                    <p class="card__result-price">
+                                        от 11 279 руб
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="card__btn-content">
+                                <div class="card__basket-btn-row">
+                                    <div class="card__btn-row">
+                                        <div class="card__btn-plus quantity__number-minus">
+                                            -
+                                        </div>
+                                        <input type="number" min="1" value="2" readonly="readonly" class="quantity__input">
+                                        <div class="card__btn-minus quantity__number-plus">
+                                            +
+                                        </div>
+                                    </div>
+                                    <div class="card__btn-delete">
+                                        <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M19 19L10 10M1 1L10 10M10 10L19 1M10 10L1 19" stroke="white"/>
+                                        </svg>
+                                        <span>удалить товар</span>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="card__body">
+                            <div class="card__img">
+                                <img src="images/card-img1.png" alt="">
+                            </div>
+                            <div class="card__info">
+                                <h3 class="card__title">
+                                    RABANNE million gold
+                                </h3>
+                                <div class="card__selected-volume">10 ml</div>
+                                <div class="card__price-row">
+                                    <div class="card__price-calc">
+                                        <span class="pink"><span class="quantity-number-text">2</span>x</span>
+                                        <span>5 530 руб</span>
+                                    </div>
+                                    <p class="card__result-price">
+                                        от 11 279 руб
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="card__btn-content">
+                                <div class="card__basket-btn-row">
+                                    <div class="card__btn-row">
+                                        <div class="card__btn-plus quantity__number-minus">
+                                            -
+                                        </div>
+                                        <input type="number" min="1" value="2" readonly="readonly" class="quantity__input">
+                                        <div class="card__btn-minus quantity__number-plus">
+                                            +
+                                        </div>
+                                    </div>
+                                    <div class="card__btn-delete">
+                                        <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M19 19L10 10M1 1L10 10M10 10L19 1M10 10L1 19" stroke="white"/>
+                                        </svg>
+                                        <span>удалить товар</span>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="card__body">
+                            <div class="card__img">
+                                <img src="images/card-img1.png" alt="">
+                            </div>
+                            <div class="card__info">
+                                <h3 class="card__title">
+                                    RABANNE million gold
+                                </h3>
+                                <div class="card__selected-volume">10 ml</div>
+                                <div class="card__price-row">
+                                    <div class="card__price-calc">
+                                        <span class="pink"><span class="quantity-number-text">2</span>x</span>
+                                        <span>5 530 руб</span>
+                                    </div>
+                                    <p class="card__result-price">
+                                        от 11 279 руб
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="card__btn-content">
+                                <div class="card__basket-btn-row">
+                                    <div class="card__btn-row">
+                                        <div class="card__btn-plus quantity__number-minus">
+                                            -
+                                        </div>
+                                        <input type="number" min="1" value="2" readonly="readonly" class="quantity__input">
+                                        <div class="card__btn-minus quantity__number-plus">
+                                            +
+                                        </div>
+                                    </div>
+                                    <div class="card__btn-delete">
+                                        <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M19 19L10 10M1 1L10 10M10 10L19 1M10 10L1 19" stroke="white"/>
+                                        </svg>
+                                        <span>удалить товар</span>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                        </div>
+                    </div>
+                </div>
+                <div class="basket__promocode">
+                    <div class="item-input-text popup-right__item-input">
+                        <input type="text" placeholder="введите промокод" name="promocode" class="input-text">
+                    </div>
+                </div>
+                <div class="product__bottom-left">
+                    <div class="basket__result">
+                        <p>
+                            итого
+                        </p>
+                        <p class="basket__price-result">
+                            41 111 руб
+                        </p>
+                    </div>
+                    <a href="#" class="button basket__button-arrange">
+                        оформить заказ
+                    </a>
+                </div>
+                <div class="product__buy-click product__text-btn-bot">Купить к 1 клик</div>
+                <form accept="#" class="product__btn-row product__form-buy-click">
+                    <div class="item-input-text popup-right__item-input">
+                        <input type="tel" placeholder="ваш телефон" name="tel" class="input-text _req">
+                    </div>
+                    <button class="button popup-basket-open product__button">жду звонка</button>
+                </form>
+                <div class="basket-bot basket__bottom">
+                    <div class="basket-bot__title">
+                        вам может подойти
+                    </div>
+                    <div class="basket-bot__row">
+                        <div class="card t-right">
+                            <div class="card__body">
+                                <div class="card__img">
+                                    <img src="images/card-img1.png" alt="">
+                                        <div class="card__mark prc">-30%</div>
+                                        <div class="card__mark top">top</div>
+                                        <div class="card__mark new">new</div>
+                                </div>
+                                
+                                <div class="card__info">
+                                    <h3 class="card__title">
+                                        <a href="#">RABANNE million gold</a>
+                                    </h3>
+                                    <div class="card__price-row">
+                                        <p class="card__discount">
+                                            7 900 руб
+                                        </p>
+                                        <p class="card__price">
+                                            от 11 279 руб
+                                        </p>
+                                    </div>
+                                </div>
+            
+                            </div>
+                        </div>
+                        <div class="card t-right">
+                            <div class="card__body">
+                                <div class="card__img">
+                                    <img src="images/card-img2.png" alt="">
+                                        <div class="card__mark prc">-30%</div>
+                                        <div class="card__mark top">top</div>
+                                        <div class="card__mark new">new</div>
+                                </div>
+                                
+                                <div class="card__info">
+                                    <h3 class="card__title">
+                                        <a href="#">RABANNE million gold</a>
+                                    </h3>
+                                    <div class="card__price-row">
+                                        <p class="card__discount">
+                                            7 900 руб
+                                        </p>
+                                        <p class="card__price">
+                                            от 11 279 руб
+                                        </p>
+                                    </div>
+                                </div>
+            
+                            </div>
+                        </div>
+                        <div class="card t-right">
+                            <div class="card__body">
+                                <div class="card__img">
+                                    <img src="images/card-img3.png" alt="">
+                                        <div class="card__mark prc">-30%</div>
+                                        <div class="card__mark top">top</div>
+                                        <div class="card__mark new">new</div>
+                                </div>
+                                
+                                <div class="card__info">
+                                    <h3 class="card__title">
+                                        <a href="#">RABANNE million gold</a>
+                                    </h3>
+                                    <div class="card__price-row">
+                                        <p class="card__discount">
+                                            7 900 руб
+                                        </p>
+                                        <p class="card__price">
+                                            от 11 279 руб
+                                        </p>
+                                    </div>
+                                </div>
+            
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<div class="popup popup-right" data-popup="popup-password" data-close-overlay>
+    <div class="popup-right__container" data-close-overlay>
+        <div class="popup-right__content">
+            <div class="popup-right__body">
+                <div class="popup-right__head">
+                    <div class="popup-right__title">
+                        новый пароль
+                    </div>
+                    <button class="button-close popup-right__button-close">
+                        <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <g clip-path="url(#clip0_26_7847)">
+                              <path d="M19 19L10 10M1 1L10 10M10 10L19 1M10 10L1 19" stroke="#999999"/>
+                            </g>
+                            <defs>
+                              <clipPath id="clip0_26_7847">
+                                <rect width="20" height="20" fill="white"/>
+                              </clipPath>
+                            </defs>
+                        </svg>
+                    </button>
+                </div>
+                <div class="popup-right__center">
+                    <form action="#" class="popup-right__form">
+                        <div class="popup-right__item-row">
+                            <div class="item-input-text popup-right__item-input">
+                                <input type="text" placeholder="пароль" name="password" class="input-text _req password">
+                            </div>
+                            <div class="item-input-text popup-right__item-input">
+                                <input type="text" placeholder="новый пароль" name="password-nex" class="input-text _req password input-match" data-match-group="2">
+                            </div>
+                            <div class="item-input-text popup-right__item-input">
+                                <input type="text" placeholder="повтор нового пароля" name="password-nex-two" class="input-text _req password input-match confirm" data-match-group="2">
+                            </div>
+                        </div>
+                        <div class="popup-right__button-row">
+                            <button type="submit" class="button popup-right__button">
+                                изменить пароль
+                            </button>
+                        </div>
+                    </form>
+                </div>
+                <div class="popup-right__bottom">
                 </div>
             </div>
         </div>

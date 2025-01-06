@@ -1,10 +1,10 @@
-
+<!doctype html>
 <html lang="ru">
   <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width,initial-scale=1">
-  <title>Главная</title>
+  <title>Оформление заказа</title>
 
   <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
   <link rel="stylesheet" href="css/main.min.css?_v=20250106231917">
@@ -12,7 +12,7 @@
   <script defer="defer" src="js/main.min.js?_v=20250106231917"></script>
 </head>
 
-  <body>
+  <body class="header-white">
     <div class="wrapper">
       <header class="header">
   <div class="header__container">
@@ -1166,745 +1166,383 @@
 
       <main class="page">
         <div data-observ></div>
-        <section class="about">
-    <div class="about__slider">
-        <div class="swiper-wrapper about__wrapper">
-            <div class="swiper-slide about__slide">
-                <div class="about__slide-bg">
-                    <picture>
-                        <source media="(max-width: 720px)" srcset="images/about/slide-about-bg-mob.png">
-                        <source media="(max-width: 1024px)" srcset="images/about/slide-about-bg-table.png">
-                        <img src="images/about/slide-about-bg.png" alt="">
-                    </picture>
+        <section class="making">
+    <div class="making__container">
+        <form action="#" class="making__row">
+            <div class="making__left">
+                <div class="making__head">
+                    <h1>
+                        оформление
+                        заказа
+                    </h1>
+                    <a href="#" class="making__button-basket">
+                        <svg width="41" height="16" viewBox="0 0 41 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M0.292893 7.29289C-0.0976311 7.68342 -0.0976311 8.31658 0.292893 8.70711L6.65685 15.0711C7.04738 15.4616 7.68054 15.4616 8.07107 15.0711C8.46159 14.6805 8.46159 14.0474 8.07107 13.6569L2.41421 8L8.07107 2.34315C8.46159 1.95262 8.46159 1.31946 8.07107 0.928932C7.68054 0.538408 7.04738 0.538408 6.65685 0.928932L0.292893 7.29289ZM1 9H41V7H1V9Z" fill="#999999"/>
+                        </svg>
+                        <span>в корзину</span>
+                    </a>
                 </div>
-                <div class="about__container">
-                    <div class="about__img">
-                        <img src="images/about/about-img.png" alt="">
+                <div class="making__item">
+                    <div class="making__item-body">
+                        <div class="popup-right__item-row">
+                            <div class="item-input-text popup-right__item-input">
+                                <input type="text" placeholder="Ваше имя" name="name" class="input-text _req">
+                            </div>
+                            <div class="item-input-text popup-right__item-input">
+                                <input type="text" placeholder="Ваш e-mail" name="e-mail" class="input-text _req _email">
+                            </div>
+                            <div class="item-input-text popup-right__item-input">
+                                <input type="tel" placeholder="ваш телефон" name="tel" class="input-text _req">
+                            </div>
+                        </div>
                     </div>
-                    <div class="about__body">
-                        <h2 class="about__title">
-                            Скидки
-                            на товары
-                            месяца
-                        </h2>
-                        <p class="about__text">
-                            в интернет-магазине и офлайн
+                    <div class="making__item-title">
+                        контактные
+                        <br>данные
+                    </div>
+                </div>
+                <div class="making__item">
+                    <div class="making__item-body">
+                        <div class="basket__row-card">
+                            <div class="card">
+                                <div class="card__body">
+                                    <div class="card__img">
+                                        <img src="images/card-img1.png" alt="">
+                                    </div>
+                                    <div class="card__info">
+                                        <div class="card__btn-delete">
+                                            <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M15.2008 15.2L8.00078 7.99999M0.800781 0.799988L8.00078 7.99999M8.00078 7.99999L15.2008 0.799988M8.00078 7.99999L0.800781 15.2" stroke="#CCCCCC"/>
+                                            </svg>
+                                        </div>
+                                        <h3 class="card__title">
+                                            RABANNE million gold
+                                        </h3>
+                                        <div class="card__selected-volume">10 ml</div>
+                                        <div class="card__price-row">
+                                            <div class="card__price-calc">
+                                                <span class="pink"><span class="quantity-number-text">2</span>x</span>
+                                                <span>5 530 руб</span>
+                                            </div>
+                                            <p class="card__result-price">
+                                                от 11 279 руб
+                                            </p>
+                                        </div>
+                                    </div>
+                                    
+                                </div>
+                            </div>
+                            <div class="card">
+                                <div class="card__body">
+                                    <div class="card__img">
+                                        <img src="images/card-img2.png" alt="">
+                                    </div>
+                                    <div class="card__info">
+                                        <div class="card__btn-delete">
+                                            <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M15.2008 15.2L8.00078 7.99999M0.800781 0.799988L8.00078 7.99999M8.00078 7.99999L15.2008 0.799988M8.00078 7.99999L0.800781 15.2" stroke="#CCCCCC"/>
+                                            </svg>
+                                        </div>
+                                        <h3 class="card__title">
+                                            RABANNE million gold
+                                        </h3>
+                                        <div class="card__selected-volume">10 ml</div>
+                                        <div class="card__price-row">
+                                            <div class="card__price-calc">
+                                                <span class="pink"><span class="quantity-number-text">2</span>x</span>
+                                                <span>5 530 руб</span>
+                                            </div>
+                                            <p class="card__result-price">
+                                                от 11 279 руб
+                                            </p>
+                                        </div>
+                                    </div>
+                                    
+                                </div>
+                            </div>
+                            <div class="card">
+                                <div class="card__body">
+                                    <div class="card__img">
+                                        <img src="images/card-img3.png" alt="">
+                                    </div>
+                                    <div class="card__info">
+                                        <div class="card__btn-delete">
+                                            <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M15.2008 15.2L8.00078 7.99999M0.800781 0.799988L8.00078 7.99999M8.00078 7.99999L15.2008 0.799988M8.00078 7.99999L0.800781 15.2" stroke="#CCCCCC"/>
+                                            </svg>
+                                        </div>
+                                        <h3 class="card__title">
+                                            RABANNE million gold
+                                        </h3>
+                                        <div class="card__selected-volume">10 ml</div>
+                                        <div class="card__price-row">
+                                            <div class="card__price-calc">
+                                                <span class="pink"><span class="quantity-number-text">2</span>x</span>
+                                                <span>5 530 руб</span>
+                                            </div>
+                                            <p class="card__result-price">
+                                                от 11 279 руб
+                                            </p>
+                                        </div>
+                                    </div>
+                                    
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="making__item-title">
+                        товары
+                        <br>в корзине
+                    </div>
+                </div>
+                <div class="making__item">
+                    <div class="making__item-body">
+                        <div class="making__row-radio four">
+                            <label class="making__big-radio">
+                                <input type="radio" value="самовывоз в Минске" name="delivery" class="input-delivery">
+                                <span class="making__big-radio-body">
+                                    <span class="bold">самовывоз</span>
+                                    <span>в Минске</span>
+                                    <span class="bold m-t gray">бесплатно</span>
+                                </span>
+                            </label>
+                            <label class="making__big-radio">
+                                <input checked="checked" type="radio" value="курьер по Минску" name="delivery" class="input-delivery delivery-address-active">
+                                <span class="making__big-radio-body">
+                                    <span class="bold">курьер</span>
+                                    <span>по Минску</span>
+                                    <span class="bold m-t">от 500 руб</span>
+                                </span>
+                            </label>
+                            <label class="making__big-radio">
+                                <input type="radio" value="самовывоз по Беларуси" name="delivery" class="input-delivery">
+                                <span class="making__big-radio-body">
+                                    <span class="bold">самовывоз</span>
+                                    <span>по Беларуси</span>
+                                    <span class="bold m-t gray">бесплатно</span>
+                                </span>
+                            </label>
+                            <label class="making__big-radio">
+                                <input type="radio" value="курьер по Беларуси" name="delivery" class="input-delivery delivery-address-active delivery-city-active">
+                                <span class="making__big-radio-body">
+                                    <span class="bold">курьер</span>
+                                    <span>по Беларуси</span>
+                                    <span class="bold m-t">от 500 руб</span>
+                                </span>
+                            </label>
+                        </div>
+                    </div>
+                    <div class="making__item-title">
+                        способ
+                        <br>доставки
+                    </div>
+                </div>
+                <div class="making__item delivery-address-item">
+                    <div class="making__item-body">
+                        <div class="making__item-input-row two">
+                            <div class="item-input-text popup-right__item-input item-input-city">
+                                <input type="text" placeholder="Город" name="city" class="input-text">
+                            </div>
+                            <div class="item-input-text popup-right__item-input">
+                                <input type="text" placeholder="Улица" name="street" class="input-text">
+                            </div>
+                        </div>
+
+                        <div class="making__item-input-row">
+                            <div class="item-input-text popup-right__item-input">
+                                <input type="text" placeholder="Дом" name="house" class="input-text">
+                            </div>
+                            <div class="item-input-text popup-right__item-input">
+                                <input type="text" placeholder="Подъезд" name="entrance" class="input-text">
+                            </div>
+                            <div class="item-input-text popup-right__item-input">
+                                <input type="text" placeholder="Квартира" name="flat" class="input-text">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="making__item-title">
+                        адрес
+                        <br>доставки
+                    </div>
+                </div>
+                <div class="making__item">
+                    <div class="making__item-body making__row-radio-time">
+                        <div class="making__item-time">
+                            <div class="making__item-time-title">
+                                сегодня
+                            </div>
+                            <div class="making__row-radio three">
+                                <label class="making__radio">
+                                    <input type="radio" value="15:00-18:00" name="delivery-time-1">
+                                    <span class="making__radio-body">
+                                        15:00-18:00
+                                    </span>
+                                </label>
+                                <label class="making__radio">
+                                    <input type="radio" value="18:00-21:00" name="delivery-time-1">
+                                    <span class="making__radio-body">
+                                        18:00-21:00
+                                    </span>
+                                </label>
+                                <label class="making__radio">
+                                    <input type="radio" value="20:00-23:00" name="delivery-time-1">
+                                    <span class="making__radio-body">
+                                        20:00-23:00
+                                    </span>
+                                </label>
+                            </div>
+                        </div>
+                        <div class="making__item-time">
+                            <div class="making__item-time-title">
+                                завтра
+                            </div>
+                            <div class="making__row-radio three">
+                                <label class="making__radio">
+                                    <input type="radio" value="10:00-15:00" name="delivery-time-2">
+                                    <span class="making__radio-body">
+                                        10:00-15:00
+                                    </span>
+                                </label>
+                                <label class="making__radio">
+                                    <input type="radio" value="12:00-16:00" name="delivery-time-2">
+                                    <span class="making__radio-body">
+                                        12:00-16:00
+                                    </span>
+                                </label>
+                                <label class="making__radio">
+                                    <input type="radio" value="15:00-18:00" name="delivery-time-2">
+                                    <span class="making__radio-body">
+                                        15:00-18:00
+                                    </span>
+                                </label>
+                                <label class="making__radio">
+                                    <input type="radio" value="18:00-21:00" name="delivery-time-2">
+                                    <span class="making__radio-body">
+                                        18:00-21:00
+                                    </span>
+                                </label>
+                                <label class="making__radio">
+                                    <input type="radio" value="20:00-23:00" name="delivery-time-2">
+                                    <span class="making__radio-body">
+                                        20:00-23:00
+                                    </span>
+                                </label>
+                            </div>
+                        </div>
+                        <div class="making__item-time">
+                            <div class="making__item-time-title">
+                                23 сентября
+                            </div>
+                            <div class="making__row-radio three">
+                                <label class="making__radio">
+                                    <input type="radio" value="10:00-15:00" name="delivery-time-3">
+                                    <span class="making__radio-body">
+                                        10:00-15:00
+                                    </span>
+                                </label>
+                                <label class="making__radio">
+                                    <input type="radio" value="12:00-16:00" name="delivery-time-3">
+                                    <span class="making__radio-body">
+                                        12:00-16:00
+                                    </span>
+                                </label>
+                                <label class="making__radio">
+                                    <input type="radio" value="" name="delivery-time-3">
+                                    <span class="making__radio-body">
+                                        15:00-18:00
+                                    </span>
+                                </label>
+                                <label class="making__radio">
+                                    <input type="radio" value="18:00-21:00" name="delivery-time-3">
+                                    <span class="making__radio-body">
+                                        18:00-21:00
+                                    </span>
+                                </label>
+                                <label class="making__radio">
+                                    <input type="radio" value="20:00-23:00" name="delivery-time-3">
+                                    <span class="making__radio-body">
+                                        20:00-23:00
+                                    </span>
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="making__item-title">
+                        время
+                        <br>доставки
+                    </div>
+                </div>
+                <div class="making__item">
+                    <div class="making__item-body">
+                        <div class="making__row-radio three">
+                            <label class="making__big-radio">
+                                <input checked="checked" type="radio" value="наличными при получении" name="payment">
+                                <span class="making__big-radio-body">
+                                    <span class="bold">наличными</span>
+                                    <span>при получении</span>
+                                </span>
+                            </label>
+                            <label class="making__big-radio">
+                                <input type="radio" value="через ЕРИП" name="payment">
+                                <span class="making__big-radio-body">
+                                    <span class="bold">оплата</span>
+                                    <span>через ЕРИП</span>
+                                </span>
+                            </label>
+                            <label class="making__big-radio">
+                                <input type="radio" value="подарочным сертификатом" name="payment">
+                                <span class="making__big-radio-body">
+                                    <span class="bold">оплата</span>
+                                    <span>подарочным сертификатом</span>
+                                    <span class="making__big-radio-button">добавить</span>
+                                </span>
+                            </label>
+                        </div>
+                    </div>
+                    <div class="making__item-title">
+                        способ
+                        <br>оплаты
+                    </div>
+                </div>
+                <button type="submit" class="button basket__button-arrange two">
+                    подтвердить заказ
+                </button>
+            </div>
+            <div class="making-right making__right">
+                <div class="making-right__title">
+                    Ваш заказ
+                </div>
+                <div class="basket__promocode">
+                    <div class="item-input-text popup-right__item-input">
+                        <input type="text" placeholder="введите промокод" name="promocode" class="input-text">
+                    </div>
+                </div>
+                <div class="product__bottom-left">
+                    <div class="basket__result text-min">
+                        <p>
+                            <span class="black">4x</span>
+                            <span>товара</span>
                         </p>
-                        <div class="about__button-row">
-                            <div class="button white about__button">
-                                <span>перейти к акции</span>
-                                <svg width="41" height="16" viewBox="0 0 41 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M40.7071 8.70711C41.0976 8.31658 41.0976 7.68342 40.7071 7.29289L34.3431 0.928932C33.9526 0.538408 33.3195 0.538408 32.9289 0.928932C32.5384 1.31946 32.5384 1.95262 32.9289 2.34315L38.5858 8L32.9289 13.6569C32.5384 14.0474 32.5384 14.6805 32.9289 15.0711C33.3195 15.4616 33.9526 15.4616 34.3431 15.0711L40.7071 8.70711ZM0 9H40V7H0V9Z" fill="#1A1A1A"/>
-                                </svg>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="swiper-slide about__slide">
-                <div class="about__slide-bg">
-                    <picture>
-                        <source media="(max-width: 480px)" srcset="images/about/slide-about-bg-mob2.png">
-                        <source media="(max-width: 1024px)" srcset="images/about/slide-about-bg-table2.png">
-                        <img src="images/about/slide-about-bg2.png" alt="">
-                    </picture>
-                </div>
-                <div class="about__container">
-                    <div class="about__img">
-                        <img src="images/about/about-img.png" alt="">
-                    </div>
-                    <div class="about__body">
-                        <h2 class="about__title">
-                            Скидки
-                            на товары
-                            месяца
-                        </h2>
-                        <p class="about__text">
-                            в интернет-магазине и офлайн
+                        <p class="basket__price-result">
+                            41 111 руб
                         </p>
-                        <div class="about__button-row">
-                            <div class="button white about__button">
-                                <span>перейти к акции</span>
-                                <svg width="41" height="16" viewBox="0 0 41 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M40.7071 8.70711C41.0976 8.31658 41.0976 7.68342 40.7071 7.29289L34.3431 0.928932C33.9526 0.538408 33.3195 0.538408 32.9289 0.928932C32.5384 1.31946 32.5384 1.95262 32.9289 2.34315L38.5858 8L32.9289 13.6569C32.5384 14.0474 32.5384 14.6805 32.9289 15.0711C33.3195 15.4616 33.9526 15.4616 34.3431 15.0711L40.7071 8.70711ZM0 9H40V7H0V9Z" fill="#1A1A1A"/>
-                                </svg>
-                            </div>
-                        </div>
                     </div>
-                </div>
-            </div>
-            <div class="swiper-slide about__slide">
-                <div class="about__slide-bg">
-                    <picture>
-                        <source media="(max-width: 480px)" srcset="images/about/slide-about-bg-mob.png">
-                        <source media="(max-width: 1024px)" srcset="images/about/slide-about-bg-table.png">
-                        <img src="images/about/slide-about-bg.png" alt="">
-                    </picture>
-                </div>
-                <div class="about__container">
-                    <div class="about__img">
-                        <img src="images/about/about-img.png" alt="">
-                    </div>
-                    <div class="about__body">
-                        <h2 class="about__title">
-                            Скидки
-                            на товары
-                            месяца
-                        </h2>
-                        <p class="about__text">
-                            в интернет-магазине и офлайн
+                    <div class="basket__result">
+                        <p>
+                            итого
                         </p>
-                        <div class="about__button-row">
-                            <div class="button white about__button">
-                                <span>перейти к акции</span>
-                                <svg width="41" height="16" viewBox="0 0 41 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M40.7071 8.70711C41.0976 8.31658 41.0976 7.68342 40.7071 7.29289L34.3431 0.928932C33.9526 0.538408 33.3195 0.538408 32.9289 0.928932C32.5384 1.31946 32.5384 1.95262 32.9289 2.34315L38.5858 8L32.9289 13.6569C32.5384 14.0474 32.5384 14.6805 32.9289 15.0711C33.3195 15.4616 33.9526 15.4616 34.3431 15.0711L40.7071 8.70711ZM0 9H40V7H0V9Z" fill="#1A1A1A"/>
-                                </svg>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="swiper-slide about__slide">
-                <div class="about__slide-bg">
-                    <picture>
-                        <source media="(max-width: 480px)" srcset="images/about/slide-about-bg-mob2.png">
-                        <source media="(max-width: 1024px)" srcset="images/about/slide-about-bg-table2.png">
-                        <img src="images/about/slide-about-bg2.png" alt="">
-                    </picture>
-                </div>
-                <div class="about__container">
-                    <div class="about__img">
-                        <img src="images/about/about-img.png" alt="">
-                    </div>
-                    <div class="about__body">
-                        <h2 class="about__title">
-                            Скидки
-                            на товары
-                            месяца
-                        </h2>
-                        <p class="about__text">
-                            в интернет-магазине и офлайн
+                        <p class="basket__price-result">
+                            41 111 руб
                         </p>
-                        <div class="about__button-row">
-                            <div class="button white about__button">
-                                <span>перейти к акции</span>
-                                <svg width="41" height="16" viewBox="0 0 41 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M40.7071 8.70711C41.0976 8.31658 41.0976 7.68342 40.7071 7.29289L34.3431 0.928932C33.9526 0.538408 33.3195 0.538408 32.9289 0.928932C32.5384 1.31946 32.5384 1.95262 32.9289 2.34315L38.5858 8L32.9289 13.6569C32.5384 14.0474 32.5384 14.6805 32.9289 15.0711C33.3195 15.4616 33.9526 15.4616 34.3431 15.0711L40.7071 8.70711ZM0 9H40V7H0V9Z" fill="#1A1A1A"/>
-                                </svg>
-                            </div>
-                        </div>
                     </div>
+                    <button type="submit" class="button basket__button-arrange">
+                        подтвердить заказ
+                    </button>
                 </div>
             </div>
-        </div>
-
-
-        <div class="swiper-pagination about__pagination"></div>
-    </div>
-
-
-</section>
-        <section class="category">
-    <div class="category__container">
-        <div class="category__slider">
-            <div class="swiper-wrapper category__wrapper">
-                <div class="swiper-slide category__slide">
-                    <div class="category__img">
-                        <img src="images/category/category-img1.png" alt="">
-                    </div>
-                    <h3 class="category__title">
-                        мужская
-                        парфюмерия
-                    </h3>   
-                </div>
-                <div class="swiper-slide category__slide">
-                    <div class="category__img">
-                        <img src="images/category/category-img2.png" alt="">
-                    </div>
-                    <h3 class="category__title">
-                        нишевый
-                        парфюм
-                    </h3>
-                </div>
-                <div class="swiper-slide category__slide">
-                    <div class="category__img">
-                        <img src="images/category/category-img3.png" alt="">
-                    </div>
-                    <h3 class="category__title">
-                        Женская
-                        парфюмерия
-                    </h3>
-                </div>
-            </div>
-        </div>
-        <div class="slider-bottom category__bottom-slider">
-            <div class="slider-bottom__button-prev category__button-prev">
-                <picture>
-                    <source media="(max-width: 480px)" srcset="images/button-slider-mob.svg">
-                    <img src="images/button-slider.svg" alt="">
-                </picture>
-            </div>
-            <div class="swiper-pagination slider-bottom__pagination category__pagination"></div>
-            <div class="slider-bottom__button-next category__button-next">
-                <picture>
-                    <source media="(max-width: 480px)" srcset="images/button-slider-mob.svg">
-                    <img src="images/button-slider.svg" alt="">
-                </picture>
-            </div>
-        </div>
+        </form>
     </div>
 </section>
-        <section class="stocks">
-    <div class="stocks__container">
-        <div class="right title-head stocks__head">
-            <h2>
-                Акции
-            </h2>
-            <a href="#" class="title-head__link">
-                <span>
-                    смотреть все
-                </span>
-                <svg width="41" height="16" viewBox="0 0 41 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M40.7071 8.70711C41.0976 8.31658 41.0976 7.68342 40.7071 7.29289L34.3431 0.928932C33.9526 0.538408 33.3195 0.538408 32.9289 0.928932C32.5384 1.31946 32.5384 1.95262 32.9289 2.34315L38.5858 8L32.9289 13.6569C32.5384 14.0474 32.5384 14.6805 32.9289 15.0711C33.3195 15.4616 33.9526 15.4616 34.3431 15.0711L40.7071 8.70711ZM0 9H40V7H0V9Z" fill="black"/>
-                </svg>
-            </a>
-        </div>
-        <div class="card-row stocks__row">
-            <div class="card t-right">
-                <div class="card__body">
-                    <div class="card__img">
-                        <img src="images/card-img1.png" alt="">
-                        <div class="card__mark prc"></div>
-                        <div class="card__mark top"></div>
-                        <div class="card__mark new"></div>
-                    </div>
-                     <div class="card__info">
-                        <h3 class="card__title">
-                            <a href="#">RABANNE million gold</a>
-                        </h3>
-                        <div class="card__price-row">
-                            <p class="card__price">от 11 279 руб</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="card t-right">
-                <div class="card__body">
-                    <div class="card__img">
-                        <img src="images/card-img2.png" alt="">
-                        <div class="card__mark prc"></div>
-                        <div class="card__mark top"></div>
-                        <div class="card__mark new"></div>
-                    </div>
-                     <div class="card__info">
-                        <h3 class="card__title">
-                            <a href="#">RABANNE million gold</a>
-                        </h3>
-                        <div class="card__price-row">
-                            <p class="card__price">от 11 279 руб</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="card t-right big-card-one">
-                <div class="card__body">
-                    <div class="card__img">
-                        <img src="images/card-img3.png" alt="">
-                        <div class="card__mark prc"></div>
-                        <div class="card__mark top"></div>
-                        <div class="card__mark new"></div>
-                    </div>
-                    <div class="card__info">
-                        <h3 class="card__title">
-                            <a href="#">RABANNE million gold</a>
-                        </h3>
-                        <div class="card__price-row">
-                            <p class="card__price">от 11 279 руб</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="card t-right">
-                <div class="card__body">
-                    <div class="card__img">
-                        <img src="images/card-img3.png" alt="">
-                        <div class="card__mark prc"></div>
-                        <div class="card__mark top"></div>
-                        <div class="card__mark new"></div>
-                    </div>
-                     <div class="card__info">
-                        <h3 class="card__title">
-                            <a href="#">RABANNE million gold</a>
-                        </h3>
-                        <div class="card__price-row">
-                            <p class="card__price">от 11 279 руб</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="card t-right">
-                <div class="card__body">
-                    <div class="card__img">
-                        <img src="images/card-img4.png" alt="">
-                        <div class="card__mark prc"></div>
-                        <div class="card__mark top"></div>
-                        <div class="card__mark new"></div>
-                    </div>
-                     <div class="card__info">
-                        <h3 class="card__title">
-                            <a href="#">RABANNE million gold</a>
-                        </h3>
-                        <div class="card__price-row">
-                            <p class="card__price">от 11 279 руб</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="stocks__button-row">
-            <div class="button pink stocks__button">
-                смотреть еще
-            </div>
-        </div>
-    </div>
-</section>
-        <section class="novelty">
-    <div class="novelty__container">
-        <div class="title-head left-center novelty__head">
-            <h2 class="black">
-                распив новинок
-            </h2>
-            <a href="#" class="white title-head__link">
-                <span>
-                    смотреть все
-                </span>
-                <svg width="41" height="16" viewBox="0 0 41 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M40.7071 8.70711C41.0976 8.31658 41.0976 7.68342 40.7071 7.29289L34.3431 0.928932C33.9526 0.538408 33.3195 0.538408 32.9289 0.928932C32.5384 1.31946 32.5384 1.95262 32.9289 2.34315L38.5858 8L32.9289 13.6569C32.5384 14.0474 32.5384 14.6805 32.9289 15.0711C33.3195 15.4616 33.9526 15.4616 34.3431 15.0711L40.7071 8.70711ZM0 9H40V7H0V9Z" fill="black"/>
-                </svg>
-            </a>
-        </div>
-
-        <div class="novelty__row">
-            <div class="novelty__left">
-                <div class="novelty__img">
-                    <img src="images/novelty/novelty-img.png" alt="">
-                </div>
-            </div>
-            <div class="novelty__right">
-                <div class="card-row novelty__row-card">
-                    <div class="card t-right">
-                        <div class="card__body">
-                            <div class="card__img">
-                                <img src="images/card-img1.png" alt="">
-                                <div class="card__mark prc"></div>
-                                <div class="card__mark top"></div>
-                                <div class="card__mark new"></div>
-                            </div>
-                             <div class="card__info">
-                                <h3 class="card__title">
-                                    <a href="#">RABANNE million gold</a>
-                                </h3>
-                                <div class="card__price-row">
-                                    <p class="card__price">от 11 279 руб</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="card t-right">
-                        <div class="card__body">
-                            <div class="card__img">
-                                <img src="images/card-img2.png" alt="">
-                                <div class="card__mark prc"></div>
-                                <div class="card__mark top"></div>
-                                <div class="card__mark new"></div>
-                            </div>
-                             <div class="card__info">
-                                <h3 class="card__title">
-                                    <a href="#">RABANNE million gold</a>
-                                </h3>
-                                <div class="card__price-row">
-                                    <p class="card__price">от 11 279 руб</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="card t-right">
-                        <div class="card__body">
-                            <div class="card__img">
-                                <img src="images/card-img3.png" alt="">
-                                <div class="card__mark prc"></div>
-                                <div class="card__mark top"></div>
-                                <div class="card__mark new"></div>
-                            </div>
-                             <div class="card__info">
-                                <h3 class="card__title">
-                                    <a href="#">RABANNE million gold</a>
-                                </h3>
-                                <div class="card__price-row">
-                                    <p class="card__price">от 11 279 руб</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="card t-right">
-                        <div class="card__body">
-                            <div class="card__img">
-                                <img src="images/card-img4.png" alt="">
-                                <div class="card__mark prc"></div>
-                                <div class="card__mark top"></div>
-                                <div class="card__mark new"></div>
-                            </div>
-                             <div class="card__info">
-                                <h3 class="card__title">
-                                    <a href="#">RABANNE million gold</a>
-                                </h3>
-                                <div class="card__price-row">
-                                    <p class="card__price">от 11 279 руб</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="novelty__button-row">
-                    <div class="button novelty__button">
-                        смотреть еще
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-        <section class="promo">
-    <div class="promo__container">
-        <a href="#" class="promo__card">
-            <div class="promo__img">
-                <img src="images/promo/promo-img.png" alt="">
-            </div>
-            <div class="promo__bottom">
-                <h2 class="promo__title">
-                    промокод
-                    на первый заказ
-                </h2>
-                <p class="promo__text">
-                    введи кодовое слово
-                    <br>и получи дооплнительную скидку
-                    <br>до 2000 рублей
-                </p>
-            </div>
-        </a>
-    </div>
-</section>
-        <section class="hits">
-    <div class="hits__container">
-        <div class="title-head hits__head left">
-            <h2>
-                Хиты
-            </h2>
-            <a href="#" class="title-head__link">
-                <span>
-                    смотреть все
-                </span>
-                <svg width="41" height="16" viewBox="0 0 41 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M40.7071 8.70711C41.0976 8.31658 41.0976 7.68342 40.7071 7.29289L34.3431 0.928932C33.9526 0.538408 33.3195 0.538408 32.9289 0.928932C32.5384 1.31946 32.5384 1.95262 32.9289 2.34315L38.5858 8L32.9289 13.6569C32.5384 14.0474 32.5384 14.6805 32.9289 15.0711C33.3195 15.4616 33.9526 15.4616 34.3431 15.0711L40.7071 8.70711ZM0 9H40V7H0V9Z" fill="black"/>
-                </svg>
-            </a>
-        </div>
-        <div class="hits__slider">
-            <div class="swiper-wrapper hits__wrapper">
-                <div class="swiper-slide hits__slide">
-                    <div class="card t-right">
-                        <div class="card__body">
-                            <div class="card__img">
-                                <img src="images/card-img1.png" alt="">
-                                <div class="card__mark prc"></div>
-                                <div class="card__mark top"></div>
-                                <div class="card__mark new"></div>
-                            </div>
-                             <div class="card__info">
-                                <h3 class="card__title">
-                                    <a href="#">RABANNE million gold</a>
-                                </h3>
-                                <div class="card__price-row">
-                                    <p class="card__price">от 11 279 руб</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="swiper-slide hits__slide">
-                    <div class="card t-right">
-                        <div class="card__body">
-                            <div class="card__img">
-                                <img src="images/card-img2.png" alt="">
-                                <div class="card__mark prc"></div>
-                                <div class="card__mark top"></div>
-                                <div class="card__mark new"></div>
-                            </div>
-                             <div class="card__info">
-                                <h3 class="card__title">
-                                    <a href="#">RABANNE million gold</a>
-                                </h3>
-                                <div class="card__price-row">
-                                    <p class="card__price">от 11 279 руб</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="swiper-slide hits__slide">
-                    <div class="card t-right">
-                        <div class="card__body">
-                            <div class="card__img">
-                                <img src="images/card-img3.png" alt="">
-                                <div class="card__mark prc"></div>
-                                <div class="card__mark top"></div>
-                                <div class="card__mark new"></div>
-                            </div>
-                             <div class="card__info">
-                                <h3 class="card__title">
-                                    <a href="#">RABANNE million gold</a>
-                                </h3>
-                                <div class="card__price-row">
-                                    <p class="card__price">от 11 279 руб</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="swiper-slide hits__slide">
-                    <div class="card t-right">
-                        <div class="card__body">
-                            <div class="card__img">
-                                <img src="images/card-img4.png" alt="">
-                                <div class="card__mark prc"></div>
-                                <div class="card__mark top"></div>
-                                <div class="card__mark new"></div>
-                            </div>
-                             <div class="card__info">
-                                <h3 class="card__title">
-                                    <a href="#">RABANNE million gold</a>
-                                </h3>
-                                <div class="card__price-row">
-                                    <p class="card__price">от 11 279 руб</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="swiper-slide hits__slide">
-                    <div class="card t-right">
-                        <div class="card__body">
-                            <div class="card__img">
-                                <img src="images/card-img1.png" alt="">
-                                <div class="card__mark prc"></div>
-                                <div class="card__mark top"></div>
-                                <div class="card__mark new"></div>
-                            </div>
-                             <div class="card__info">
-                                <h3 class="card__title">
-                                    <a href="#">RABANNE million gold</a>
-                                </h3>
-                                <div class="card__price-row">
-                                    <p class="card__price">от 11 279 руб</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="swiper-slide hits__slide">
-                    <div class="card t-right">
-                        <div class="card__body">
-                            <div class="card__img">
-                                <img src="images/card-img2.png" alt="">
-                                <div class="card__mark prc"></div>
-                                <div class="card__mark top"></div>
-                                <div class="card__mark new"></div>
-                            </div>
-                             <div class="card__info">
-                                <h3 class="card__title">
-                                    <a href="#">RABANNE million gold</a>
-                                </h3>
-                                <div class="card__price-row">
-                                    <p class="card__price">от 11 279 руб</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="swiper-slide hits__slide">
-                    <div class="card t-right">
-                        <div class="card__body">
-                            <div class="card__img">
-                                <img src="images/card-img3.png" alt="">
-                                <div class="card__mark prc"></div>
-                                <div class="card__mark top"></div>
-                                <div class="card__mark new"></div>
-                            </div>
-                             <div class="card__info">
-                                <h3 class="card__title">
-                                    <a href="#">RABANNE million gold</a>
-                                </h3>
-                                <div class="card__price-row">
-                                    <p class="card__price">от 11 279 руб</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="swiper-slide hits__slide">
-                    <div class="card t-right">
-                        <div class="card__body">
-                            <div class="card__img">
-                                <img src="images/card-img4.png" alt="">
-                                <div class="card__mark prc"></div>
-                                <div class="card__mark top"></div>
-                                <div class="card__mark new"></div>
-                            </div>
-                             <div class="card__info">
-                                <h3 class="card__title">
-                                    <a href="#">RABANNE million gold</a>
-                                </h3>
-                                <div class="card__price-row">
-                                    <p class="card__price">от 11 279 руб</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="slider-bottom hits__bottom-slider">
-            <div class="slider-bottom__button-prev hits__button-prev">
-                <picture>
-                    <source media="(max-width: 480px)" srcset="images/button-slider-mob.svg">
-                    <img src="images/button-slider.svg" alt="">
-                </picture>
-            </div>
-            <div class="swiper-pagination slider-bottom__pagination hits__pagination"></div>
-            <div class="slider-bottom__button-next hits__button-next">
-                <picture>
-                    <source media="(max-width: 480px)" srcset="images/button-slider-mob.svg">
-                    <img src="images/button-slider.svg" alt="">
-                </picture>
-            </div>
-        </div>
-    </div>
-</section>
-        <section class="blog-promo">
-    <div class="blog-promo__container">
-        <div class="right title-head blog-promo__head">
-            <h2>
-                блог
-            </h2>
-            <a href="#" class="title-head__link">
-                <span>
-                    смотреть все
-                </span>
-                <svg width="41" height="16" viewBox="0 0 41 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M40.7071 8.70711C41.0976 8.31658 41.0976 7.68342 40.7071 7.29289L34.3431 0.928932C33.9526 0.538408 33.3195 0.538408 32.9289 0.928932C32.5384 1.31946 32.5384 1.95262 32.9289 2.34315L38.5858 8L32.9289 13.6569C32.5384 14.0474 32.5384 14.6805 32.9289 15.0711C33.3195 15.4616 33.9526 15.4616 34.3431 15.0711L40.7071 8.70711ZM0 9H40V7H0V9Z" fill="black"/>
-                </svg>
-            </a>
-        </div>
-        <div class="blog-promo__row blog__row">
-            <a href="#" class="right blog__card crad-blog">
-                <div class="crad-blog__img">
-                    <img src="images/blog/blog-img1.png" alt="">
-                </div>
-                <h3 class="crad-blog__title">
-                    Новости
-                </h3>
-                <p class="crad-blog__text">
-                    Популярная актриса раскритиковала подборку
-                </p>
-                <div class="crad-blog__bottom">
-                    <p class="crad-blog__data">
-                        2.9.24
-                    </p>
-                    <p class="crad-blog__mark">
-                        Новинки
-                    </p>
-                </div>
-            </a>
-            <a href="#" class="right blog__card crad-blog">
-                <div class="crad-blog__img">
-                    <img src="images/blog/blog-img2.png" alt="">
-                </div>
-                <h3 class="crad-blog__title">
-                    Советы
-                </h3>
-                <p class="crad-blog__text">
-                    Что носят мужчины?
-                </p>
-                <div class="crad-blog__bottom">
-                    <p class="crad-blog__data">
-                        29.8.24
-                    </p>
-                    <p class="crad-blog__mark">
-                        Новинки
-                    </p>
-                </div>
-            </a>
-            <a href="#" class="right blog__card crad-blog">
-                <div class="crad-blog__img">
-                    <img src="images/blog/blog-img3.png" alt="">
-                </div>
-                <h3 class="crad-blog__title">
-                    советы
-                </h3>
-                <p class="crad-blog__text">
-                    Какой парфюм выбрать в качестве подарка
-                </p>
-                <div class="crad-blog__bottom">
-                    <p class="crad-blog__data">
-                        30.8.24
-                    </p>
-                    <p class="crad-blog__mark">
-                        Новинки
-                    </p>
-                </div>
-            </a>
-        </div>
-    </div>
-</section>
-        <div class="bottom-menu">
-    <div class="bottom-menu__container">
-        <div class="bottom-menu__row-item">
-            <a href="#" class="bottom-menu__item">
-                <svg class="fill" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M8.70009 10.9768C8.70009 11.9514 9.08012 12.8685 9.76924 13.5577C10.4584 14.2468 11.3755 14.6268 12.35 14.6268C13.3246 14.6268 14.2417 14.2468 14.9309 13.5577C15.6216 12.8685 16 11.9531 16 10.9768C16 10.3874 15.8564 9.80298 15.5845 9.28447L13.0966 4.17519H13.5138C13.7468 4.17519 13.936 3.98602 13.936 3.75294V3.04862C13.936 2.81554 13.7468 2.62637 13.5138 2.62637H10.3367C10.259 1.92712 9.21693 1.37312 7.94173 1.37312C6.66653 1.37312 5.62441 1.92712 5.54669 2.62637H2.36968C2.1366 2.62637 1.94743 2.81554 1.94743 3.04862V3.75294C1.94743 3.98602 2.1366 4.17519 2.36968 4.17519H2.90341L0.415497 9.28445C0.143566 9.80298 0 10.3891 0 10.9768C0 11.9514 0.380027 12.8685 1.06914 13.5577C1.75826 14.2468 2.67539 14.6268 3.64995 14.6268C4.62451 14.6268 5.54164 14.2468 6.23076 13.5577C6.92157 12.8685 7.30159 11.9531 7.30159 10.9768C7.30159 10.3874 7.15803 9.80298 6.8861 9.28447L4.39649 4.17519H11.6052L9.11559 9.28447C8.84366 9.80298 8.70009 10.3891 8.70009 10.9768ZM5.97739 9.73542L5.98415 9.75062C6.18514 10.1323 6.28648 10.5445 6.28648 10.9785H1.01341C1.01341 10.5445 1.11475 10.1323 1.31574 9.75062L1.31912 9.74386L3.64995 4.96058L5.97739 9.73542ZM10.0158 9.75062L10.0192 9.74386L12.35 4.96058L14.6775 9.73711L14.6842 9.75231C14.8852 10.134 14.9866 10.5461 14.9866 10.9802H9.7135C9.7135 10.5445 9.81484 10.1306 10.0158 9.75062Z" fill="#999999"/>
-                </svg>
-                <span class="p-b">
-                    сравнение
-                </span>
-            </a>
-            <a href="#" class="bottom-menu__item">
-                <svg class="stroke" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M3.46357 11.3752L3.46356 11.3752L0.650856 8L3.46356 4.62475L3.07945 4.30466L3.46356 4.62475C4.58549 3.27843 6.24748 2.5 8 2.5C9.75251 2.5 11.4145 3.27842 12.5365 4.62475C12.5365 4.62475 12.5365 4.62476 12.5365 4.62476L15.3491 8L12.5365 11.3752C11.4145 12.7216 9.75252 13.5 8 13.5C6.24747 13.5 4.5855 12.7216 3.46357 11.3752ZM8 11.5C9.93299 11.5 11.5 9.93299 11.5 8C11.5 6.06701 9.93299 4.5 8 4.5C6.06701 4.5 4.5 6.06701 4.5 8C4.5 9.93299 6.06701 11.5 8 11.5Z" stroke="#999999"/>
-                </svg>
-                <span class="p-b">
-                    вы смотрели
-                </span>
-            </a>
-            <a href="tel:+397000904" class="bottom-menu__item">
-                <svg class="stroke" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M2 3.66667C2 9.3736 6.62639 14 12.3333 14C12.5908 14 12.8461 13.9906 13.0989 13.9721C13.3889 13.9508 13.5339 13.9402 13.666 13.8642C13.7753 13.8013 13.879 13.6897 13.9338 13.576C14 13.4388 14 13.2787 14 12.9587V11.0805C14 10.8113 14 10.6767 13.9557 10.5613C13.9166 10.4594 13.853 10.3687 13.7706 10.2971C13.6773 10.216 13.5508 10.17 13.2979 10.078L11.16 9.3006C10.8657 9.1936 10.7185 9.14007 10.5789 9.14913C10.4557 9.15713 10.3373 9.1992 10.2366 9.27053C10.1225 9.3514 10.0419 9.48567 9.8808 9.75427L9.33333 10.6667C7.56673 9.8666 6.1346 8.4326 5.33333 6.66667L6.24575 6.11921C6.5143 5.95809 6.64857 5.87752 6.72947 5.76337C6.8008 5.66272 6.84287 5.54425 6.85087 5.42113C6.85993 5.28151 6.8064 5.13435 6.6994 4.84003L5.92199 2.70214C5.83 2.44917 5.78401 2.32269 5.70295 2.2294C5.63134 2.14699 5.54059 2.08343 5.43868 2.0443C5.32331 2 5.18872 2 4.91955 2H3.04134C2.72125 2 2.56121 2 2.42399 2.06617C2.31033 2.12097 2.19876 2.22467 2.1358 2.33402C2.05979 2.46605 2.04917 2.61108 2.02793 2.90115C2.00942 3.15391 2 3.40919 2 3.66667Z" stroke="#999999" stroke-width="1.33333" stroke-linecap="round" stroke-linejoin="round"/>
-                </svg>
-                <span>
-                    +397000904
-                </span>
-            </a>
-        </div>
-        <div class="bottom-menu__button-up">
-            <span>
-                наверх
-            </span>
-            <svg width="8" height="6" viewBox="0 0 8 6" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M4 0L7.4641 6L0.535898 6L4 0Z" fill="black"/>
-            </svg>
-        </div>
-    </div>
-</div>
       </main>
 
       <footer class="footer">
@@ -1914,7 +1552,7 @@
         <div class="item-input-text footer__item-input">
           <input type="text" placeholder="Ваш e-mail" name="e-mail" class="input-text _req _email">
         </div>
-        <button type="submit" class="button white footer__button">подписаться</button>
+        <button type="submit" class="button footer__button white">подписаться</button>
       </form>
     </div>
     <div class="footer__center">
