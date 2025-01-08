@@ -7,11 +7,11 @@
   <title>Каталог</title>
 
   <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
-  <link rel="stylesheet" href="css/main.min.css?_v=20250107025651">
-  <link rel="stylesheet" href="css/catalog-page.min.css?_v=20250107025651">
+  <link rel="stylesheet" href="css/main.min.css?_v=20250108131948">
+  <link rel="stylesheet" href="css/catalog-page.min.css?_v=20250108131948">
 
 
-  <script defer="defer" src="js/main.min.js?_v=20250107025651"></script>
+  <script defer="defer" src="js/main.min.js?_v=20250108131948"></script>
   
 </head>
 
@@ -3524,7 +3524,7 @@
 <div class="popup popup-right" data-popup="popup-ent-reg" data-close-overlay>
     <div class="popup-right__container" data-close-overlay>
         <div class="popup-right__content">
-            <div class="active popup-ent-reg-body popup-right__body">
+            <div class="active popup-right__body enter popup-body-change">
                 <div class="popup-right__head">
                     <div class="popup-right__title">
                         Вход
@@ -3559,15 +3559,15 @@
                                 <span class="popup-item-checkbox__square"></span>
                                 <span>запомнить меня</span>
                             </label>
-                            <a href="#" class="popup-right__button-password">
+                            <div class="popup-button-change new popup-right__button-password">
                                 забыл пароль?
-                            </a>
+                            </div>
                         </div>
                         <div class="popup-right__button-row">
                             <button type="submit" class="button popup-right__button">
                                 Войти
                             </button>
-                            <div class="popup-ent-reg-change popup-right__button-change">
+                            <div class="popup-button-change popup-right__button-change reg">
                                 зарегистрироваться
                             </div>
                         </div>
@@ -3604,7 +3604,7 @@
                 </div>
             </div>
 
-            <div class="popup-right__body popup-ent-reg-body">
+            <div class="popup-right__body popup-body-change reg">
                 <div class="popup-right__head">
                     <div class="popup-right__title">
                         регистрация
@@ -3643,8 +3643,47 @@
                             <button type="submit" class="button popup-right__button">
                                 зарегистрироваться
                             </button>
-                            <div class="popup-ent-reg-change popup-right__button-change">
+                            <div class="popup-button-change popup-right__button-change enter">
                                 войти в личный кабинет
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                <div class="popup-right__bottom">
+                </div>
+            </div>
+
+            <div class="popup-right__body popup-body-change new">
+                <div class="popup-right__head">
+                    <div class="popup-right__title">
+                        Новый пароль
+                    </div>
+                    <button class="button-close popup-right__button-close">
+                        <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <g clip-path="url(#clip0_26_7847)">
+                              <path d="M19 19L10 10M1 1L10 10M10 10L19 1M10 10L1 19" stroke="#999999"/>
+                            </g>
+                            <defs>
+                              <clipPath>
+                                <rect width="20" height="20" fill="white"/>
+                              </clipPath>
+                            </defs>
+                        </svg>
+                    </button>
+                </div>
+                <div class="popup-right__center">
+                    <form action="#" class="popup-right__form">
+                        <div class="popup-right__item-row">
+                            <div class="item-input-text popup-right__item-input">
+                                <input type="text" placeholder="Ваш e-mail" name="e-mail" class="input-text _req _email">
+                            </div>
+                        </div>
+                        <div class="popup-right__button-row">
+                            <button type="submit" class="button popup-right__button">
+                                выслать новый пароль
+                            </button>
+                            <div class="popup-button-change popup-right__button-change reg">
+                                зарегестрироваться
                             </div>
                         </div>
                     </form>
@@ -3657,45 +3696,519 @@
 </div>
 
 
-<div class="popup-basket">
-        <div class="popup-basket__content">
-            <div class="popup-basket__img">
-                <img loading="lazy" src="images/catalog/cat-top1.png" alt="">
-            </div>
-            <div class="popup-basket__body">
-                <div class="popup-basket__top">
-                    <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <g clip-path="url(#clip0_24_892)">
-                          <rect x="3" width="6" height="1" fill="#999999"/>
-                          <rect x="0.5" y="3.5" width="11" height="8" stroke="#999999"/>
-                        </g>
-                        <defs>
-                          <clipPath id="clip0_24_892">
-                            <rect width="12" height="12" fill="white"/>
-                          </clipPath>
-                        </defs>
-                    </svg>
-                    <p>
-                        добавлен в корзину
-                    </p>
+
+<div class="popup popup-right" data-popup="popup-report-admission" data-close-overlay>
+    <div class="popup-right__container" data-close-overlay>
+        <div class="popup-right__content">
+            <div class="popup-right__body">
+                <div class="popup-right__head">
+                    <div class="popup-right__title">
+                        сообщить
+                        о поступлении
+                    </div>
+                    <button class="button-close popup-right__button-close">
+                        <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <g clip-path="url(#clip0_26_7847)">
+                              <path d="M19 19L10 10M1 1L10 10M10 10L19 1M10 10L1 19" stroke="#999999"/>
+                            </g>
+                            <defs>
+                              <clipPath>
+                                <rect width="20" height="20" fill="white"/>
+                              </clipPath>
+                            </defs>
+                        </svg>
+                    </button>
                 </div>
-                <div class="popup-basket__title">
-                    TUMI atlas 00:00 gmt
+                <div class="popup-right__center">
+                    <form action="#" class="popup-right__form">
+                        <div class="popup-right__item-row">
+                            <div class="item-input-text popup-right__item-input">
+                                <input type="text" placeholder="Ваше имя" name="name" class="input-text _req">
+                            </div>
+                            <div class="item-input-text popup-right__item-input">
+                                <input type="text" placeholder="Ваш e-mail" name="e-mail" class="input-text _req _email">
+                            </div>
+                            <div class="item-input-text popup-right__item-input">
+                                <input type="tel" placeholder="ваш телефон" name="tel" class="input-text _req tel">
+                            </div>
+                        </div>
+                        <div class="popup-right__button-row">
+                            <button type="submit" class="button popup-right__button">
+                                отправить
+                            </button>
+                        </div>
+                    </form>
                 </div>
-                <div class="popup-basket__mill">
-                    10 ml
+                <div class="popup-right__bottom">
                 </div>
             </div>
         </div>
+    </div>
+</div>
+
+<div class="popup popup-right popup-feedback" data-popup="popup-feedback" data-close-overlay>
+    <div class="popup-right__container" data-close-overlay>
+        <div class="popup-right__content">
+            <div class="popup-right__body">
+                <div class="popup-right__head">
+                    <div class="popup-right__title">
+                        отзыв
+                    </div>
+                    <button class="button-close popup-right__button-close">
+                        <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <g clip-path="url(#clip0_26_7847)">
+                              <path d="M19 19L10 10M1 1L10 10M10 10L19 1M10 10L1 19" stroke="#999999"/>
+                            </g>
+                            <defs>
+                              <clipPath>
+                                <rect width="20" height="20" fill="white"/>
+                              </clipPath>
+                            </defs>
+                        </svg>
+                    </button>
+                </div>
+                <div class="popup-right__center">
+                    <form action="#" class="popup-right__form">
+                        <div class="popup-right__item-row">
+                            <div class="item-input-text popup-right__item-input">
+                                <textarea name="text-feedback" placeholder="напишите комментарий" class="input-text _req textarea-auto-height"></textarea>
+                            </div>
+                            
+                        </div>
+                        <div class="estim-feedback popup-feedback__estim">
+                            <input type="text" name="estim-feedback" class="estim-feedback__input">
+                            <p class="estim-feedback__text">
+                                оценка
+                            </p>
+                            <div class="estim-feedback__number">
+                                1
+                            </div>
+                            <div class="card__estim-star estim-feedback__star-row">
+                                <svg class="marked estim-feedback__star" width="20" height="19" viewBox="0 0 20 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M10 1.904L12.044 7.049L12.177 7.414L12.538 7.422L18.119 7.548L13.426 10.739L13.08 10.999L13.192 11.399L15.107 16.536L10.357 13.487L10 13.213L9.643 13.487L4.893 16.536L6.808 11.399L6.92 10.999L6.574 10.739L1.881 7.548L7.462 7.422L7.823 7.414L7.956 7.049L10 1.904Z" stroke="#999999" fill="none"></path>
+                                </svg>
+                                <svg class="estim-feedback__star" width="20" height="19" viewBox="0 0 20 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M10 1.904L12.044 7.049L12.177 7.414L12.538 7.422L18.119 7.548L13.426 10.739L13.08 10.999L13.192 11.399L15.107 16.536L10.357 13.487L10 13.213L9.643 13.487L4.893 16.536L6.808 11.399L6.92 10.999L6.574 10.739L1.881 7.548L7.462 7.422L7.823 7.414L7.956 7.049L10 1.904Z" stroke="#999999" fill="none"></path>
+                                </svg>
+                                <svg class="estim-feedback__star" width="20" height="19" viewBox="0 0 20 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M10 1.904L12.044 7.049L12.177 7.414L12.538 7.422L18.119 7.548L13.426 10.739L13.08 10.999L13.192 11.399L15.107 16.536L10.357 13.487L10 13.213L9.643 13.487L4.893 16.536L6.808 11.399L6.92 10.999L6.574 10.739L1.881 7.548L7.462 7.422L7.823 7.414L7.956 7.049L10 1.904Z" stroke="#999999" fill="none"></path>
+                                </svg>
+                                <svg class="estim-feedback__star" width="20" height="19" viewBox="0 0 20 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M10 1.904L12.044 7.049L12.177 7.414L12.538 7.422L18.119 7.548L13.426 10.739L13.08 10.999L13.192 11.399L15.107 16.536L10.357 13.487L10 13.213L9.643 13.487L4.893 16.536L6.808 11.399L6.92 10.999L6.574 10.739L1.881 7.548L7.462 7.422L7.823 7.414L7.956 7.049L10 1.904Z" stroke="#999999" fill="none"></path>
+                                </svg>
+                                <svg class="estim-feedback__star" width="20" height="19" viewBox="0 0 20 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M10 1.904L12.044 7.049L12.177 7.414L12.538 7.422L18.119 7.548L13.426 10.739L13.08 10.999L13.192 11.399L15.107 16.536L10.357 13.487L10 13.213L9.643 13.487L4.893 16.536L6.808 11.399L6.92 10.999L6.574 10.739L1.881 7.548L7.462 7.422L7.823 7.414L7.956 7.049L10 1.904Z" stroke="#999999" fill="none"></path>
+                                </svg>
+                            </div>
+                        </div>
+                        <div class="popup-right__button-row">
+                            <button type="submit" class="button popup-right__button">
+                                добавить отзыв
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
 </div>
 
 
+
+<div class="popup popup-right" data-popup="popup-password" data-close-overlay>
+    <div class="popup-right__container" data-close-overlay>
+        <div class="popup-right__content">
+            <div class="popup-right__body">
+                <div class="popup-right__head">
+                    <div class="popup-right__title">
+                        новый пароль
+                    </div>
+                    <button class="button-close popup-right__button-close">
+                        <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <g clip-path="url(#clip0_26_7847)">
+                              <path d="M19 19L10 10M1 1L10 10M10 10L19 1M10 10L1 19" stroke="#999999"/>
+                            </g>
+                            <defs>
+                              <clipPath>
+                                <rect width="20" height="20" fill="white"/>
+                              </clipPath>
+                            </defs>
+                        </svg>
+                    </button>
+                </div>
+                <div class="popup-right__center">
+                    <form action="#" class="popup-right__form">
+                        <div class="popup-right__item-row">
+                            <div class="item-input-text popup-right__item-input">
+                                <input type="text" placeholder="пароль" name="password" class="input-text _req password">
+                            </div>
+                            <div class="item-input-text popup-right__item-input">
+                                <input type="text" placeholder="новый пароль" name="password-nex" class="input-text _req password input-match" data-match-group="2">
+                            </div>
+                            <div class="item-input-text popup-right__item-input">
+                                <input type="text" placeholder="повтор нового пароля" name="password-nex-two" class="input-text _req password input-match confirm" data-match-group="2">
+                            </div>
+                        </div>
+                        <div class="popup-right__button-row">
+                            <button type="submit" class="button popup-right__button">
+                                изменить пароль
+                            </button>
+                        </div>
+                    </form>
+                </div>
+                <div class="popup-right__bottom">
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<div class="popup-basket">
+    <div class="popup-basket__content">
+        <div class="popup-basket__img">
+            <img loading="lazy" src="images/catalog/cat-top1.png" alt="">
+        </div>
+        <div class="popup-basket__body">
+            <div class="popup-basket__top">
+                <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <g clip-path="url(#clip0_24_892)">
+                      <rect x="3" width="6" height="1" fill="#999999"/>
+                      <rect x="0.5" y="3.5" width="11" height="8" stroke="#999999"/>
+                    </g>
+                    <defs>
+                      <clipPath id="clip0_24_892">
+                        <rect width="12" height="12" fill="white"/>
+                      </clipPath>
+                    </defs>
+                </svg>
+                <p>
+                    добавлен в корзину
+                </p>
+            </div>
+            <div class="popup-basket__title">
+                TUMI atlas 00:00 gmt
+            </div>
+            <div class="popup-basket__mill">
+                10 ml
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<div class="popup popup-right basket" data-popup="basket" data-close-overlay>
+    <div class="popup-right__container" data-close-overlay>
+        <div class="popup-right__content">
+            <div class="popup-right__body">
+                <div class="popup-right__head">
+                    <div class="popup-filter__head-left">
+                        <div class="popup-right__title">
+                            корзина
+                        </div>
+                        <div class="popup-filter__clear">Очистить</div>
+                    </div>
+                    
+                    <button class="button-close popup-right__button-close">
+                        <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <g clip-path="url(#clip0_26_7847)">
+                              <path d="M19 19L10 10M1 1L10 10M10 10L19 1M10 10L1 19" stroke="#999999"/>
+                            </g>
+                            <defs>
+                              <clipPath>
+                                <rect width="20" height="20" fill="white"/>
+                              </clipPath>
+                            </defs>
+                        </svg>
+                    </button>
+                </div>
+                <div class="basket__row-card">
+                    <div class="card">
+                        <div class="card__body">
+                            <div class="card__img">
+                                <img loading="lazy" src="images/card-img1.png" alt="">
+                            </div>
+                            <div class="card__info">
+                                <h3 class="card__title">
+                                    RABANNE million gold
+                                </h3>
+                                <div class="card__selected-volume">10 ml</div>
+                                <div class="card__price-row">
+                                    <div class="card__price-calc">
+                                        <span class="pink"><span class="quantity-number-text">2</span>x</span>
+                                        <span>5 530 руб</span>
+                                    </div>
+                                    <p class="card__result-price">
+                                        от 11 279 руб
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="card__btn-content">
+                                <div class="card__basket-btn-row">
+                                    <div class="card__btn-row">
+                                        <div class="card__btn-plus quantity__number-minus">
+                                            -
+                                        </div>
+                                        <input type="number" min="1" value="2" readonly="readonly" class="quantity__input">
+                                        <div class="card__btn-minus quantity__number-plus">
+                                            +
+                                        </div>
+                                    </div>
+                                    <div class="card__btn-delete">
+                                        <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M19 19L10 10M1 1L10 10M10 10L19 1M10 10L1 19" stroke="white"/>
+                                        </svg>
+                                        <span>удалить товар</span>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="card__body">
+                            <div class="card__img">
+                                <img loading="lazy" src="images/card-img1.png" alt="">
+                            </div>
+                            <div class="card__info">
+                                <h3 class="card__title">
+                                    RABANNE million gold
+                                </h3>
+                                <div class="card__selected-volume">10 ml</div>
+                                <div class="card__price-row">
+                                    <div class="card__price-calc">
+                                        <span class="pink"><span class="quantity-number-text">2</span>x</span>
+                                        <span>5 530 руб</span>
+                                    </div>
+                                    <p class="card__result-price">
+                                        от 11 279 руб
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="card__btn-content">
+                                <div class="card__basket-btn-row">
+                                    <div class="card__btn-row">
+                                        <div class="card__btn-plus quantity__number-minus">
+                                            -
+                                        </div>
+                                        <input type="number" min="1" value="2" readonly="readonly" class="quantity__input">
+                                        <div class="card__btn-minus quantity__number-plus">
+                                            +
+                                        </div>
+                                    </div>
+                                    <div class="card__btn-delete">
+                                        <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M19 19L10 10M1 1L10 10M10 10L19 1M10 10L1 19" stroke="white"/>
+                                        </svg>
+                                        <span>удалить товар</span>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="card__body">
+                            <div class="card__img">
+                                <img loading="lazy" src="images/card-img1.png" alt="">
+                            </div>
+                            <div class="card__info">
+                                <h3 class="card__title">
+                                    RABANNE million gold
+                                </h3>
+                                <div class="card__selected-volume">10 ml</div>
+                                <div class="card__price-row">
+                                    <div class="card__price-calc">
+                                        <span class="pink"><span class="quantity-number-text">2</span>x</span>
+                                        <span>5 530 руб</span>
+                                    </div>
+                                    <p class="card__result-price">
+                                        от 11 279 руб
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="card__btn-content">
+                                <div class="card__basket-btn-row">
+                                    <div class="card__btn-row">
+                                        <div class="card__btn-plus quantity__number-minus">
+                                            -
+                                        </div>
+                                        <input type="number" min="1" value="2" readonly="readonly" class="quantity__input">
+                                        <div class="card__btn-minus quantity__number-plus">
+                                            +
+                                        </div>
+                                    </div>
+                                    <div class="card__btn-delete">
+                                        <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M19 19L10 10M1 1L10 10M10 10L19 1M10 10L1 19" stroke="white"/>
+                                        </svg>
+                                        <span>удалить товар</span>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="card__body">
+                            <div class="card__img">
+                                <img loading="lazy" src="images/card-img1.png" alt="">
+                            </div>
+                            <div class="card__info">
+                                <h3 class="card__title">
+                                    RABANNE million gold
+                                </h3>
+                                <div class="card__selected-volume">10 ml</div>
+                                <div class="card__price-row">
+                                    <div class="card__price-calc">
+                                        <span class="pink"><span class="quantity-number-text">2</span>x</span>
+                                        <span>5 530 руб</span>
+                                    </div>
+                                    <p class="card__result-price">
+                                        от 11 279 руб
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="card__btn-content">
+                                <div class="card__basket-btn-row">
+                                    <div class="card__btn-row">
+                                        <div class="card__btn-plus quantity__number-minus">
+                                            -
+                                        </div>
+                                        <input type="number" min="1" value="2" readonly="readonly" class="quantity__input">
+                                        <div class="card__btn-minus quantity__number-plus">
+                                            +
+                                        </div>
+                                    </div>
+                                    <div class="card__btn-delete">
+                                        <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M19 19L10 10M1 1L10 10M10 10L19 1M10 10L1 19" stroke="white"/>
+                                        </svg>
+                                        <span>удалить товар</span>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                        </div>
+                    </div>
+                </div>
+                <div class="basket__promocode">
+                    <div class="item-input-text popup-right__item-input">
+                        <input type="text" placeholder="введите промокод" name="promocode" class="input-text">
+                    </div>
+                </div>
+                <div class="product__bottom-left">
+                    <div class="basket__result">
+                        <p>
+                            итого
+                        </p>
+                        <p class="basket__price-result">
+                            41 111 руб
+                        </p>
+                    </div>
+                    <a href="#" class="button basket__button-arrange">
+                        оформить заказ
+                    </a>
+                </div>
+                <div class="product__buy-click product__text-btn-bot">Купить к 1 клик</div>
+                <form action="#" class="product__btn-row product__form-buy-click">
+                    <div class="item-input-text popup-right__item-input">
+                        <input type="tel" placeholder="ваш телефон" name="tel" class="input-text _req tel">
+                    </div>
+                    <button class="popup-basket-open button product__button">жду звонка</button>
+                </form>
+                <div class="basket-bot basket__bottom">
+                    <div class="basket-bot__title">
+                        вам может подойти
+                    </div>
+                    <div class="basket-bot__row">
+                        <div class="card t-right">
+                            <div class="card__body">
+                                <div class="card__img">
+                                    <img loading="lazy" src="images/card-img1.png" alt="">
+                                        <div class="card__mark prc">-30%</div>
+                                        <div class="card__mark top">top</div>
+                                        <div class="card__mark new">new</div>
+                                </div>
+                                
+                                <div class="card__info">
+                                    <h3 class="card__title">
+                                        <a href="#">RABANNE million gold</a>
+                                    </h3>
+                                    <div class="card__price-row">
+                                        <p class="card__discount">
+                                            7 900 руб
+                                        </p>
+                                        <p class="card__price">
+                                            от 11 279 руб
+                                        </p>
+                                    </div>
+                                </div>
+            
+                            </div>
+                        </div>
+                        <div class="card t-right">
+                            <div class="card__body">
+                                <div class="card__img">
+                                    <img loading="lazy" src="images/card-img2.png" alt="">
+                                        <div class="card__mark prc">-30%</div>
+                                        <div class="card__mark top">top</div>
+                                        <div class="card__mark new">new</div>
+                                </div>
+                                
+                                <div class="card__info">
+                                    <h3 class="card__title">
+                                        <a href="#">RABANNE million gold</a>
+                                    </h3>
+                                    <div class="card__price-row">
+                                        <p class="card__discount">
+                                            7 900 руб
+                                        </p>
+                                        <p class="card__price">
+                                            от 11 279 руб
+                                        </p>
+                                    </div>
+                                </div>
+            
+                            </div>
+                        </div>
+                        <div class="card t-right">
+                            <div class="card__body">
+                                <div class="card__img">
+                                    <img loading="lazy" src="images/card-img3.png" alt="">
+                                        <div class="card__mark prc">-30%</div>
+                                        <div class="card__mark top">top</div>
+                                        <div class="card__mark new">new</div>
+                                </div>
+                                
+                                <div class="card__info">
+                                    <h3 class="card__title">
+                                        <a href="#">RABANNE million gold</a>
+                                    </h3>
+                                    <div class="card__price-row">
+                                        <p class="card__discount">
+                                            7 900 руб
+                                        </p>
+                                        <p class="card__price">
+                                            от 11 279 руб
+                                        </p>
+                                    </div>
+                                </div>
+            
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
 
 
 <div class="popup popup-right popup-filter" data-popup="popup-filter" data-close-overlay>
     <div class="popup-right__container" data-close-overlay>
         <div class="popup-right__content">
-            <form action="#" class="active popup-ent-reg-body popup-right__body">
+            <form action="#" class="active popup-right__body popup-ent-reg-body">
                 <div class="popup-right__head">
                     <div class="popup-filter__head-left">
                         <div class="popup-right__title">
@@ -4090,479 +4603,6 @@
     </div>
 </div>
 
-
-
-<div class="popup popup-right" data-popup="popup-report-admission" data-close-overlay>
-    <div class="popup-right__container" data-close-overlay>
-        <div class="popup-right__content">
-            <div class="popup-right__body">
-                <div class="popup-right__head">
-                    <div class="popup-right__title">
-                        сообщить
-                        о поступлении
-                    </div>
-                    <button class="button-close popup-right__button-close">
-                        <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <g clip-path="url(#clip0_26_7847)">
-                              <path d="M19 19L10 10M1 1L10 10M10 10L19 1M10 10L1 19" stroke="#999999"/>
-                            </g>
-                            <defs>
-                              <clipPath>
-                                <rect width="20" height="20" fill="white"/>
-                              </clipPath>
-                            </defs>
-                        </svg>
-                    </button>
-                </div>
-                <div class="popup-right__center">
-                    <form action="#" class="popup-right__form">
-                        <div class="popup-right__item-row">
-                            <div class="item-input-text popup-right__item-input">
-                                <input type="text" placeholder="Ваше имя" name="name" class="input-text _req">
-                            </div>
-                            <div class="item-input-text popup-right__item-input">
-                                <input type="text" placeholder="Ваш e-mail" name="e-mail" class="input-text _req _email">
-                            </div>
-                            <div class="item-input-text popup-right__item-input">
-                                <input type="tel" placeholder="ваш телефон" name="tel" class="input-text _req">
-                            </div>
-                        </div>
-                        <div class="popup-right__button-row">
-                            <button type="submit" class="button popup-right__button">
-                                отправить
-                            </button>
-                        </div>
-                    </form>
-                </div>
-                <div class="popup-right__bottom">
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-
-
-<div class="popup popup-right popup-feedback" data-popup="popup-feedback" data-close-overlay>
-    <div class="popup-right__container" data-close-overlay>
-        <div class="popup-right__content">
-            <div class="popup-right__body">
-                <div class="popup-right__head">
-                    <div class="popup-right__title">
-                        отзыв
-                    </div>
-                    <button class="button-close popup-right__button-close">
-                        <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <g clip-path="url(#clip0_26_7847)">
-                              <path d="M19 19L10 10M1 1L10 10M10 10L19 1M10 10L1 19" stroke="#999999"/>
-                            </g>
-                            <defs>
-                              <clipPath>
-                                <rect width="20" height="20" fill="white"/>
-                              </clipPath>
-                            </defs>
-                        </svg>
-                    </button>
-                </div>
-                <div class="popup-right__center">
-                    <form action="#" class="popup-right__form">
-                        <div class="popup-right__item-row">
-                            <div class="item-input-text popup-right__item-input">
-                                <textarea name="text-feedback" placeholder="напишите комментарий" class="input-text _req textarea-auto-height"></textarea>
-                            </div>
-                            
-                        </div>
-                        <div class="estim-feedback popup-feedback__estim">
-                            <input type="text" name="estim-feedback" class="estim-feedback__input">
-                            <p class="estim-feedback__text">
-                                оценка
-                            </p>
-                            <div class="estim-feedback__number">
-                                1
-                            </div>
-                            <div class="card__estim-star estim-feedback__star-row">
-                                <svg class="marked estim-feedback__star" width="20" height="19" viewBox="0 0 20 19" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M10 1.904L12.044 7.049L12.177 7.414L12.538 7.422L18.119 7.548L13.426 10.739L13.08 10.999L13.192 11.399L15.107 16.536L10.357 13.487L10 13.213L9.643 13.487L4.893 16.536L6.808 11.399L6.92 10.999L6.574 10.739L1.881 7.548L7.462 7.422L7.823 7.414L7.956 7.049L10 1.904Z" stroke="#999999" fill="none"></path>
-                                </svg>
-                                <svg class="estim-feedback__star" width="20" height="19" viewBox="0 0 20 19" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M10 1.904L12.044 7.049L12.177 7.414L12.538 7.422L18.119 7.548L13.426 10.739L13.08 10.999L13.192 11.399L15.107 16.536L10.357 13.487L10 13.213L9.643 13.487L4.893 16.536L6.808 11.399L6.92 10.999L6.574 10.739L1.881 7.548L7.462 7.422L7.823 7.414L7.956 7.049L10 1.904Z" stroke="#999999" fill="none"></path>
-                                </svg>
-                                <svg class="estim-feedback__star" width="20" height="19" viewBox="0 0 20 19" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M10 1.904L12.044 7.049L12.177 7.414L12.538 7.422L18.119 7.548L13.426 10.739L13.08 10.999L13.192 11.399L15.107 16.536L10.357 13.487L10 13.213L9.643 13.487L4.893 16.536L6.808 11.399L6.92 10.999L6.574 10.739L1.881 7.548L7.462 7.422L7.823 7.414L7.956 7.049L10 1.904Z" stroke="#999999" fill="none"></path>
-                                </svg>
-                                <svg class="estim-feedback__star" width="20" height="19" viewBox="0 0 20 19" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M10 1.904L12.044 7.049L12.177 7.414L12.538 7.422L18.119 7.548L13.426 10.739L13.08 10.999L13.192 11.399L15.107 16.536L10.357 13.487L10 13.213L9.643 13.487L4.893 16.536L6.808 11.399L6.92 10.999L6.574 10.739L1.881 7.548L7.462 7.422L7.823 7.414L7.956 7.049L10 1.904Z" stroke="#999999" fill="none"></path>
-                                </svg>
-                                <svg class="estim-feedback__star" width="20" height="19" viewBox="0 0 20 19" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M10 1.904L12.044 7.049L12.177 7.414L12.538 7.422L18.119 7.548L13.426 10.739L13.08 10.999L13.192 11.399L15.107 16.536L10.357 13.487L10 13.213L9.643 13.487L4.893 16.536L6.808 11.399L6.92 10.999L6.574 10.739L1.881 7.548L7.462 7.422L7.823 7.414L7.956 7.049L10 1.904Z" stroke="#999999" fill="none"></path>
-                                </svg>
-                            </div>
-                        </div>
-                        <div class="popup-right__button-row">
-                            <button type="submit" class="button popup-right__button">
-                                добавить отзыв
-                            </button>
-                        </div>
-                    </form>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-<div class="popup popup-right basket" data-popup="basket" data-close-overlay>
-    <div class="popup-right__container" data-close-overlay>
-        <div class="popup-right__content">
-            <div class="popup-right__body">
-                <div class="popup-right__head">
-                    <div class="popup-filter__head-left">
-                        <div class="popup-right__title">
-                            корзина
-                        </div>
-                        <div class="popup-filter__clear">Очистить</div>
-                    </div>
-                    
-                    <button class="button-close popup-right__button-close">
-                        <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <g clip-path="url(#clip0_26_7847)">
-                              <path d="M19 19L10 10M1 1L10 10M10 10L19 1M10 10L1 19" stroke="#999999"/>
-                            </g>
-                            <defs>
-                              <clipPath>
-                                <rect width="20" height="20" fill="white"/>
-                              </clipPath>
-                            </defs>
-                        </svg>
-                    </button>
-                </div>
-                <div class="basket__row-card">
-                    <div class="card">
-                        <div class="card__body">
-                            <div class="card__img">
-                                <img loading="lazy" src="images/card-img1.png" alt="">
-                            </div>
-                            <div class="card__info">
-                                <h3 class="card__title">
-                                    RABANNE million gold
-                                </h3>
-                                <div class="card__selected-volume">10 ml</div>
-                                <div class="card__price-row">
-                                    <div class="card__price-calc">
-                                        <span class="pink"><span class="quantity-number-text">2</span>x</span>
-                                        <span>5 530 руб</span>
-                                    </div>
-                                    <p class="card__result-price">
-                                        от 11 279 руб
-                                    </p>
-                                </div>
-                            </div>
-                            <div class="card__btn-content">
-                                <div class="card__basket-btn-row">
-                                    <div class="card__btn-row">
-                                        <div class="card__btn-plus quantity__number-minus">
-                                            -
-                                        </div>
-                                        <input type="number" min="1" value="2" readonly="readonly" class="quantity__input">
-                                        <div class="card__btn-minus quantity__number-plus">
-                                            +
-                                        </div>
-                                    </div>
-                                    <div class="card__btn-delete">
-                                        <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                            <path d="M19 19L10 10M1 1L10 10M10 10L19 1M10 10L1 19" stroke="white"/>
-                                        </svg>
-                                        <span>удалить товар</span>
-                                    </div>
-                                </div>
-                            </div>
-                            
-                        </div>
-                    </div>
-                    <div class="card">
-                        <div class="card__body">
-                            <div class="card__img">
-                                <img loading="lazy" src="images/card-img1.png" alt="">
-                            </div>
-                            <div class="card__info">
-                                <h3 class="card__title">
-                                    RABANNE million gold
-                                </h3>
-                                <div class="card__selected-volume">10 ml</div>
-                                <div class="card__price-row">
-                                    <div class="card__price-calc">
-                                        <span class="pink"><span class="quantity-number-text">2</span>x</span>
-                                        <span>5 530 руб</span>
-                                    </div>
-                                    <p class="card__result-price">
-                                        от 11 279 руб
-                                    </p>
-                                </div>
-                            </div>
-                            <div class="card__btn-content">
-                                <div class="card__basket-btn-row">
-                                    <div class="card__btn-row">
-                                        <div class="card__btn-plus quantity__number-minus">
-                                            -
-                                        </div>
-                                        <input type="number" min="1" value="2" readonly="readonly" class="quantity__input">
-                                        <div class="card__btn-minus quantity__number-plus">
-                                            +
-                                        </div>
-                                    </div>
-                                    <div class="card__btn-delete">
-                                        <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                            <path d="M19 19L10 10M1 1L10 10M10 10L19 1M10 10L1 19" stroke="white"/>
-                                        </svg>
-                                        <span>удалить товар</span>
-                                    </div>
-                                </div>
-                            </div>
-                            
-                        </div>
-                    </div>
-                    <div class="card">
-                        <div class="card__body">
-                            <div class="card__img">
-                                <img loading="lazy" src="images/card-img1.png" alt="">
-                            </div>
-                            <div class="card__info">
-                                <h3 class="card__title">
-                                    RABANNE million gold
-                                </h3>
-                                <div class="card__selected-volume">10 ml</div>
-                                <div class="card__price-row">
-                                    <div class="card__price-calc">
-                                        <span class="pink"><span class="quantity-number-text">2</span>x</span>
-                                        <span>5 530 руб</span>
-                                    </div>
-                                    <p class="card__result-price">
-                                        от 11 279 руб
-                                    </p>
-                                </div>
-                            </div>
-                            <div class="card__btn-content">
-                                <div class="card__basket-btn-row">
-                                    <div class="card__btn-row">
-                                        <div class="card__btn-plus quantity__number-minus">
-                                            -
-                                        </div>
-                                        <input type="number" min="1" value="2" readonly="readonly" class="quantity__input">
-                                        <div class="card__btn-minus quantity__number-plus">
-                                            +
-                                        </div>
-                                    </div>
-                                    <div class="card__btn-delete">
-                                        <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                            <path d="M19 19L10 10M1 1L10 10M10 10L19 1M10 10L1 19" stroke="white"/>
-                                        </svg>
-                                        <span>удалить товар</span>
-                                    </div>
-                                </div>
-                            </div>
-                            
-                        </div>
-                    </div>
-                    <div class="card">
-                        <div class="card__body">
-                            <div class="card__img">
-                                <img loading="lazy" src="images/card-img1.png" alt="">
-                            </div>
-                            <div class="card__info">
-                                <h3 class="card__title">
-                                    RABANNE million gold
-                                </h3>
-                                <div class="card__selected-volume">10 ml</div>
-                                <div class="card__price-row">
-                                    <div class="card__price-calc">
-                                        <span class="pink"><span class="quantity-number-text">2</span>x</span>
-                                        <span>5 530 руб</span>
-                                    </div>
-                                    <p class="card__result-price">
-                                        от 11 279 руб
-                                    </p>
-                                </div>
-                            </div>
-                            <div class="card__btn-content">
-                                <div class="card__basket-btn-row">
-                                    <div class="card__btn-row">
-                                        <div class="card__btn-plus quantity__number-minus">
-                                            -
-                                        </div>
-                                        <input type="number" min="1" value="2" readonly="readonly" class="quantity__input">
-                                        <div class="card__btn-minus quantity__number-plus">
-                                            +
-                                        </div>
-                                    </div>
-                                    <div class="card__btn-delete">
-                                        <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                            <path d="M19 19L10 10M1 1L10 10M10 10L19 1M10 10L1 19" stroke="white"/>
-                                        </svg>
-                                        <span>удалить товар</span>
-                                    </div>
-                                </div>
-                            </div>
-                            
-                        </div>
-                    </div>
-                </div>
-                <div class="basket__promocode">
-                    <div class="item-input-text popup-right__item-input">
-                        <input type="text" placeholder="введите промокод" name="promocode" class="input-text">
-                    </div>
-                </div>
-                <div class="product__bottom-left">
-                    <div class="basket__result">
-                        <p>
-                            итого
-                        </p>
-                        <p class="basket__price-result">
-                            41 111 руб
-                        </p>
-                    </div>
-                    <a href="#" class="button basket__button-arrange">
-                        оформить заказ
-                    </a>
-                </div>
-                <div class="product__buy-click product__text-btn-bot">Купить к 1 клик</div>
-                <form action="#" class="product__btn-row product__form-buy-click">
-                    <div class="item-input-text popup-right__item-input">
-                        <input type="tel" placeholder="ваш телефон" name="tel" class="input-text _req">
-                    </div>
-                    <button class="popup-basket-open button product__button">жду звонка</button>
-                </form>
-                <div class="basket-bot basket__bottom">
-                    <div class="basket-bot__title">
-                        вам может подойти
-                    </div>
-                    <div class="basket-bot__row">
-                        <div class="card t-right">
-                            <div class="card__body">
-                                <div class="card__img">
-                                    <img loading="lazy" src="images/card-img1.png" alt="">
-                                        <div class="card__mark prc">-30%</div>
-                                        <div class="card__mark top">top</div>
-                                        <div class="card__mark new">new</div>
-                                </div>
-                                
-                                <div class="card__info">
-                                    <h3 class="card__title">
-                                        <a href="#">RABANNE million gold</a>
-                                    </h3>
-                                    <div class="card__price-row">
-                                        <p class="card__discount">
-                                            7 900 руб
-                                        </p>
-                                        <p class="card__price">
-                                            от 11 279 руб
-                                        </p>
-                                    </div>
-                                </div>
-            
-                            </div>
-                        </div>
-                        <div class="card t-right">
-                            <div class="card__body">
-                                <div class="card__img">
-                                    <img loading="lazy" src="images/card-img2.png" alt="">
-                                        <div class="card__mark prc">-30%</div>
-                                        <div class="card__mark top">top</div>
-                                        <div class="card__mark new">new</div>
-                                </div>
-                                
-                                <div class="card__info">
-                                    <h3 class="card__title">
-                                        <a href="#">RABANNE million gold</a>
-                                    </h3>
-                                    <div class="card__price-row">
-                                        <p class="card__discount">
-                                            7 900 руб
-                                        </p>
-                                        <p class="card__price">
-                                            от 11 279 руб
-                                        </p>
-                                    </div>
-                                </div>
-            
-                            </div>
-                        </div>
-                        <div class="card t-right">
-                            <div class="card__body">
-                                <div class="card__img">
-                                    <img loading="lazy" src="images/card-img3.png" alt="">
-                                        <div class="card__mark prc">-30%</div>
-                                        <div class="card__mark top">top</div>
-                                        <div class="card__mark new">new</div>
-                                </div>
-                                
-                                <div class="card__info">
-                                    <h3 class="card__title">
-                                        <a href="#">RABANNE million gold</a>
-                                    </h3>
-                                    <div class="card__price-row">
-                                        <p class="card__discount">
-                                            7 900 руб
-                                        </p>
-                                        <p class="card__price">
-                                            от 11 279 руб
-                                        </p>
-                                    </div>
-                                </div>
-            
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-
-
-<div class="popup popup-right" data-popup="popup-password" data-close-overlay>
-    <div class="popup-right__container" data-close-overlay>
-        <div class="popup-right__content">
-            <div class="popup-right__body">
-                <div class="popup-right__head">
-                    <div class="popup-right__title">
-                        новый пароль
-                    </div>
-                    <button class="button-close popup-right__button-close">
-                        <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <g clip-path="url(#clip0_26_7847)">
-                              <path d="M19 19L10 10M1 1L10 10M10 10L19 1M10 10L1 19" stroke="#999999"/>
-                            </g>
-                            <defs>
-                              <clipPath>
-                                <rect width="20" height="20" fill="white"/>
-                              </clipPath>
-                            </defs>
-                        </svg>
-                    </button>
-                </div>
-                <div class="popup-right__center">
-                    <form action="#" class="popup-right__form">
-                        <div class="popup-right__item-row">
-                            <div class="item-input-text popup-right__item-input">
-                                <input type="text" placeholder="пароль" name="password" class="input-text _req password">
-                            </div>
-                            <div class="item-input-text popup-right__item-input">
-                                <input type="text" placeholder="новый пароль" name="password-nex" class="input-text _req password input-match" data-match-group="2">
-                            </div>
-                            <div class="item-input-text popup-right__item-input">
-                                <input type="text" placeholder="повтор нового пароля" name="password-nex-two" class="input-text _req password input-match confirm" data-match-group="2">
-                            </div>
-                        </div>
-                        <div class="popup-right__button-row">
-                            <button type="submit" class="button popup-right__button">
-                                изменить пароль
-                            </button>
-                        </div>
-                    </form>
-                </div>
-                <div class="popup-right__bottom">
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
   </body>
 </html>
 
