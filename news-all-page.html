@@ -11,11 +11,11 @@
   <link rel="icon" type="image/svg+xml" href="images/favicon.svg">
   <link rel="apple-touch-icon" sizes="180x180" href="images/apple-touch-icon.png">
 
-  <link rel="stylesheet" href="css/main.min.css?_v=20250109230503">
-  <link rel="stylesheet" href="css/news-all-page.min.css?_v=20250109230503">
+  <link rel="stylesheet" href="css/main.min.css?_v=20250110000833">
+  <link rel="stylesheet" href="css/news-all-page.min.css?_v=20250110000833">
 
 
-  <script defer="defer" src="js/main.min.js?_v=20250109230503"></script>
+  <script defer="defer" src="js/main.min.js?_v=20250110000833"></script>
   
 
   
@@ -1480,9 +1480,14 @@
                 <div class="popup-right__center">
                     <form action="#" class="popup-right__form">
                         <div class="popup-right__item-row">
-                            <div class="item-input-text popup-right__item-input">
-                                <input type="text" placeholder="e-mail или телефон" name="e-mail" class="input-text _req _req _email-or-tel">
+                            <div class="item-input-text popup-right__item-input popup-right__input-change active">
+                                <input type="text" placeholder="e-mail" name="e-mail" class="input-text _req _req _email">
+                                
                             </div>
+                            <div class="item-input-text popup-right__item-input popup-right__input-change">
+                                <input type="text" placeholder="телефон" name="tel" class="input-text _req tel">
+                            </div>
+                            <div class="active-one-text popup-right__btn-change-input"><span>войти по номеру телефона</span><span>войти по e-mail</span></div>
                             <div class="item-input-text popup-right__item-input">
                                 <input type="text" placeholder="пароль" name="e-mail" class="input-text _req password">
                             </div>
