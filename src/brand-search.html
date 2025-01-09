@@ -3,14 +3,13 @@
   @@include('html/head.html', {
     'title': 'Выбор бренда',
     'stylePage': '<link rel="stylesheet" href="css/brand-search-page.min.css">',
-    'scriptPage': ' '
+    'scriptPage': ' <script defer src="js/brand-page.min.js"></script>'
   })
   <body class="header-white">
     <div class="wrapper">
       @@include('html/header.html')
 
       <main class="page">
-        <div data-observ></div>
         @@include('html/brand.html')
         
       </main>

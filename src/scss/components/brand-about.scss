@@ -1,14 +1,15 @@
 .brand-about {
+    position: relative;
     background: #1f1f1f;
     overflow: hidden;
-
-    margin-top: rem(-108);
-    @media(max-width:720px){
-        margin-top: rem(-132);
-    }
-    @media(max-width:480px){
-        margin-top: rem(-128);
-    }
+    padding-top: 0;
+    // margin-top: rem(-108);
+    // @media(max-width:720px){
+    //     margin-top: rem(-132);
+    // }
+    // @media(max-width:480px){
+    //     margin-top: rem(-128);
+    // }
 
     &__container {
         position: relative;
@@ -26,8 +27,12 @@
     &__bg {
         position: absolute;
         left: 0;
-        width: auto;
-        height: 100%;
+        top: 0;
+        width: rem(720);
+        min-height: 100%;
+        img {
+            width: rem(720);
+        }
         @media(max-width:720px){
             left: rem(-360);
         }

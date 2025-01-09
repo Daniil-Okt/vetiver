@@ -14,7 +14,7 @@ function cardsPayOpenTimer() {
         
                 timeoutId = setTimeout(() => {
                     popupBasket.classList.remove('is-open');
-                }, 2000);
+                }, 2500);
             });
         });
     }

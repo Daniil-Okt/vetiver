@@ -19,14 +19,14 @@
 
 
     }
-    &__fiter {
+    &__filter {
         overflow-x: auto;
         overflow-y: hidden;
         
         
     }
 
-    &__fiter-body {
+    &__filter-body {
         & {
             overflow: auto; 
             scrollbar-width: none; 
@@ -37,34 +37,38 @@
         }
     }
 
-    &__fiter-body-row {
+    &__filter-body-row {
         display: flex;
         justify-content: space-between;
         gap: rem(40);
         padding-bottom: rem(20);
         min-width: max-content;
     }
-    &__fiter-left {
+    &__filter-left {
+        display: none;
+        cursor: pointer;
+        text-transform: uppercase;
+        &.active {
+            display: inline-block;
+        }
     }
 
-    &__fiter-item {
+    &__filter-item {
         cursor: pointer;
-        input {
-            display: none;
+        text-transform: uppercase;
 
-            &:checked + span {
-                font-weight: 700;
-            }
-        }
-        span {
-            text-transform: uppercase;
+        &.active {
+            font-weight: 700;
         }
     }
 
     &__top-center {
-        display: flex;
         align-items: center;
         gap: rem(20);
+        display: none;
+        &.active {
+            display: flex;
+        }
     }
 
     &__top-right {

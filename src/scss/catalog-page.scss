@@ -5,6 +5,10 @@
 @import 'config/functions';
 @import 'config/mixins';
 
+@import 'components/popup/popup-filter';
+@import 'components/promo';
+@import 'components/quest';
+
 @import 'components/catalog/catalog-top';
 @import 'components/catalog/catalog';
 @import 'components/catalog/looked';

@@ -1,0 +1,438 @@
+<!-- фильтр -->
+<div class="popup popup-filter popup-right" data-popup="popup-filter" data-close-overlay>
+    <div class="popup-right__container" data-close-overlay>
+        <div class="popup-right__content">
+            <form action="#" class="popup-right__body popup-ent-reg-body active">
+                <div class="popup-right__head">
+                    <div class="popup-filter__head-left">
+                        <div class="popup-right__title">
+                            фильтр
+                        </div>
+                        <button type="reset" class="popup-filter__clear popup-filter__clear-all">сбросить</button>
+                    </div>
+                    
+                    <button class="popup-right__button-close button-close">
+                        <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <g clip-path="url(#clip0_26_7847)">
+                              <path d="M19 19L10 10M1 1L10 10M10 10L19 1M10 10L1 19" stroke="#999999" />
+                            </g>
+                            <defs>
+                              <clipPath >
+                                <rect width="20" height="20" fill="white" />
+                              </clipPath>
+                            </defs>
+                        </svg>
+                    </button>
+                </div>
+                <div class="popup-right__center">
+                    <div class="popup-filter__avail avail-filter">
+                        <div class="popup-filter__title-item">в наличии</div>
+                        <label class="avail-filter__item-input">
+                            <input type="checkbox" name="avail-filter" class="avail-filter__input">
+                            <span class="avail-filter__icon">
+                                <span class="square"></span>
+                            </span>
+                        </label>
+                    </div>
+                    <div class="popup-filter__range-row">
+                        <div class="range">
+                            <div class="range__row-input">
+                                <div class="range__item-input">
+                                    <p>от</p>
+                                    <input  type="text" value="120" class="range__min-input autoresize">
+                                </div>
+                                
+                                <div class="range__item-input">
+                                    <p>до</p>
+                                    <input type="text" value="93000"  class="range__max-input autoresize">
+                                </div>
+                            </div>
+                            <div class="range__slider">
+                                <div class="slider-range"></div>
+                            </div>
+                            
+                        </div>
+                    </div>
+                    <div class="popup-filter__item item-filter">
+                        <div class="item-filter__head">
+                            <div class="item-filter__title btn-no-all">
+                                <div class="quest-item__icon"></div>
+                                <span>Бренд</span>
+                            </div>
+                            <div class="item-filter__quantity">01</div>
+                            <div class="item-filter__clear popup-filter__clear">сбросить</div>
+                        </div>
+                        <div class="item-filter__body">
+                            <div class="item-filter__row">
+                                <label class="item-filter__item-input item-input-sync">
+                                    <input type="checkbox" value="100BON" name="brand[]">
+                                    <span class="square"></span>
+                                    <span class="text">100BON</span>
+                                </label>
+                                <label class="item-filter__item-input item-input-sync">
+                                    <input type="checkbox" value="Hugo Boss" name="brand[]">
+                                    <span class="square"></span>
+                                    <span class="text">Hugo Boss</span>
+                                </label>
+                                <label class="item-filter__item-input item-input-sync">
+                                    <input type="checkbox" value="Lacoste" name="brand[]">
+                                    <span class="square"></span>
+                                    <span class="text">Lacoste</span>
+                                </label>
+                                <label class="item-filter__item-input item-input-sync">
+                                    <input type="checkbox" value="Off-White" name="brand[]">
+                                    <span class="square"></span>
+                                    <span class="text">Off-White</span>
+                                </label>
+                                <label class="item-filter__item-input item-input-sync">
+                                    <input type="checkbox" value="PANDORA" name="brand[]">
+                                    <span class="square"></span>
+                                    <span class="text">PANDORA</span>
+                                </label>
+                            </div>
+                            <div class="item-filter__button-row">
+                                <div class="item-filter__button btn-all">
+                                    <span>смотреть все</span>
+                                    <svg width="179" height="8" viewBox="0 0 179 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M178.354 4.35355C178.549 4.15829 178.549 3.84171 178.354 3.64645L175.172 0.464466C174.976 0.269204 174.66 0.269204 174.464 0.464466C174.269 0.659728 174.269 0.976311 174.464 1.17157L177.293 4L174.464 6.82843C174.269 7.02369 174.269 7.34027 174.464 7.53553C174.66 7.7308 174.976 7.7308 175.172 7.53553L178.354 4.35355ZM0 4.5H178V3.5H0V4.5Z" fill="#CCCCCC" />
+                                    </svg>
+                                </div>
+                                <div class="item-filter__button btn-no-all">
+                                    <svg width="206" height="8" viewBox="0 0 206 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M0.646447 3.64645C0.451184 3.84171 0.451184 4.15829 0.646447 4.35355L3.82843 7.53553C4.02369 7.7308 4.34027 7.7308 4.53553 7.53553C4.7308 7.34027 4.7308 7.02369 4.53553 6.82843L1.70711 4L4.53553 1.17157C4.7308 0.976311 4.7308 0.659728 4.53553 0.464466C4.34027 0.269204 4.02369 0.269204 3.82843 0.464466L0.646447 3.64645ZM1 4.5H206V3.5H1V4.5Z" fill="black" />
+                                    </svg>
+                                    <span>свернуть</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="item-filter__body item-filter__body-all">
+                            <div class="item-filter__button-row">
+                                <div class="item-filter__button btn-no-all">
+                                    <svg width="126" height="8" viewBox="0 0 126 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M0.646447 3.64645C0.451184 3.84171 0.451184 4.15829 0.646447 4.35355L3.82843 7.53553C4.02369 7.7308 4.34027 7.7308 4.53553 7.53553C4.7308 7.34027 4.7308 7.02369 4.53553 6.82843L1.70711 4L4.53553 1.17157C4.7308 0.976311 4.7308 0.659728 4.53553 0.464466C4.34027 0.269204 4.02369 0.269204 3.82843 0.464466L0.646447 3.64645ZM1 4.5H126V3.5H1V4.5Z" fill="#999999" />
+                                    </svg>
+                                    <span>свернуть</span>
+                                </div>
+                            </div>
+                            <div class="header-search__item-input item-input-text">
+                                <button class="header-search__button-send">
+                                    <svg
+                                      width="20"
+                                      height="20"
+                                      viewBox="0 0 20 20"
+                                      fill="none"
+                                      xmlns="http://www.w3.org/2000/svg"
+                                      class="icon"
+                                    >
+                                      <g clip-path="url(#clip0_1_78)">
+                                        <rect
+                                          x="14.168"
+                                          y="15.3597"
+                                          width="1.66667"
+                                          height="6.55963"
+                                          transform="rotate(-45 14.168 15.3597)"
+                                          fill="currentColor"
+                                        />
+                                        <circle
+                                          cx="8.75146"
+                                          cy="8.75"
+                                          r="7.91667"
+                                          stroke="currentColor"
+                                          stroke-width="1.66667"
+                                        />
+                                      </g>
+                                      <defs>
+                                        <clipPath >
+                                          <rect width="20" height="20" fill="white" />
+                                        </clipPath>
+                                      </defs>
+                                    </svg>
+                                </button>
+                                <input type="text" placeholder="поиск" name="search" class="input-text">
+                            </div>
+                            <div class="item-filter__row">
+                                <label class="item-filter__item-input item-input-sync">
+                                    <input type="checkbox" value="100BON" name="brand[]">
+                                    <span class="square"></span>
+                                    <span class="text">100BON</span>
+                                </label>
+                                <label class="item-filter__item-input item-input-sync">
+                                    <input type="checkbox" value="Hugo Boss" name="brand[]">
+                                    <span class="square"></span>
+                                    <span class="text">Hugo Boss</span>
+                                </label>
+                                <label class="item-filter__item-input item-input-sync">
+                                    <input type="checkbox" value="Lacoste" name="brand[]">
+                                    <span class="square"></span>
+                                    <span class="text">Lacoste</span>
+                                </label>
+                                <label class="item-filter__item-input item-input-sync">
+                                    <input type="checkbox" value="Off-White" name="brand[]">
+                                    <span class="square"></span>
+                                    <span class="text">Off-White</span>
+                                </label>
+                                <label class="item-filter__item-input item-input-sync">
+                                    <input type="checkbox" value="PANDORA" name="brand[]">
+                                    <span class="square"></span>
+                                    <span class="text">PANDORA</span>
+                                </label>
+                                <label class="item-filter__item-input item-input-sync">
+                                    <input type="checkbox" value="PANDORA1" name="brand[]">
+                                    <span class="square"></span>
+                                    <span class="text">PANDORA1</span>
+                                </label>
+                                <label class="item-filter__item-input item-input-sync">
+                                    <input type="checkbox" value="PANDORA2" name="brand[]">
+                                    <span class="square"></span>
+                                    <span class="text">PANDORA2</span>
+                                </label>
+                                <label class="item-filter__item-input item-input-sync">
+                                    <input type="checkbox" value="PANDORA3" name="brand[]">
+                                    <span class="square"></span>
+                                    <span class="text">PANDORA3</span>
+                                </label>
+                                <label class="item-filter__item-input item-input-sync">
+                                    <input type="checkbox" value="PANDORA4" name="brand[]">
+                                    <span class="square"></span>
+                                    <span class="text">PANDORA4</span>
+                                </label>
+                                <label class="item-filter__item-input item-input-sync">
+                                    <input type="checkbox" value="PANDORA5" name="brand[]">
+                                    <span class="square"></span>
+                                    <span class="text">PANDORA5</span>
+                                </label>
+                                <label class="item-filter__item-input item-input-sync">
+                                    <input type="checkbox" value="PANDORA6" name="brand[]">
+                                    <span class="square"></span>
+                                    <span class="text">PANDORA6</span>
+                                </label>
+                                <label class="item-filter__item-input item-input-sync">
+                                    <input type="checkbox" value="PANDORA7" name="brand[]">
+                                    <span class="square"></span>
+                                    <span class="text">PANDORA7</span>
+                                </label>
+                                <label class="item-filter__item-input item-input-sync">
+                                    <input type="checkbox" value="PANDORA8" name="brand[]">
+                                    <span class="square"></span>
+                                    <span class="text">PANDORA8</span>
+                                </label>
+                                <label class="item-filter__item-input item-input-sync">
+                                    <input type="checkbox" value="PANDORA9" name="brand[]">
+                                    <span class="square"></span>
+                                    <span class="text">PANDORA9</span>
+                                </label>
+                                <label class="item-filter__item-input item-input-sync">
+                                    <input type="checkbox" value="PANDORA10" name="brand[]">
+                                    <span class="square"></span>
+                                    <span class="text">PANDORA10</span>
+                                </label>
+                                <label class="item-filter__item-input item-input-sync">
+                                    <input type="checkbox" value="PANDORA11" name="brand[]">
+                                    <span class="square"></span>
+                                    <span class="text">PANDORA11</span>
+                                </label>
+                                <label class="item-filter__item-input item-input-sync">
+                                    <input type="checkbox" value="PANDORA12" name="brand[]">
+                                    <span class="square"></span>
+                                    <span class="text">PANDORA12</span>
+                                </label>
+                            </div>
+                            
+                        </div>
+                    </div>
+                    <div class="popup-filter__item item-filter">
+                        <div class="item-filter__head">
+                            <div class="item-filter__title btn-no-all">
+                                <div class="quest-item__icon"></div>
+                                <span>тип продукта</span>
+                            </div>
+                            <div class="item-filter__quantity">01</div>
+                            <div class="item-filter__clear popup-filter__clear">сбросить</div>
+                        </div>
+                        <div class="item-filter__body">
+                            <div class="item-filter__row">
+                                <label class="item-filter__item-input item-input-sync">
+                                    <input type="checkbox" value="100BON1" name="brand[]">
+                                    <span class="square"></span>
+                                    <span class="text">100BON1</span>
+                                </label>
+                                <label class="item-filter__item-input item-input-sync">
+                                    <input type="checkbox" value="Hugo Boss2" name="brand[]">
+                                    <span class="square"></span>
+                                    <span class="text">Hugo Boss2</span>
+                                </label>
+                                <label class="item-filter__item-input item-input-sync">
+                                    <input type="checkbox" value="Lacoste3" name="brand[]">
+                                    <span class="square"></span>
+                                    <span class="text">Lacoste3</span>
+                                </label>
+                                <label class="item-filter__item-input item-input-sync">
+                                    <input type="checkbox" value="Off-White4" name="brand[]">
+                                    <span class="square"></span>
+                                    <span class="text">Off-White4</span>
+                                </label>
+                                <label class="item-filter__item-input item-input-sync">
+                                    <input type="checkbox" value="PANDORA5" name="brand[]">
+                                    <span class="square"></span>
+                                    <span class="text">PANDORA5</span>
+                                </label>
+                            </div>
+                            <div class="item-filter__button-row">
+                                <div class="item-filter__button btn-all">
+                                    <span>смотреть все</span>
+                                    <svg width="179" height="8" viewBox="0 0 179 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M178.354 4.35355C178.549 4.15829 178.549 3.84171 178.354 3.64645L175.172 0.464466C174.976 0.269204 174.66 0.269204 174.464 0.464466C174.269 0.659728 174.269 0.976311 174.464 1.17157L177.293 4L174.464 6.82843C174.269 7.02369 174.269 7.34027 174.464 7.53553C174.66 7.7308 174.976 7.7308 175.172 7.53553L178.354 4.35355ZM0 4.5H178V3.5H0V4.5Z" fill="#CCCCCC" />
+                                    </svg>
+                                </div>
+                                <div class="item-filter__button btn-no-all">
+                                    <svg width="206" height="8" viewBox="0 0 206 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M0.646447 3.64645C0.451184 3.84171 0.451184 4.15829 0.646447 4.35355L3.82843 7.53553C4.02369 7.7308 4.34027 7.7308 4.53553 7.53553C4.7308 7.34027 4.7308 7.02369 4.53553 6.82843L1.70711 4L4.53553 1.17157C4.7308 0.976311 4.7308 0.659728 4.53553 0.464466C4.34027 0.269204 4.02369 0.269204 3.82843 0.464466L0.646447 3.64645ZM1 4.5H206V3.5H1V4.5Z" fill="black" />
+                                    </svg>
+                                    <span>свернуть</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="item-filter__body item-filter__body-all">
+                            <div class="item-filter__button-row">
+                                <div class="item-filter__button btn-no-all">
+                                    <svg width="126" height="8" viewBox="0 0 126 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M0.646447 3.64645C0.451184 3.84171 0.451184 4.15829 0.646447 4.35355L3.82843 7.53553C4.02369 7.7308 4.34027 7.7308 4.53553 7.53553C4.7308 7.34027 4.7308 7.02369 4.53553 6.82843L1.70711 4L4.53553 1.17157C4.7308 0.976311 4.7308 0.659728 4.53553 0.464466C4.34027 0.269204 4.02369 0.269204 3.82843 0.464466L0.646447 3.64645ZM1 4.5H126V3.5H1V4.5Z" fill="#999999" />
+                                    </svg>
+                                    <span>свернуть</span>
+                                </div>
+                            </div>
+                            <div class="header-search__item-input item-input-text">
+                                <button class="header-search__button-send">
+                                    <svg
+                                      width="20"
+                                      height="20"
+                                      viewBox="0 0 20 20"
+                                      fill="none"
+                                      xmlns="http://www.w3.org/2000/svg"
+                                      class="icon"
+                                    >
+                                      <g clip-path="url(#clip0_1_78)">
+                                        <rect
+                                          x="14.168"
+                                          y="15.3597"
+                                          width="1.66667"
+                                          height="6.55963"
+                                          transform="rotate(-45 14.168 15.3597)"
+                                          fill="currentColor"
+                                        />
+                                        <circle
+                                          cx="8.75146"
+                                          cy="8.75"
+                                          r="7.91667"
+                                          stroke="currentColor"
+                                          stroke-width="1.66667"
+                                        />
+                                      </g>
+                                      <defs>
+                                        <clipPath >
+                                          <rect width="20" height="20" fill="white" />
+                                        </clipPath>
+                                      </defs>
+                                    </svg>
+                                </button>
+                                <input type="text" placeholder="поиск" name="search" class="input-text">
+                            </div>
+                            <div class="item-filter__row">
+                                <label class="item-filter__item-input item-input-sync">
+                                    <input type="checkbox" value="100BON1" name="brand[]">
+                                    <span class="square"></span>
+                                    <span class="text">100BON1</span>
+                                </label>
+                                <label class="item-filter__item-input item-input-sync">
+                                    <input type="checkbox" value="Hugo Boss2" name="brand[]">
+                                    <span class="square"></span>
+                                    <span class="text">Hugo Boss2</span>
+                                </label>
+                                <label class="item-filter__item-input item-input-sync">
+                                    <input type="checkbox" value="Lacoste3" name="brand[]">
+                                    <span class="square"></span>
+                                    <span class="text">Lacoste3</span>
+                                </label>
+                                <label class="item-filter__item-input item-input-sync">
+                                    <input type="checkbox" value="Off-White4" name="brand[]">
+                                    <span class="square"></span>
+                                    <span class="text">Off-White4</span>
+                                </label>
+                                <label class="item-filter__item-input item-input-sync">
+                                    <input type="checkbox" value="PANDORA5" name="brand[]">
+                                    <span class="square"></span>
+                                    <span class="text">PANDORA5</span>
+                                </label>
+                                <label class="item-filter__item-input item-input-sync">
+                                    <input type="checkbox" value="PANDORA21" name="brand[]">
+                                    <span class="square"></span>
+                                    <span class="text">PANDORA21</span>
+                                </label>
+                                <label class="item-filter__item-input item-input-sync">
+                                    <input type="checkbox" value="PANDORA22" name="brand[]">
+                                    <span class="square"></span>
+                                    <span class="text">PANDORA22</span>
+                                </label>
+                                <label class="item-filter__item-input item-input-sync">
+                                    <input type="checkbox" value="PANDORA23" name="brand[]">
+                                    <span class="square"></span>
+                                    <span class="text">PANDORA23</span>
+                                </label>
+                                <label class="item-filter__item-input item-input-sync">
+                                    <input type="checkbox" value="PANDORA24" name="brand[]">
+                                    <span class="square"></span>
+                                    <span class="text">PANDORA24</span>
+                                </label>
+                                <label class="item-filter__item-input item-input-sync">
+                                    <input type="checkbox" value="PANDORA25" name="brand[]">
+                                    <span class="square"></span>
+                                    <span class="text">PANDORA25</span>
+                                </label>
+                                <label class="item-filter__item-input item-input-sync">
+                                    <input type="checkbox" value="PANDORA26" name="brand[]">
+                                    <span class="square"></span>
+                                    <span class="text">PANDORA26</span>
+                                </label>
+                                <label class="item-filter__item-input item-input-sync">
+                                    <input type="checkbox" value="PANDORA27" name="brand[]">
+                                    <span class="square"></span>
+                                    <span class="text">PANDORA27</span>
+                                </label>
+                                <label class="item-filter__item-input item-input-sync">
+                                    <input type="checkbox" value="PANDORA28" name="brand[]">
+                                    <span class="square"></span>
+                                    <span class="text">PANDORA28</span>
+                                </label>
+                                <label class="item-filter__item-input item-input-sync">
+                                    <input type="checkbox" value="PANDORA29" name="brand[]">
+                                    <span class="square"></span>
+                                    <span class="text">PANDORA29</span>
+                                </label>
+                                <label class="item-filter__item-input item-input-sync">
+                                    <input type="checkbox" value="PANDORA210" name="brand[]">
+                                    <span class="square"></span>
+                                    <span class="text">PANDORA210</span>
+                                </label>
+                                <label class="item-filter__item-input item-input-sync">
+                                    <input type="checkbox" value="PANDORA211" name="brand[]">
+                                    <span class="square"></span>
+                                    <span class="text">PANDORA211</span>
+                                </label>
+                                <label class="item-filter__item-input item-input-sync">
+                                    <input type="checkbox" value="PANDORA212" name="brand[]">
+                                    <span class="square"></span>
+                                    <span class="text">PANDORA212</span>
+                                </label>
+                            </div>
+                            
+                        </div>
+                    </div>
+                </div>
+                <div class="popup-right__bottom">
+                    <button class="popup-filter__button-bot button">показать все товары</button>
+                </div>
+            </form>
+
+        </div>
+    </div>
+</div>

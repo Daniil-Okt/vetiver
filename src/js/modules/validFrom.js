@@ -89,7 +89,7 @@ function validForm(form) {
       formAddError(input);
       }
   } else if (input.classList.contains('tel')) {
-      if (input.value.length >= 3) {
+      if (input.value.length >= 19) {
       formRemoveError(input);
       } else {
       formAddError(input);
@@ -248,9 +248,49 @@ function focusInput() {
       });
   });
 }
+
+function popupRightChangeInput() {
+    const button = document.querySelector('.popup-right__btn-change-input');
+    const formButton = button.closest('form')
+    // Проверяем наличие кнопки на странице
+    if (button) {
+            // Добавление обработчика события
+            button.addEventListener('click', function() {
+                // Переключение класса на самой кнопке
+                button.classList.toggle('active-one-text');
+
+                // Получаем все элементы инпутов
+                const inputFields = document.querySelectorAll('.popup-right__input-change');
+
+                inputFields.forEach(field => {
+                    const input = field.querySelector('input');
+
+                    if (field.classList.contains('active')) {
+                        // Удаляем классы у активного поля
+                        field.classList.remove('active');
+                        
+                        if (input) {
+                            input.classList.remove('_req');
+                            input.classList.remove('_error');
+                        }
+                    } else {
+                        // Добавляем классы у неактивного поля
+                        field.classList.add('active');
+                        if (input) {
+                            input.classList.add('_req');
+                        }
+                    }
+                });
+
+                checkFormUnlock(formButton)
+            });
+    }
+}
+
 export {
   checkFormUnlock,
   validForm,
   inputMatch,
-  focusInput
+  focusInput,
+  popupRightChangeInput
 }

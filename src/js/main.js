@@ -11,14 +11,12 @@
 import BaseHelpers from './helpers/base-helpers';
 import PopupManager from './modules/popup-manager';
 import BurgerMenu from './modules/burger-menu';
-import { checkFormUnlock, focusInput, inputMatch, validForm } from './modules/validFrom';
-import noUiSliderInit from './modules/noUiSliderInit.js';
-import setupAutoResize from './modules/inputAutoResize.js';
+import { checkFormUnlock, focusInput, inputMatch, popupRightChangeInput, validForm } from './modules/validFrom';
+
 import cardsPayOpenTimer from './modules/cardsPayOpenTimer.js';
-import cardsHover from './modules/cardsHover.js';
+
 import searchHeader from './modules/searchHeader.js';
 import syncCheckboxes from './modules/syncCheckboxes.js';
-import headerMarginBottom from './modules/headerMarginBottom.js';
 import setupAutoResizeTextareas from './modules/setupAutoResizeTextareas.js';
 import cardBasketBtnActive from './modules/cardBasketBtnActive.js';
 import quantityNumber from './modules/quantityNumber.js';
@@ -27,12 +25,11 @@ import buyClick from './modules/buyClick.js';
 import buttonUp from './modules/buttonUp.js';
 import select from './modules/select.js';
 import linkAnchor from './modules/linkAnchor.js';
-import cardBtnLikeSave from './modules/cardBtnLikeSave.js';
-import filterFunction from './modules/filterFunction.js';
-import popupEntRegChange from './modules/popupEntRegChange.js';
+import cardBtnImgLikeCompare from './modules/cardBtnImgLikeCompare.js';
+import popupBodyChange from './modules/popupBodyChange.js';
 import initializeMenu from './modules/initializeMenu.js';
 import catalogRowChange from './modules/catalogRowChange.js';
-
+// import swiperInit from './modules/swiperInit.js';
 
 /* Фиксированный header */
 BaseHelpers.headerFixed(10);
@@ -71,14 +68,14 @@ useDynamicAdapt()
 /* Маска для инпута tel =================================================================================
 	* Добавить класс tel к нужному инпуту 
 */
-// import { maskTel } from './modules/index.js'
-// maskTel()
+import { maskTel } from './modules/index.js'
+maskTel()
 
 
 
 /* Инициализация  swiper =================================================================================
 */
-swiperInit()
+// swiperInit()
 
 /* Валидация формы ======================================================================================
 * В константу записывает нужную форму
@@ -102,42 +99,6 @@ if (formAll.length > 0) {
 //проверка совпадения
 inputMatch()
 focusInput()
-// =======================================================================================================
-
-/* Добавление класса _active родителю при клике ==========================================================
-	* Вызвать функцию и передать в нее массив нужных элементов
-	* При клике на элемент, у всех элементов класс удаляется
-*/
-import { toggleActiveClassParent } from './modules/index.js'
-import swiperInit from './modules/swiperInit.js';
-const footerItemTitle = document.querySelectorAll('.footer__item-title');
-toggleActiveClassParent(footerItemTitle)
-const itemFilterTitle = document.querySelectorAll('.item-filter__title');
-toggleActiveClassParent(itemFilterTitle)
-
-//окно способов оплаты
-const productBtnMethods = document.querySelectorAll('.product__btn-methods');
-toggleActiveClassParent(productBtnMethods)
-
-
-
-
-/* Динамический класса _active элементу при клике ========================================================
-	* Вызвать функцию и передать в нее массив нужных элементов
-	* При клике на элемент, у всех элементов класс удаляется
-*/
-import { toggleActiveClass } from './modules/index.js'
-const questItem = document.querySelectorAll('.quest-item');
-toggleActiveClass(questItem)
-
-
-
-//header bottom
-const about = document.querySelector('.about');
-headerMarginBottom(about)
-const brandAbout = document.querySelector('.brand-about');
-headerMarginBottom(brandAbout)
-
 
 
 //меню
@@ -151,15 +112,33 @@ window.addEventListener('resize', () => {
 
 
 //переключение зарегестрироваться/войти
-popupEntRegChange()
+popupBodyChange()
 
 
 //открытие-закрытие  поиска
 searchHeader()
 
 
-//наведение на карточку товара
-cardsHover()
+// =======================================================================================================
+
+/* Добавление класса _active родителю при клике ==========================================================
+	* Вызвать функцию и передать в нее массив нужных элементов
+	* При клике на элемент, у всех элементов класс удаляется
+*/
+import { toggleActiveClassParent } from './modules/index.js'
+
+const footerItemTitle = document.querySelectorAll('.footer__item-title');
+toggleActiveClassParent(footerItemTitle)
+const itemFilterTitle = document.querySelectorAll('.item-filter__title');
+toggleActiveClassParent(itemFilterTitle)
+//окно способов оплаты
+const productBtnMethods = document.querySelectorAll('.product__btn-methods');
+toggleActiveClassParent(productBtnMethods)
+
+
+
+
+
 
 
 //таймер окна добавления корзины
@@ -170,21 +149,9 @@ cardsPayOpenTimer()
 catalogRowChange()
 
 
-//ползунок цены
-noUiSliderInit()
-
-
-// Функция для автоматического изменения ширины инпутов
-const inputsAutoresize = document.querySelectorAll('input.autoresize');
-setupAutoResize(inputsAutoresize);
-
-
 // Функция для синхронизации состояния чекбоксов по value
 syncCheckboxes()
 
-
-//фильтр
-filterFunction()
 
 
 //select
@@ -220,6 +187,10 @@ cardBasketBtnActive()
 
 
 
-//сохранить в избранное
-cardBtnLikeSave()
+//сохранить в избранное/сравнение
+cardBtnImgLikeCompare()
 
+
+
+//смена инпута телефон/email
+popupRightChangeInput()

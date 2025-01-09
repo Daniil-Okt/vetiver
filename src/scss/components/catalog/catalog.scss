@@ -20,24 +20,30 @@
     &__top {
     }
     &__row {
-        margin-bottom: rem(120);
-        @media(max-width:1024px){
-            margin-bottom: rem(100);
-        }
-        @media(max-width:720px){
-            margin-bottom: rem(60);
-        }
+        // margin-bottom: rem(120);
+        // @media(max-width:1024px){
+        //     margin-bottom: rem(100);
+        // }
+        // @media(max-width:720px){
+        //     margin-bottom: rem(60);
+        // }
     }
     &__button-row {
         display: flex;
         justify-content: center;
-        margin-bottom: rem(100);
+        margin-top: rem(120);
+        @media(max-width:1024px){
+            margin-top: rem(100);
+        }
         @media(max-width:720px){
-            margin-bottom: rem(60);
+            margin-top: rem(60);
         }
     }
     &__pagin-row {
-        margin-top: 0;
+        margin-top: rem(100);
+        @media(max-width:720px){
+            margin-top: rem(60);
+        }
     }
 
     &__pagin {

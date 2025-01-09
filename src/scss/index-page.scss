@@ -1,0 +1,20 @@
+@use 'sass:math';
+/**
+* Подключение sass function и mixins и extends стилей
+*/
+@import 'config/functions';
+@import 'config/mixins';
+/** Подключение переменных */
+@import 'config/vars';
+
+
+@import 'components/about';
+@import 'components/category';
+@import 'components/stocks';
+@import 'components/novelty';
+@import 'components/promo';
+@import 'components/hits';
+@import 'components/blog-promo';
+@import 'components/quest';
+@import 'components/bottom-menu';
+

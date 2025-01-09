@@ -2,15 +2,15 @@
 <html lang="ru">
   @@include('html/head.html', {
     'title': 'Главная',
-    'stylePage': '',
-    'scriptPage': ''
+    'stylePage': '<link rel="stylesheet" href="css/index-page.min.css"> <link rel="stylesheet" href="css/swiper-init.min.css">',
+    'scriptPage': '<script defer src="js/swiper-init.min.js"></script>'
   })
+  
   <body>
     <div class="wrapper">
       @@include('html/header.html')
 
       <main class="page">
-        <div data-observ></div>
         @@include('html/about.html')
         @@include('html/category.html')
         @@include('html/stocks.html')

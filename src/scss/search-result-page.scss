@@ -5,10 +5,13 @@
 @import 'config/functions';
 @import 'config/mixins';
 
+@import 'components/search-result';
 //стили блоков других страниц
 @import 'components/catalog/catalog';
-@import 'components/catalog/looked';
-@import 'components/about/about-social';
+@import 'components/promo';
 
-// 
-@import 'components/search-result';
+@import 'components/about/about-social';
+@import 'components/catalog/looked';
+@import 'components/quest';
+
+@import 'components/popup/popup-filter';

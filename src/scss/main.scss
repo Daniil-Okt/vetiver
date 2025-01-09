@@ -24,7 +24,7 @@
 * Библиотеки
 * раскомментировать для использования
 */
-@import 'libs/swiper';
+
 @import 'libs/nouislider';
 
 /**
@@ -46,7 +46,7 @@
 * Функциональные блоки используемые во всё проекте
 */
 @import 'components/popup';
-@import 'components/tabs';
+
 
 
 /**
@@ -54,20 +54,11 @@
 */
 @import 'components/header';
 
-@import 'components/about';
-@import 'components/category';
-@import 'components/stocks';
-@import 'components/novelty';
-@import 'components/promo';
-@import 'components/hits';
-@import 'components/blog-promo';
-@import 'components/quest';
 @import 'components/bottom-menu';
-
 @import 'components/footer';
 
 //для страницы продуктов и др.
-@import 'components/product/product';
+// @import 'components/product/product';
 
 
 

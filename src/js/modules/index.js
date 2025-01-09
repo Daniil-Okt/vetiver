@@ -7,7 +7,7 @@ export function maskTel() {
             event.keyCode && (keyCode = event.keyCode);
             var pos = this.selectionStart;
             if (pos < 3) event.preventDefault();
-            var matrix = "+7 (___) ___-__-__",
+            var matrix = "+375 (__) ___-__-__",
                 i = 0,
                 def = matrix.replace(/\D/g, ""),
                 val = this.value.replace(/\D/g, ""),

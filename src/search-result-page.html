@@ -1,16 +1,15 @@
 <!DOCTYPE html>
 <html lang="ru">
   @@include('html/head.html', {
-    'title': 'Каталог',
+    'title': 'Результат поиска',
     'stylePage': '<link rel="stylesheet" href="css/search-result-page.min.css">',
-    'scriptPage': ''
+    'scriptPage': '<script defer src="js/catalog-page.min.js"></script> <script defer src="js/quest-block.min.js"></script> '
   })
   <body class="header-white">
     <div class="wrapper">
       @@include('html/header.html')
 
       <main class="page">
-        <div data-observ></div>
         <div class="search-result">
             <div class="search-result__container">
                 <h1>
@@ -68,5 +67,6 @@
     </div>
 
     @@include('html/popup-example.html')
+    @@include('html/popup/popup-filter.html')
   </body>
 </html>

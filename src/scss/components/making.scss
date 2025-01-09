@@ -324,6 +324,11 @@
             display: none;
         }
     }
+    .product__bottom-left {
+        display: flex;
+        flex-direction: column;
+        gap: rem(20);
+    }
 }
 
 

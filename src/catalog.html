@@ -2,15 +2,14 @@
 <html lang="ru">
   @@include('html/head.html', {
     'title': 'Каталог',
-    'stylePage': '<link rel="stylesheet" href="css/catalog-page.min.css">',
-    'scriptPage': ''
+    'stylePage': '<link rel="stylesheet" href="css/swiper-init.min.css"> <link rel="stylesheet" href="css/catalog-page.min.css">',
+    'scriptPage': '<script defer src="js/swiper-init.min.js"></script> <script defer src="js/catalog-page.min.js"></script>'
   })
   <body class="header-white">
     <div class="wrapper">
       @@include('html/header.html')
 
       <main class="page">
-        <div data-observ></div>
         @@include('html/catalog/catalog-top.html')
         @@include('html/catalog/catalog.html')
         @@include('html/catalog/looked.html')
@@ -21,6 +20,7 @@
     </div>
 
     @@include('html/popup-example.html')
+    @@include('html/popup/popup-filter.html')
   </body>
 </html>
 
@@ -28,10 +28,10 @@
 <div class="card right">
   <div class="card__body">
       <div class="card__img">
-          <img loading="lazy" src="@img/card-img1.png" alt="">
+          <a href="#"><img loading="lazy" src="@img/card-img1.png" alt=""></a>
               <div class="card__mark prc active">10%</div>
-              <div class="card__mark top">top</div>
-              <div class="card__mark new">new</div>
+              
+              
           <div class="card__pay popup-basket-open">
               <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <g clip-path="url(#clip0_109_17919)">

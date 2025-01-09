@@ -6,7 +6,12 @@ h1, h2 {
         color: #ff008a;
 }
 
-
+section.first-m-t:first-child {
+    margin-top: rem(-110);
+    @media(max-width:720px){
+        margin-top: rem(-134);
+    }
+}
 
 .item-input-text {
     border-bottom: 1px solid #ccc;
@@ -90,6 +95,15 @@ input::placeholder, textarea::placeholder {
         font-size: rem(16);
         padding: rem(15) rem(20) rem(17);
     }
+
+    &:disabled {
+        opacity: 0.7;
+        pointer-events: none;
+    }
+    &.disabled {
+        opacity: 0.7;
+        pointer-events: none;
+    }
 }
 
 section {
@@ -144,6 +158,15 @@ h2 {
             width: rem(26);
             min-width: rem(26);
             height: rem(12);
+        }
+
+        &:disabled {
+            opacity: 0.7;
+            pointer-events: none;
+        }
+        &.disabled {
+            opacity: 0.7;
+            pointer-events: none;
         }
     }
 
@@ -478,6 +501,9 @@ h2 {
             object-fit: cover;
             transition: all 1s ease  0s;
         }
+        a {
+            display: block;
+        }
     }
 
     &__info {
@@ -699,7 +725,7 @@ h2 {
             }
         }
     }
-    &__btn-like.active {
+    &__btn-like.active, &__btn-compare.active {
         color: var(--pink);
         svg {
             path {

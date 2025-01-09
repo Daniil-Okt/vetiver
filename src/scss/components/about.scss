@@ -1,14 +1,10 @@
+
 .about {
     position: relative;
     // height: 3000px;
     background: #1a1a1a;
     padding-top: 0;
-    
-    margin-top: rem(-68);
-    @media(max-width:720px){
-        margin-top: rem(-100);
-    }
-    
+
     &__slider {
         max-width: 100%;
 
@@ -16,14 +12,16 @@
     &__slide {
         position: relative;
         height: auto;
+        padding-top: rem(30);
+
         @media(max-width:1260px){
-            padding-top: rem(30);
+            padding-top: rem(60);
         }
         @media(max-width:1024px){
-            padding-top: rem(184);
+            padding-top: rem(214);
         }
         @media(max-width:720px){
-            padding-top: rem(168);
+            padding-top: rem(200);
             padding-bottom: rem(40);
         }
     }
