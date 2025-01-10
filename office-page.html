@@ -11,12 +11,12 @@
   <link rel="icon" type="image/svg+xml" href="images/favicon.svg">
   <link rel="apple-touch-icon" sizes="180x180" href="images/apple-touch-icon.png">
 
-  <link rel="stylesheet" href="css/main.min.css?_v=20250110233640">
-  <link rel="stylesheet" href="css/office-page.min.css?_v=20250110233640">
+  <link rel="stylesheet" href="css/main.min.css?_v=20250111000417">
+  <link rel="stylesheet" href="css/office-page.min.css?_v=20250111000417">
 
 
-  <script defer="defer" src="js/main.min.js?_v=20250110233640"></script>
-   <script defer="defer" src="js/office-page.min.js?_v=20250110233640"></script>
+  <script defer="defer" src="js/main.min.js?_v=20250111000417"></script>
+   <script defer="defer" src="js/office-page.min.js?_v=20250111000417"></script>
 
   
 </head>
@@ -280,7 +280,7 @@
                                             <div class="active card__mark prc">-30%</div>
                                             
                                             
-                                        <div class="card__pay popup-basket-open" onclick="window.cardsPayOpenStartTimer()">
+                                        <div class="popup-basket-open card__pay" onclick="window.cardsPayOpenStartTimer()">
                                             <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
                                                 <g clip-path="url(#clip0_109_17919)">
                                                     <rect x="4" width="8" height="1.33333" fill="white"/>
@@ -394,7 +394,7 @@
                                             
                                             <div class="active card__mark top">top</div>
                                             
-                                        <div class="card__pay popup-basket-open" onclick="window.cardsPayOpenStartTimer()">
+                                        <div class="popup-basket-open card__pay" onclick="window.cardsPayOpenStartTimer()">
                                             <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
                                                 <g clip-path="url(#clip0_109_17919)">
                                                     <rect x="4" width="8" height="1.33333" fill="white"/>
@@ -508,7 +508,7 @@
                                             
                                             
                                             <div class="active card__mark new">new</div>
-                                        <div class="card__pay popup-basket-open" onclick="window.cardsPayOpenStartTimer()">
+                                        <div class="popup-basket-open card__pay" onclick="window.cardsPayOpenStartTimer()">
                                             <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
                                                 <g clip-path="url(#clip0_109_17919)">
                                                     <rect x="4" width="8" height="1.33333" fill="white"/>
@@ -622,7 +622,7 @@
                                             <div class="active card__mark prc">-30%</div>
                                             
                                             
-                                        <div class="card__pay popup-basket-open" onclick="window.cardsPayOpenStartTimer()">
+                                        <div class="popup-basket-open card__pay" onclick="window.cardsPayOpenStartTimer()">
                                             <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
                                                 <g clip-path="url(#clip0_109_17919)">
                                                     <rect x="4" width="8" height="1.33333" fill="white"/>
@@ -736,7 +736,7 @@
                                             
                                             <div class="active card__mark top">top</div>
                                             
-                                        <div class="card__pay popup-basket-open" onclick="window.cardsPayOpenStartTimer()">
+                                        <div class="popup-basket-open card__pay" onclick="window.cardsPayOpenStartTimer()">
                                             <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
                                                 <g clip-path="url(#clip0_109_17919)">
                                                     <rect x="4" width="8" height="1.33333" fill="white"/>
@@ -850,7 +850,7 @@
                                             
                                             
                                             <div class="active card__mark new">new</div>
-                                        <div class="card__pay popup-basket-open" onclick="window.cardsPayOpenStartTimer()">
+                                        <div class="popup-basket-open card__pay" onclick="window.cardsPayOpenStartTimer()">
                                             <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
                                                 <g clip-path="url(#clip0_109_17919)">
                                                     <rect x="4" width="8" height="1.33333" fill="white"/>
@@ -1531,7 +1531,178 @@
 <div class="popup popup-right" data-popup="popup-ent-reg" data-close-overlay>
     <div class="popup-right__container" data-close-overlay>
         <div class="popup-content popup-right__content">
-
+            <div class="active enter popup-body-change popup-right__body">
+                <div class="popup-right__head">
+                    <div class="popup-right__title">
+                        Вход
+                        в личный кабинет
+                    </div>
+                    <button class="button-close popup-right__button-close">
+                        <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <g clip-path="url(#clip0_26_7847)">
+                              <path d="M19 19L10 10M1 1L10 10M10 10L19 1M10 10L1 19" stroke="#999999"/>
+                            </g>
+                            <defs>
+                              <clipPath>
+                                <rect width="20" height="20" fill="white"/>
+                              </clipPath>
+                            </defs>
+                        </svg>
+                    </button>
+                </div>
+                <div class="popup-right__center">
+                    <form action="#" class="popup-right__form">
+                        <div class="popup-right__item-row">
+                            <div class="item-input-text popup-right__item-input popup-right__input-change active">
+                                <input type="text" placeholder="e-mail" name="e-mail" class="input-text _req _req _email">
+                                
+                            </div>
+                            <div class="item-input-text popup-right__item-input popup-right__input-change">
+                                <input type="text" placeholder="телефон" name="tel" class="input-text _req tel">
+                            </div>
+                            <div class="active-one-text popup-right__btn-change-input"><span>войти по номеру телефона</span><span>войти по e-mail</span></div>
+                            <div class="item-input-text popup-right__item-input">
+                                <input type="text" placeholder="пароль" name="e-mail" class="input-text _req password">
+                            </div>
+                        </div>
+                        <div class="popup-right__sub-block">
+                            <label class="popup-item-checkbox popup-right__item-checkbox">
+                                <input type="checkbox" name="remember" class="popup-item-checkbox__input">
+                                <span class="popup-item-checkbox__square"></span>
+                                <span>запомнить меня</span>
+                            </label>
+                            <div class="new popup-button-change popup-right__button-password">
+                                забыл пароль?
+                            </div>
+                        </div>
+                        <div class="popup-right__button-row">
+                            <button type="submit" class="button popup-right__button">
+                                Войти
+                            </button>
+                            <div class="popup-button-change popup-right__button-change reg">
+                                зарегистрироваться
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                <div class="popup-right__bottom">
+                    <p>
+                        войти с помощью
+                    </p>
+                    <div class="popup-right__social">
+                        <a href="#" class="popup-right__social-link">
+                            <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <g clip-path="url(#clip0_109_16074)">
+                                  <path d="M10.2919 8.54166V11.7083H14.8335C14.5622 12.694 13.9662 13.5594 13.142 14.1643C12.3178 14.7692 11.3136 15.0783 10.2919 15.0417C9.48022 15.0389 8.68121 14.8403 7.96278 14.4626C7.24434 14.0849 6.62771 13.5393 6.16531 12.8722C5.70291 12.2052 5.4084 11.4363 5.30681 10.631C5.20523 9.82574 5.29957 9.00783 5.58182 8.24681C5.86408 7.4858 6.32589 6.80419 6.92802 6.2599C7.53015 5.71562 8.25479 5.32476 9.04035 5.12054C9.82591 4.91633 10.6492 4.90479 11.4401 5.08692C12.2311 5.26905 12.9664 5.63946 13.5835 6.16666L15.9169 3.83333C14.9158 2.92345 13.7083 2.27095 12.3986 1.93219C11.0889 1.59344 9.71649 1.57862 8.39981 1.88901C7.08312 2.1994 5.86179 2.82566 4.84131 3.71371C3.82083 4.60176 3.03189 5.7249 2.54263 6.9861C2.05337 8.2473 1.87851 9.60865 2.03314 10.9526C2.18777 12.2965 2.66724 13.5825 3.43015 14.6997C4.19306 15.8168 5.21647 16.7314 6.41196 17.3645C7.60746 17.9976 8.93911 18.3301 10.2919 18.3333C17.2919 18.3333 18.8335 11.7917 18.1669 8.54166H10.2919Z" fill="black"/>
+                                </g>
+                                <defs>
+                                  <clipPath id="clip0_109_16074">
+                                    <rect width="20" height="20" fill="white"/>
+                                  </clipPath>
+                                </defs>
+                            </svg>
+                        </a>
+                        <a href="#" class="popup-right__social-link">
+                            <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M11.9145 9.84383C11.602 9.72633 11.602 9.27758 11.5826 8.96508C11.5045 7.85195 11.8951 6.15258 11.4263 5.43008C11.0945 5.00008 9.49259 5.03945 8.51634 5.0982C8.24259 5.13758 7.91072 5.1957 7.67634 5.3132C7.44197 5.4307 7.20759 5.6257 7.20759 5.80133C7.20759 6.05508 7.79384 6.01633 8.00822 6.3482C8.24259 6.70008 8.24259 7.46133 8.24259 8.08633C8.24259 8.80883 8.12509 9.76633 7.83259 9.80508C7.38322 9.82445 7.12947 9.37508 6.89509 9.0432C6.42634 8.39883 5.95759 7.59758 5.60572 6.81633C5.43009 6.40633 5.33197 5.95695 5.07822 5.78133C4.68759 5.50758 3.98447 5.4882 3.30072 5.50758C2.67572 5.52695 1.77697 5.44883 1.60134 5.82008C1.46447 6.23008 1.75759 6.6207 1.91384 6.9532C2.71447 8.69133 3.57384 10.2151 4.62884 11.6601C5.60572 13.0076 6.52322 14.082 8.32009 14.6482C8.82822 14.8045 11.0545 15.2538 11.5038 14.6482C11.6601 14.4138 11.6213 13.8863 11.6995 13.4957C11.7776 13.1051 11.8751 12.7145 12.2463 12.6951C12.5588 12.6757 12.7345 12.9488 12.9301 13.1445C13.1451 13.3595 13.3207 13.5351 13.477 13.7307C13.8482 14.102 14.2388 14.6095 14.7076 14.8051C15.352 15.0788 16.3482 15.0007 17.2857 14.9613C18.0476 14.942 18.5945 14.7857 18.6532 14.3363C18.6926 13.9845 18.3013 13.477 18.067 13.1838C17.4807 12.4613 17.2076 12.2463 16.5432 11.582C16.2501 11.2888 15.8788 10.9763 15.8788 10.6251C15.8595 10.4101 16.0351 10.2151 16.1913 10.0001C16.8751 8.98445 17.5588 8.26195 18.1838 7.20695C18.3595 6.89445 18.7701 6.17195 18.6138 5.82008C18.4382 5.42945 17.4613 5.54633 16.8557 5.54633C16.0745 5.54633 15.0588 5.48758 14.8632 5.64383C14.492 5.89758 14.3357 6.3082 14.1601 6.69883C13.7695 7.59758 13.242 8.51508 12.6951 9.19883C12.4995 9.4332 12.1288 9.92133 11.9138 9.8432L11.9145 9.84383Z" fill="black"/>
+                            </svg>
+                        </a>
+                        <a href="#" class="popup-right__social-link">
+                            <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M17.258 3.04476C17.258 3.04476 18.8769 2.41351 18.742 3.94655C18.697 4.57781 18.2923 6.78718 17.9775 9.17693L16.8983 16.256C16.8983 16.256 16.8084 17.293 15.9989 17.4734C15.1895 17.6537 13.9753 16.8421 13.7505 16.6618C13.5706 16.5265 10.3778 14.4975 9.25358 13.5055C8.93879 13.235 8.57904 12.6939 9.29854 12.0626L14.0203 7.55372C14.5599 7.01264 15.0995 5.75014 12.8511 7.28318L6.55546 11.5667C6.55546 11.5667 5.83596 12.0176 4.48692 11.6118L1.56393 10.71C1.56393 10.71 0.484671 10.0336 2.3284 9.35727C6.82529 7.23806 12.3565 5.07377 17.258 3.04476Z" fill="black"/>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="popup-right__body popup-body-change reg">
+                <div class="popup-right__head">
+                    <div class="popup-right__title">
+                        регистрация
+                        нового аккаунта
+                    </div>
+                    <button class="button-close popup-right__button-close">
+                        <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <g clip-path="url(#clip0_26_7847)">
+                              <path d="M19 19L10 10M1 1L10 10M10 10L19 1M10 10L1 19" stroke="#999999"/>
+                            </g>
+                            <defs>
+                              <clipPath>
+                                <rect width="20" height="20" fill="white"/>
+                              </clipPath>
+                            </defs>
+                        </svg>
+                    </button>
+                </div>
+                <div class="popup-right__center">
+                    <form action="#" class="popup-right__form">
+                        <div class="popup-right__item-row">
+                            <div class="item-input-text popup-right__item-input">
+                                <input type="text" placeholder="Ваше имя" name="name" class="input-text _req">
+                            </div>
+                            <div class="item-input-text popup-right__item-input">
+                                <input type="text" placeholder="Ваш e-mail" name="e-mail" class="input-text _req _email">
+                            </div>
+                            <div class="item-input-text popup-right__item-input">
+                                <input type="text" placeholder="пароль" name="password" class="input-text _req password input-match" data-match-group="1">
+                            </div>
+                            <div class="item-input-text popup-right__item-input">
+                                <input type="text" placeholder="повтор пароля" name="password-two" class="input-text _req password input-match confirm" data-match-group="1">
+                            </div>
+                        </div>
+                        <div class="popup-right__button-row">
+                            <button type="submit" class="button popup-right__button">
+                                зарегистрироваться
+                            </button>
+                            <div class="popup-button-change popup-right__button-change enter">
+                                войти в личный кабинет
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                <div class="popup-right__bottom">
+                </div>
+            </div>
+            
+            <div class="new popup-body-change popup-right__body">
+                <div class="popup-right__head">
+                    <div class="popup-right__title">
+                        Новый пароль
+                    </div>
+                    <button class="button-close popup-right__button-close">
+                        <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <g clip-path="url(#clip0_26_7847)">
+                              <path d="M19 19L10 10M1 1L10 10M10 10L19 1M10 10L1 19" stroke="#999999"/>
+                            </g>
+                            <defs>
+                              <clipPath>
+                                <rect width="20" height="20" fill="white"/>
+                              </clipPath>
+                            </defs>
+                        </svg>
+                    </button>
+                </div>
+                <div class="popup-right__center">
+                    <form action="#" class="popup-right__form">
+                        <div class="popup-right__item-row">
+                            <div class="item-input-text popup-right__item-input">
+                                <input type="text" placeholder="Ваш e-mail" name="e-mail" class="input-text _req _email">
+                            </div>
+                        </div>
+                        <div class="popup-right__button-row">
+                            <button type="submit" class="button popup-right__button">
+                                выслать новый пароль
+                            </button>
+                            <div class="popup-button-change popup-right__button-change reg">
+                                зарегестрироваться
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                <div class="popup-right__bottom">
+                </div>
+            </div>
         </div>
     </div>
 </div>
@@ -1574,7 +1745,306 @@
 <div class="popup popup-right basket" data-popup="basket" data-close-overlay>
     <div class="popup-right__container" data-close-overlay>
         <div class="popup-content popup-right__content">
-
+            <div class="popup-right__body">
+                <div class="popup-right__head">
+                    <div class="popup-filter__head-left">
+                        <div class="popup-right__title">
+                            корзина
+                        </div>
+                        <div class="popup-filter__clear">Очистить</div>
+                    </div>
+                    
+                    <button class="button-close popup-right__button-close">
+                        <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <g clip-path="url(#clip0_26_7847)">
+                              <path d="M19 19L10 10M1 1L10 10M10 10L19 1M10 10L1 19" stroke="#999999"/>
+                            </g>
+                            <defs>
+                              <clipPath>
+                                <rect width="20" height="20" fill="white"/>
+                              </clipPath>
+                            </defs>
+                        </svg>
+                    </button>
+                </div>
+                <div class="basket__row-card">
+                    <div class="card">
+                        <div class="card__body">
+                            <div class="card__img">
+                                <img loading="lazy" src="images/card-img1.png" alt="">
+                            </div>
+                            <div class="card__info">
+                                <h3 class="card__title">
+                                    RABANNE million gold
+                                </h3>
+                                <div class="card__selected-volume">10 ml</div>
+                                <div class="card__price-row">
+                                    <div class="card__price-calc">
+                                        <span class="pink"><span class="quantity-number-text">2</span>x</span>
+                                        <span>5 530 руб</span>
+                                    </div>
+                                    <p class="card__result-price">
+                                        от 11 279 руб
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="card__btn-content">
+                                <div class="card__basket-btn-row">
+                                    <div class="card__btn-row">
+                                        <div class="card__btn-plus quantity__number-minus">
+                                            -
+                                        </div>
+                                        <input type="number" min="1" value="2" readonly="readonly" class="quantity__input">
+                                        <div class="card__btn-minus quantity__number-plus">
+                                            +
+                                        </div>
+                                    </div>
+                                    <div class="card__btn-delete">
+                                        <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M19 19L10 10M1 1L10 10M10 10L19 1M10 10L1 19" stroke="white"/>
+                                        </svg>
+                                        <span>удалить товар</span>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="card__body">
+                            <div class="card__img">
+                                <img loading="lazy" src="images/card-img1.png" alt="">
+                            </div>
+                            <div class="card__info">
+                                <h3 class="card__title">
+                                    RABANNE million gold
+                                </h3>
+                                <div class="card__selected-volume">10 ml</div>
+                                <div class="card__price-row">
+                                    <div class="card__price-calc">
+                                        <span class="pink"><span class="quantity-number-text">2</span>x</span>
+                                        <span>5 530 руб</span>
+                                    </div>
+                                    <p class="card__result-price">
+                                        от 11 279 руб
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="card__btn-content">
+                                <div class="card__basket-btn-row">
+                                    <div class="card__btn-row">
+                                        <div class="card__btn-plus quantity__number-minus">
+                                            -
+                                        </div>
+                                        <input type="number" min="1" value="2" readonly="readonly" class="quantity__input">
+                                        <div class="card__btn-minus quantity__number-plus">
+                                            +
+                                        </div>
+                                    </div>
+                                    <div class="card__btn-delete">
+                                        <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M19 19L10 10M1 1L10 10M10 10L19 1M10 10L1 19" stroke="white"/>
+                                        </svg>
+                                        <span>удалить товар</span>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="card__body">
+                            <div class="card__img">
+                                <img loading="lazy" src="images/card-img1.png" alt="">
+                            </div>
+                            <div class="card__info">
+                                <h3 class="card__title">
+                                    RABANNE million gold
+                                </h3>
+                                <div class="card__selected-volume">10 ml</div>
+                                <div class="card__price-row">
+                                    <div class="card__price-calc">
+                                        <span class="pink"><span class="quantity-number-text">2</span>x</span>
+                                        <span>5 530 руб</span>
+                                    </div>
+                                    <p class="card__result-price">
+                                        от 11 279 руб
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="card__btn-content">
+                                <div class="card__basket-btn-row">
+                                    <div class="card__btn-row">
+                                        <div class="card__btn-plus quantity__number-minus">
+                                            -
+                                        </div>
+                                        <input type="number" min="1" value="2" readonly="readonly" class="quantity__input">
+                                        <div class="card__btn-minus quantity__number-plus">
+                                            +
+                                        </div>
+                                    </div>
+                                    <div class="card__btn-delete">
+                                        <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M19 19L10 10M1 1L10 10M10 10L19 1M10 10L1 19" stroke="white"/>
+                                        </svg>
+                                        <span>удалить товар</span>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="card__body">
+                            <div class="card__img">
+                                <img loading="lazy" src="images/card-img1.png" alt="">
+                            </div>
+                            <div class="card__info">
+                                <h3 class="card__title">
+                                    RABANNE million gold
+                                </h3>
+                                <div class="card__selected-volume">10 ml</div>
+                                <div class="card__price-row">
+                                    <div class="card__price-calc">
+                                        <span class="pink"><span class="quantity-number-text">2</span>x</span>
+                                        <span>5 530 руб</span>
+                                    </div>
+                                    <p class="card__result-price">
+                                        от 11 279 руб
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="card__btn-content">
+                                <div class="card__basket-btn-row">
+                                    <div class="card__btn-row">
+                                        <div class="card__btn-plus quantity__number-minus">
+                                            -
+                                        </div>
+                                        <input type="number" min="1" value="2" readonly="readonly" class="quantity__input">
+                                        <div class="card__btn-minus quantity__number-plus">
+                                            +
+                                        </div>
+                                    </div>
+                                    <div class="card__btn-delete">
+                                        <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M19 19L10 10M1 1L10 10M10 10L19 1M10 10L1 19" stroke="white"/>
+                                        </svg>
+                                        <span>удалить товар</span>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                        </div>
+                    </div>
+                </div>
+                <div class="basket__promocode">
+                    <div class="item-input-text popup-right__item-input">
+                        <input type="text" placeholder="введите промокод" name="promocode" class="input-text">
+                    </div>
+                </div>
+                <div class="product__bottom-left">
+                    <div class="basket__result">
+                        <p>
+                            итого
+                        </p>
+                        <p class="basket__price-result">
+                            41 111 руб
+                        </p>
+                    </div>
+                    <a href="#" class="button basket__button-arrange">
+                        оформить заказ
+                    </a>
+                </div>
+                <div class="product__buy-click product__text-btn-bot">Купить к 1 клик</div>
+                <form action="#" class="product__btn-row product__form-buy-click">
+                    <div class="item-input-text popup-right__item-input">
+                        <input type="tel" placeholder="ваш телефон" name="tel" class="input-text _req tel">
+                    </div>
+                    <button class="button popup-basket-open product__button">жду звонка</button>
+                </form>
+                <div class="basket-bot basket__bottom">
+                    <div class="basket-bot__title">
+                        вам может подойти
+                    </div>
+                    <div class="basket-bot__row">
+                        <div class="card t-right">
+                            <div class="card__body">
+                                <div class="card__img">
+                                    <img loading="lazy" src="images/card-img1.png" alt="">
+                                        
+                                        
+                                        
+                                </div>
+                                
+                                <div class="card__info">
+                                    <h3 class="card__title">
+                                        <a href="#">RABANNE million gold</a>
+                                    </h3>
+                                    <div class="card__price-row">
+                                        <p class="card__discount">
+                                            7 900 руб
+                                        </p>
+                                        <p class="card__price">
+                                            от 11 279 руб
+                                        </p>
+                                    </div>
+                                </div>
+            
+                            </div>
+                        </div>
+                        <div class="card t-right">
+                            <div class="card__body">
+                                <div class="card__img">
+                                    <a href="#"><img loading="lazy" src="images/card-img2.png" alt=""></a>
+                                        
+                                        
+                                        
+                                </div>
+                                
+                                <div class="card__info">
+                                    <h3 class="card__title">
+                                        <a href="#">RABANNE million gold</a>
+                                    </h3>
+                                    <div class="card__price-row">
+                                        <p class="card__discount">
+                                            7 900 руб
+                                        </p>
+                                        <p class="card__price">
+                                            от 11 279 руб
+                                        </p>
+                                    </div>
+                                </div>
+            
+                            </div>
+                        </div>
+                        <div class="card t-right">
+                            <div class="card__body">
+                                <div class="card__img">
+                                    <a href="#"><img loading="lazy" src="images/card-img3.png" alt=""></a>
+                                        
+                                        
+                                        
+                                </div>
+                                
+                                <div class="card__info">
+                                    <h3 class="card__title">
+                                        <a href="#">RABANNE million gold</a>
+                                    </h3>
+                                    <div class="card__price-row">
+                                        <p class="card__discount">
+                                            7 900 руб
+                                        </p>
+                                        <p class="card__price">
+                                            от 11 279 руб
+                                        </p>
+                                    </div>
+                                </div>
+            
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
 </div>
