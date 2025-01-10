@@ -11,12 +11,12 @@
   <link rel="icon" type="image/svg+xml" href="images/favicon.svg">
   <link rel="apple-touch-icon" sizes="180x180" href="images/apple-touch-icon.png">
 
-  <link rel="stylesheet" href="css/main.min.css?_v=20250111000634">
-  <link rel="stylesheet" href="css/office-page.min.css?_v=20250111000634">
+  <link rel="stylesheet" href="css/main.min.css?_v=20250111001758">
+  <link rel="stylesheet" href="css/office-page.min.css?_v=20250111001758">
 
 
-  <script defer="defer" src="js/main.min.js?_v=20250111000634"></script>
-   <script defer="defer" src="js/office-page.min.js?_v=20250111000634"></script>
+  <script defer="defer" src="js/main.min.js?_v=20250111001758"></script>
+   <script defer="defer" src="js/office-page.min.js?_v=20250111001758"></script>
 
   
 </head>
@@ -1665,7 +1665,7 @@
                 </div>
             </div>
             
-            <div class="new popup-body-change popup-right__body">
+            <div class="popup-right__body popup-body-change new">
                 <div class="popup-right__head">
                     <div class="popup-right__title">
                         Новый пароль
@@ -1971,9 +1971,6 @@
                             <div class="card__body">
                                 <div class="card__img">
                                     <img loading="lazy" src="images/card-img1.png" alt="">
-                                        
-                                        
-                                        
                                 </div>
                                 
                                 <div class="card__info">
@@ -1996,9 +1993,6 @@
                             <div class="card__body">
                                 <div class="card__img">
                                     <a href="#"><img loading="lazy" src="images/card-img2.png" alt=""></a>
-                                        
-                                        
-                                        
                                 </div>
                                 
                                 <div class="card__info">
@@ -2021,9 +2015,6 @@
                             <div class="card__body">
                                 <div class="card__img">
                                     <a href="#"><img loading="lazy" src="images/card-img3.png" alt=""></a>
-                                        
-                                        
-                                        
                                 </div>
                                 
                                 <div class="card__info">
@@ -2054,7 +2045,47 @@
     <div class="popup popup-right" data-popup="popup-password" data-close-overlay>
     <div class="popup-right__container" data-close-overlay>
         <div class="popup-content popup-right__content">
-
+            <div class="popup-right__body">
+                <div class="popup-right__head">
+                    <div class="popup-right__title">
+                        новый пароль
+                    </div>
+                    <button class="button-close popup-right__button-close">
+                        <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <g clip-path="url(#clip0_26_7847)">
+                              <path d="M19 19L10 10M1 1L10 10M10 10L19 1M10 10L1 19" stroke="#999999"/>
+                            </g>
+                            <defs>
+                              <clipPath>
+                                <rect width="20" height="20" fill="white"/>
+                              </clipPath>
+                            </defs>
+                        </svg>
+                    </button>
+                </div>
+                <div class="popup-right__center">
+                    <form action="#" class="popup-right__form">
+                        <div class="popup-right__item-row">
+                            <div class="item-input-text popup-right__item-input">
+                                <input type="text" placeholder="пароль" name="password" class="input-text _req password">
+                            </div>
+                            <div class="item-input-text popup-right__item-input">
+                                <input type="text" placeholder="новый пароль" name="password-nex" class="input-text _req password input-match" data-match-group="2">
+                            </div>
+                            <div class="item-input-text popup-right__item-input">
+                                <input type="text" placeholder="повтор нового пароля" name="password-nex-two" class="input-text _req password input-match confirm" data-match-group="2">
+                            </div>
+                        </div>
+                        <div class="popup-right__button-row">
+                            <button type="submit" class="button popup-right__button">
+                                изменить пароль
+                            </button>
+                        </div>
+                    </form>
+                </div>
+                <div class="popup-right__bottom">
+                </div>
+            </div>
         </div>
     </div>
 </div>
