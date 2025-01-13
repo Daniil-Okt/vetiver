@@ -108,7 +108,7 @@
         margin-right: rem(-35);
         pointer-events: none;
         img {
-            width: 100%;
+            width: rem(926);
         }
         @media(max-width:1100px){
             margin-left: rem(-230);
@@ -120,6 +120,10 @@
             width: rem(580);
             margin-top: rem(-119);
             margin-left: rem(-127);
+
+            img {
+                width: rem(580);
+            }
         }
     }
 
