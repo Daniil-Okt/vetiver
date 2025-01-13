@@ -16,6 +16,16 @@
             right: 100%;
             z-index: 3;
         }
+
+        &:not(.swiper-initialized) {
+            .swiper-wrapper {
+                gap: rem(60);
+
+                @media(max-width:720px){
+                    gap: rem(40);
+                }
+            }
+        }
     }
 
     &__wrapper {

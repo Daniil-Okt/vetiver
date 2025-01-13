@@ -743,6 +743,7 @@
     width: max-content;
     margin-left: auto;
     margin-right: auto;
+    cursor: pointer;
   }
 
   .product__form-buy-click {
@@ -769,6 +770,19 @@
   &._buy-click-active .product__form-buy-click {
     display: flex;
   }
+  &._buy-click-active .product__buy-click {
+    display: none;
+  }
+  .product__buy-click.product__buy-click-close { 
+    display: none;
+  }
+  &._buy-click-active .product__buy-click.product__buy-click-close {
+    display: inline-block;
+    margin-top: rem(10);
+    margin-right: 0;
+    font-weight: 700;text-transform: lowercase;
+  }
+ 
 
   &__result {
     width: 100%;
@@ -827,6 +841,12 @@
       color: #000;
     }
   }
+  .popup-filter__head-left {
+    display: flex;
+    align-items: center;
+    gap: rem(20);
+  }
+
 }
 
 .basket-bot {

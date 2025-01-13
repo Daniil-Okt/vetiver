@@ -26,6 +26,12 @@
         display: grid;
         grid-template-columns: 1fr 1fr;
         gap: rem(60) rem(80);
+
+        @media(min-width:1371px){
+            .card:last-child {
+                display: none;
+            }
+        }
         @media(max-width:1370px){
             // margin-right: auto;
             margin-left: auto;
@@ -91,6 +97,10 @@
         gap: rem(80);
         @media(max-width:1370px){
             display: block;
+            
+            .card {
+                display: none;
+            }
         }
     }
     &__card {

@@ -29,19 +29,21 @@ function setupInitialRowHeight(textarea) {
 }
 
 function setupAutoResizeTextareas(textareas, form = null) {
-	textareas.forEach(textarea => {
-		setupInitialRowHeight(textarea);
-		autoresizeTextarea(textarea);
-		textarea.addEventListener('input', () => autoresizeTextarea(textarea));
-		const descriptor = Object.getOwnPropertyDescriptor(HTMLTextAreaElement.prototype, 'value');
-		Object.defineProperty(textarea, 'value', {
-			get: descriptor.get,
-			set(value) {
-				descriptor.set.call(textarea, value);
-				autoresizeTextarea(textarea);
-			}
+	if (textareas.length > 0) {
+		textareas.forEach(textarea => {
+			setupInitialRowHeight(textarea);
+			autoresizeTextarea(textarea);
+			textarea.addEventListener('input', () => autoresizeTextarea(textarea));
+			const descriptor = Object.getOwnPropertyDescriptor(HTMLTextAreaElement.prototype, 'value');
+			Object.defineProperty(textarea, 'value', {
+				get: descriptor.get,
+				set(value) {
+					descriptor.set.call(textarea, value);
+					autoresizeTextarea(textarea);
+				}
+			});
 		});
-	});
+	}
 
 	if (form) {
 		form.addEventListener('reset', () => {

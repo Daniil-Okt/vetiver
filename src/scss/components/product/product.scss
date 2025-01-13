@@ -45,6 +45,7 @@
 
     &__code {
         text-transform: lowercase;
+        margin-right: auto;
     }
 
     &__avail {
@@ -98,7 +99,18 @@
         overflow: hidden; 
         
         min-height: rem(600);
-       
+        
+        &:not(.swiper-initialized) {
+            .swiper-slide:first-child {
+                opacity: 1;
+            }
+        }
+        @media(max-width:1020px){
+            min-height: rem(570);
+        }
+        @media(max-width:720px){
+            min-height: rem(375);
+        }
     }
     
 
@@ -119,6 +131,13 @@
 
         &.swiper-slide-active {
             opacity: 1;
+        }
+
+        @media(max-width:1020px){
+            min-height: rem(570);
+        }
+        @media(max-width:720px){
+            min-height: rem(375);
         }
         @media(max-width:720px){
             opacity: 1;
@@ -151,6 +170,14 @@
     &__slider-thumbs {
         overflow: hidden;
         width: rem(100);
+
+
+        &:not(.swiper-initialized) {
+            .swiper-wrapper {
+                gap: rem(16);
+                flex-direction: column;
+            }
+        }
     }
 
     &__wrapper-thumbs {
@@ -162,7 +189,7 @@
         width: rem(100);
         overflow: hidden;
         border: 1px solid #ccc;
-        transition: all 0.3s ease  0s;
+        transition: border-color 0.3s ease  0s;
         cursor: pointer;
         img {
             width: 100%;
@@ -233,9 +260,14 @@
         
     }
 
+    &__volume-head {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: rem(24);
+    }
     &__volume-title {
         text-transform: lowercase;
-        margin-bottom: rem(16);
+        
     }
 
     &__price-row {
@@ -315,6 +347,16 @@
         ._buy-click-active & {
             display: none;
         }
+        &.product__buy-click-close {
+            display: none;
+        }
+        ._buy-click-active &.product__buy-click-close {
+            display: inline-block;
+            width: max-content;
+            margin-left: auto;
+            margin-top: rem(-10);
+            margin-right: rem(24);
+        }
     }
 
     &__buy-click {
@@ -325,8 +367,6 @@
         &:hover {
             color: var(--pink);
         }
-
-        
     }
 
     &__btn-sq {
@@ -479,13 +519,16 @@
     gap: rem(20);
     * {
         font-size: rem(12);
+        
     }
     &__left {
         display: flex;
         align-items: center;
         gap: rem(8);
+        
         p {
             font-weight: 700;
+            color: #000;
         }
     }
 
@@ -496,6 +539,7 @@
     }
 
     &__right {
+        color: #000;
     }
 }
 
@@ -510,7 +554,9 @@
         text-transform: lowercase;
         color: #ff008a;
         cursor: pointer;
-        transition: all 0.3s ease  0s;
+        transition: all 0.3s ease  0;
+        padding-bottom: rem(3);
+        border-bottom: 1px solid var(--pink);
         &:hover {
             opacity: 0.8;
         }

@@ -3,7 +3,28 @@
     &__contianer {
     }
 
-    &__slider {
+    &__slider:not(.swiper-initialized) {
+        .swiper-wrapper {
+            display: grid !important;
+            grid-template-columns: 1fr 1fr 1fr !important;
+            gap: rem(100);
+            @media(max-width:1290px){
+                gap: rem(40);
+            }
+            @media(max-width:1000px){
+                min-width: 120.91%;
+            }
+            @media(max-width:720px){
+                min-width: 153%;
+            }
+            @media(max-width:560px){
+                min-width: 207.69%;
+            }
+            @media(max-width:460px){
+                display: flex !important;
+                min-width: 0;
+            }
+        }
     }
 
     &__wrapper {
@@ -35,6 +56,9 @@
         }
         @media(max-width:460px){
             @include adaptiveClamp(height, 860, 360);
+        }
+        @media(max-width:375px){
+            height: rem(360);
         }
     }
 

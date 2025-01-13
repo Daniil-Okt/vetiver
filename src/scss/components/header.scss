@@ -503,7 +503,7 @@
       }
     }
     &:hover {
-
+      color: #000;
       span {
         color: #000;
       }
@@ -680,7 +680,7 @@
 .header-search {
   position: absolute;
   display: block;
-  bottom: 100%;
+  bottom: 150%;
 
   left: 0;
   width: 100%;
@@ -689,7 +689,7 @@
   // opacity: 0;
   pointer-events: none;
   // max-height: 0;
-  transition: all 0.6s ease  0s;
+  transition: all 0.7s ease  0s;
   z-index: 10;
  
   padding-top: rem(36);

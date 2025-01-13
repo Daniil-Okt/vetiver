@@ -251,22 +251,18 @@ function focusInput() {
 
 function popupRightChangeInput() {
     const button = document.querySelector('.popup-right__btn-change-input');
-    const formButton = button.closest('form')
-    // Проверяем наличие кнопки на странице
+
     if (button) {
-            // Добавление обработчика события
+        const formButton = button.closest('form')
             button.addEventListener('click', function() {
-                // Переключение класса на самой кнопке
                 button.classList.toggle('active-one-text');
 
-                // Получаем все элементы инпутов
                 const inputFields = document.querySelectorAll('.popup-right__input-change');
 
                 inputFields.forEach(field => {
                     const input = field.querySelector('input');
 
                     if (field.classList.contains('active')) {
-                        // Удаляем классы у активного поля
                         field.classList.remove('active');
                         
                         if (input) {
@@ -274,7 +270,6 @@ function popupRightChangeInput() {
                             input.classList.remove('_error');
                         }
                     } else {
-                        // Добавляем классы у неактивного поля
                         field.classList.add('active');
                         if (input) {
                             input.classList.add('_req');

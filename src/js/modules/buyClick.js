@@ -1,11 +1,13 @@
 function buyClick(classBlock) {
     const block = document.querySelector(`${classBlock}`);
 	if (block) {
-		const productBuyClick = block.querySelector('.product__buy-click')
-		if (productBuyClick) {
-			productBuyClick.addEventListener('click', () => {
-				block.classList.add('_buy-click-active')
-			})
+		const productBuyClick = block.querySelectorAll('.product__buy-click')
+		if (productBuyClick.length > 0) {
+			productBuyClick.forEach(button => {
+				button.addEventListener('click', () => {
+					block.classList.toggle('_buy-click-active')
+				})
+			});
 		}
 	}
 }

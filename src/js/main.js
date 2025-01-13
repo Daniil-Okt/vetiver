@@ -57,25 +57,15 @@ buttonUp()
 
 
 
-/* Динамический адаптив =================================================================================
-* Что бы перебросить блок в другой блок, повешай на него атрибут:
-* data-da="class блока куда нужно перебросить, брекпоинт(ширина экрана), позиция в блоке(цифра либо first,last)"
+/* Инициализация  swiper =================================================================================
 */
-/*Расскоментировать для использования*/
-import { useDynamicAdapt } from './modules/dynamicAdapt.js'
-useDynamicAdapt()
+// swiperInit()
 
 /* Маска для инпута tel =================================================================================
 	* Добавить класс tel к нужному инпуту 
 */
 import { maskTel } from './modules/index.js'
 maskTel()
-
-
-
-/* Инициализация  swiper =================================================================================
-*/
-// swiperInit()
 
 /* Валидация формы ======================================================================================
 * В константу записывает нужную форму
@@ -87,29 +77,34 @@ maskTel()
   Раскоментировать для использования
 */ 
 
-const formAll = document.querySelectorAll('form')
 
-if (formAll.length > 0) {
-	formAll.forEach(form => {
-		validForm(form)
-		checkFormUnlock(form)
-	});
+function initializeValidForm() {
+	const formAll = document.querySelectorAll('form')
+	if (formAll.length > 0) {
+		formAll.forEach(form => {
+			validForm(form)
+			checkFormUnlock(form)
+		});
+	}
+	//проверка совпадения
+	inputMatch()
+	focusInput()
 }
+initializeValidForm()
 
-//проверка совпадения
-inputMatch()
-focusInput()
 
 
 //меню
-initializeMenu('.menu-list-one')
-initializeMenu('.menu-list-two')
 
-window.addEventListener('resize', () => {
+function intializeAllMenu() {
 	initializeMenu('.menu-list-one')
 	initializeMenu('.menu-list-two')
-});
-
+	
+	window.addEventListener('resize', () => {
+		initializeMenu('.menu-list-one')
+		initializeMenu('.menu-list-two')
+	});
+}
 
 //переключение зарегестрироваться/войти
 popupBodyChange()
@@ -126,6 +121,7 @@ searchHeader()
 	* При клике на элемент, у всех элементов класс удаляется
 */
 import { toggleActiveClassParent } from './modules/index.js'
+import loadHtmlContent from './modules/loadHtmlContent.js';
 
 const footerItemTitle = document.querySelectorAll('.footer__item-title');
 toggleActiveClassParent(footerItemTitle)
@@ -134,11 +130,6 @@ toggleActiveClassParent(itemFilterTitle)
 //окно способов оплаты
 const productBtnMethods = document.querySelectorAll('.product__btn-methods');
 toggleActiveClassParent(productBtnMethods)
-
-
-
-
-
 
 
 //таймер окна добавления корзины
@@ -162,11 +153,20 @@ select()
 linkAnchor()
 
 
-
 //добавить класс купить в клик
 buyClick('.product')
-buyClick('.basket')
 
+
+//сохранить в избранное/сравнение
+cardBtnImgLikeCompare()
+
+
+//смена инпута телефон/email
+popupRightChangeInput()
+
+
+//купить в один клик в корзине
+buyClick('.basket')
 
 
 //автовысота textarea
@@ -187,10 +187,70 @@ cardBasketBtnActive()
 
 
 
-//сохранить в избранное/сравнение
-cardBtnImgLikeCompare()
+//добавление контента меню при наведении, или клике, или в течении 10 сек после загрузки
+const iconMenu = document.querySelectorAll('.icon-menu');
+const menuBlock = document.getElementById('menu');
+const menuContentfilePath = 'menu-content.html';
+
+loadHtmlContent(iconMenu, menuBlock, menuContentfilePath, intializeAllMenu);
 
 
 
-//смена инпута телефон/email
-popupRightChangeInput()
+
+//передача всех попапов в функцию вставки контента 
+/*
+файл контента модального окна должен начинать с названия data-popyp + текст "-content" 
+*/  
+// function findElementsWithPopupAndType() {
+//     const popupElements = document.querySelectorAll('[data-popup]');
+
+//     popupElements.forEach(popupElement => {
+//         const popupName = popupElement.getAttribute('data-popup');
+
+//         const buttonsOpenPopup = document.querySelectorAll(`[data-type="${popupName}"]`);
+// 		const popupContentBlock = popupElement.querySelector('.popup-content');
+// 		const popupContentFilePatch = `${popupName}-content.html`;
+// 		console.log(popupContentFilePatch);
+
+// 		loadHtmlContent(buttonsOpenPopup, popupContentBlock, popupContentFilePatch, initFunctionPopups);
+
+// 		/*
+// 		инициализация функций для контента попапов
+// 		*/
+
+// 		function initFunctionPopups() {
+
+// 			//смена инпута телефон/email
+// 			popupRightChangeInput()
+
+// 			//купить в один клик в корзине
+// 			buyClick('.basket')
+
+// 			//автовысота textarea
+// 			const textareas = document.querySelectorAll('textarea.textarea-auto-height');
+// 			setupAutoResizeTextareas(textareas);
+
+
+// 			//выбор оценки отзыва
+// 			estimFeedback()
+
+
+// 			//добавление в number
+// 			quantityNumber()
+
+
+// 			//актиность кнопок карточки в корзине в моб версии
+// 			cardBasketBtnActive()
+
+// 			//инициализация валидации форм
+// 			initializeValidForm()
+
+// 			maskTel()
+// 		}
+//     });
+// }
+
+// findElementsWithPopupAndType();
+
+
+
